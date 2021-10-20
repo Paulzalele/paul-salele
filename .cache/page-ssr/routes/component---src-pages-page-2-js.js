@@ -258,7 +258,7 @@ const SecondPage = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createE
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"data":{"site":{"siteMetadata":{"title":"Paul Salele Website"}}}}');
+module.exports = JSON.parse('{"data":{"site":{"siteMetadata":{"title":"Paul Salele"}}}}');
 
 /***/ }),
 
@@ -269,7 +269,7 @@ module.exports = JSON.parse('{"data":{"site":{"siteMetadata":{"title":"Paul Sale
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"data":{"site":{"siteMetadata":{"title":"Paul Salele Website","description":"Paul Salele\'s personal website","author":"Paul Salele"}}}}');
+module.exports = JSON.parse('{"data":{"site":{"siteMetadata":{"title":"Paul Salele","description":"Paul Salele\'s personal website","author":"Paul Salele"}}}}');
 
 /***/ })
 

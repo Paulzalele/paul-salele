@@ -1128,7 +1128,7 @@ module.exports = JSON.parse('{"layout":"constrained","backgroundColor":"#f8f8f8"
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"data":{"site":{"siteMetadata":{"title":"Paul Salele Website"}}}}');
+module.exports = JSON.parse('{"data":{"site":{"siteMetadata":{"title":"Paul Salele"}}}}');
 
 /***/ }),
 
@@ -1139,7 +1139,7 @@ module.exports = JSON.parse('{"data":{"site":{"siteMetadata":{"title":"Paul Sale
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"data":{"site":{"siteMetadata":{"title":"Paul Salele Website","description":"Paul Salele\'s personal website","author":"Paul Salele"}}}}');
+module.exports = JSON.parse('{"data":{"site":{"siteMetadata":{"title":"Paul Salele","description":"Paul Salele\'s personal website","author":"Paul Salele"}}}}');
 
 /***/ })
 
