@@ -24,7 +24,7 @@ module.exports = {
       options: {
         name: `Paul Salele`,
         short_name: `Paul S`,
-        start_url: `/`,
+        start_url: `https://paulsalele.com`,
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `standalone`,
