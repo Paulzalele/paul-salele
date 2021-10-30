@@ -47,17 +47,37 @@ class PageQueryStore extends _react.default.Component {
   };
 
   componentDidMount() {
+    var _this$state, _this$state$page, _this$state$page$page;
+
     (0, _socketIo.registerPath)(getPathFromProps(this.props));
 
     ___emitter.on(`pageQueryResult`, this.handleMittEvent);
 
+    ___emitter.on(`serverDataResult`, this.handleMittEvent);
+
     ___emitter.on(`onPostLoadPageResources`, this.handleMittEvent);
+
+    window._gatsbyEvents.push([`FAST_REFRESH`, {
+      action: `SHOW_GETSERVERDATA_ERROR`,
+      payload: (_this$state = this.state) === null || _this$state === void 0 ? void 0 : (_this$state$page = _this$state.page) === null || _this$state$page === void 0 ? void 0 : (_this$state$page$page = _this$state$page.page) === null || _this$state$page$page === void 0 ? void 0 : _this$state$page$page.getServerDataError
+    }]);
+  }
+
+  componentDidUpdate() {
+    var _this$state2, _this$state2$page, _this$state2$page$pag;
+
+    window._gatsbyEvents.push([`FAST_REFRESH`, {
+      action: `SHOW_GETSERVERDATA_ERROR`,
+      payload: (_this$state2 = this.state) === null || _this$state2 === void 0 ? void 0 : (_this$state2$page = _this$state2.page) === null || _this$state2$page === void 0 ? void 0 : (_this$state2$page$pag = _this$state2$page.page) === null || _this$state2$page$pag === void 0 ? void 0 : _this$state2$page$pag.getServerDataError
+    }]);
   }
 
   componentWillUnmount() {
     (0, _socketIo.unregisterPath)(this.state.path);
 
     ___emitter.off(`pageQueryResult`, this.handleMittEvent);
+
+    ___emitter.off(`serverDataResult`, this.handleMittEvent);
 
     ___emitter.off(`onPostLoadPageResources`, this.handleMittEvent);
   }
@@ -87,6 +107,10 @@ class PageQueryStore extends _react.default.Component {
   render() {
     // eslint-disable-next-line
     if (!this.state.page) {
+      return /*#__PURE__*/_react.default.createElement("div", null);
+    }
+
+    if (this.state.page.page.getServerDataError) {
       return /*#__PURE__*/_react.default.createElement("div", null);
     }
 

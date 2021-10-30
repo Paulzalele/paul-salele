@@ -7,9 +7,13 @@ var plugins = [{
       plugin: require('/Users/owner/paul-salele/frontend/node_modules/gatsby-plugin-image/gatsby-ssr'),
       options: {"plugins":[]},
     },{
+      name: 'gatsby-plugin-matomo',
+      plugin: require('/Users/owner/paul-salele/frontend/node_modules/gatsby-plugin-matomo/gatsby-ssr'),
+      options: {"plugins":[],"siteId":"1","matomoUrl":"https://paulsalele.matomo.cloud/","siteUrl":"https://paulsalele.com"},
+    },{
       name: 'gatsby-plugin-manifest',
       plugin: require('/Users/owner/paul-salele/frontend/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
-      options: {"plugins":[],"name":"Paul Salele","short_name":"Paul S","start_url":"/","background_color":"#663399","theme_color":"#663399","display":"standalone","icon":"src/images/gatsby-icon.png","crossOrigin":"use-credentials","legacy":true,"theme_color_in_head":true,"cache_busting_mode":"query","include_favicon":true,"cacheDigest":"4a9773549091c227cd2eb82ccd9c5e3a"},
+      options: {"plugins":[],"name":"Paul Salele","short_name":"Paul S","start_url":"https://paulsalele.com","background_color":"#663399","theme_color":"#663399","display":"standalone","icon":"src/images/gatsby-icon.png","crossOrigin":"use-credentials","legacy":true,"theme_color_in_head":true,"cache_busting_mode":"query","include_favicon":true,"cacheDigest":"4a9773549091c227cd2eb82ccd9c5e3a"},
     },{
       name: 'gatsby-plugin-offline',
       plugin: require('/Users/owner/paul-salele/frontend/node_modules/gatsby-plugin-offline/gatsby-ssr'),
