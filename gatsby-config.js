@@ -31,7 +31,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Paul Salele`,
-        short_name: `Paul S`,
+        short_name: `Paul Salele`,
         start_url: `https://paulsalele.com`,
         background_color: `#663399`,
         theme_color: `#663399`,
