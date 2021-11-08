@@ -23,6 +23,7 @@
     "gatsby-source-filesystem": "^4.0.0-zz-next.1",
     "gatsby-source-strapi": "^1.0.2",
     "gatsby-transformer-sharp": "^4.0.0-zz-next.1",
+    "lottie-web": "^5.7.14",
     "postcss": "^8.3.10",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
