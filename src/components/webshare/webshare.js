@@ -32,9 +32,9 @@ const WebShare = ({ postTitle, siteTitle }) => {
     );
   };
 
-//   WebShare.propTypes = {
-//     postTitle: PropTypes.string.isRequired,
-//     siteTitle: PropTypes.string.isRequired,
-//   };
+  WebShare.propTypes = {
+    postTitle: PropTypes.string.isRequired,
+    siteTitle: PropTypes.string.isRequired,
+  };
 
   export default WebShare;
