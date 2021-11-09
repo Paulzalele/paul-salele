@@ -17,13 +17,17 @@ const WebShare = () => {
           .catch(error => {
             console.error('Something went wrong sharing the blog', error);
           });
+      } else {
+        console.log("Sorry! Your browser does not support Web Share API");
       }
     };
   
     return (
-      <button onClick={handleOnClick} className="h-10">
-        <ShareIcon />
+        
+      <button onClick={handleOnClick}>
+        <ShareIcon className="h-10" />
       </button>
+     
     );
   };
 
