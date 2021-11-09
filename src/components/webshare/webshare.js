@@ -1,14 +1,15 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import { ShareIcon } from "@heroicons/react/outline"
 import "../styles/global.css"
 
-const WebShare = () => {
+const WebShare = ({ postTitle, siteTitle }) => {
     const handleOnClick = () => {
       if (navigator.share) {
         navigator
           .share({
-            title: 'testing',
-            text: 'testing share',
+            title: `${postTitle} | ${siteTitle}`,
+            text: `Check out ${postTitle} on ${siteTitle}`,
             url: document.location.href,
           })
           .then(() => {
@@ -30,5 +31,10 @@ const WebShare = () => {
      
     );
   };
+
+//   WebShare.propTypes = {
+//     postTitle: PropTypes.string.isRequired,
+//     siteTitle: PropTypes.string.isRequired,
+//   };
 
   export default WebShare;

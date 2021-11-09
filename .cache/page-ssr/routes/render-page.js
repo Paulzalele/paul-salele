@@ -5152,7 +5152,7 @@ module.exports = JSON.parse('{"name":"gatsby","description":"Blazing fast modern
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"polyfill":["/polyfill-65a907e51915b8b71475.js"],"app":["/app-d81578a9bb7b16de5eaf.js"],"component---cache-caches-gatsby-plugin-offline-app-shell-js":["/component---cache-caches-gatsby-plugin-offline-app-shell-js-ca7625a901b217b3cc85.js"],"component---src-pages-404-js":["/component---src-pages-404-js-ee54fd47a0cc12f085d1.js"],"component---src-pages-index-js":["/component---src-pages-index-js-1fa71de54d15898c6ca4.js"],"component---src-pages-page-2-js":["/component---src-pages-page-2-js-1c95f864a40033873942.js"]}');
+module.exports = JSON.parse('{"polyfill":["/polyfill-65a907e51915b8b71475.js"],"app":["/app-d81578a9bb7b16de5eaf.js"],"component---cache-caches-gatsby-plugin-offline-app-shell-js":["/component---cache-caches-gatsby-plugin-offline-app-shell-js-ca7625a901b217b3cc85.js"],"component---src-pages-404-js":["/component---src-pages-404-js-ee54fd47a0cc12f085d1.js"],"component---src-pages-index-js":["/component---src-pages-index-js-444ab2f0705eb89149e5.js"],"component---src-pages-page-2-js":["/component---src-pages-page-2-js-1c95f864a40033873942.js"]}');
 
 /***/ })
 
