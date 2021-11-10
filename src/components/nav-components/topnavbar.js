@@ -95,7 +95,7 @@ export default function TopNavBar() {
                         href={item.href}
                         className={classNames(
                           item.current
-                            ? "border-white text-white items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                            ? "border-white text-white items-center px-2 pt-2 border-b-2 text-sm font-medium"
                             : "text-yellow-300 hover:bg-purple-600 group-hover:text-white",
                           "group flex items-center px-2 py-2 text-base font-medium rounded-sm transition-all duration-200 ease-linear"
                         )}
@@ -141,7 +141,7 @@ export default function TopNavBar() {
         </Dialog>
       </Transition.Root>
 
-      <div className="sticky top-0 z-10 flex-shrink-0 flex h-16 md:justify-center bg-purple-900 shadow">
+      <div className="sticky top-0 z-10 flex h-16 md:justify-center bg-purple-900 shadow">
         <button
           type="button"
           className="group px-4 text-yellow-300 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white md:hidden hover:bg-purple-600"
@@ -161,7 +161,7 @@ export default function TopNavBar() {
             href={item.href}
             className={classNames(
               item.current
-                ? "border-white text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                ? "border-white text-white inline-flex items-center px-2 pt-2 border-b-2 text-sm font-medium"
                 : "text-yellow-300 hover:bg-purple-600 hover:text-white rounded-sm",
               "hidden md:flex group items-center px-2 py-2 text-base font-medium transition-all duration-200 ease-linear"
             )}
