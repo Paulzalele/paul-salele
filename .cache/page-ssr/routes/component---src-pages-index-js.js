@@ -2,55 +2,16 @@ exports.id = 678;
 exports.ids = [678];
 exports.modules = {
 
-/***/ 1224:
-/***/ ((module) => {
-
-"use strict";
-const preserveCamelCase=string=>{let isLastCharLower=false;let isLastCharUpper=false;let isLastLastCharUpper=false;for(let i=0;i<string.length;i++){const character=string[i];if(isLastCharLower&&/[a-zA-Z]/.test(character)&&character.toUpperCase()===character){string=string.slice(0,i)+'-'+string.slice(i);isLastCharLower=false;isLastLastCharUpper=isLastCharUpper;isLastCharUpper=true;i++;}else if(isLastCharUpper&&isLastLastCharUpper&&/[a-zA-Z]/.test(character)&&character.toLowerCase()===character){string=string.slice(0,i-1)+'-'+string.slice(i-1);isLastLastCharUpper=isLastCharUpper;isLastCharUpper=false;isLastCharLower=true;}else{isLastCharLower=character.toLowerCase()===character&&character.toUpperCase()!==character;isLastLastCharUpper=isLastCharUpper;isLastCharUpper=character.toUpperCase()===character&&character.toLowerCase()!==character;}}return string;};const camelCase=(input,options)=>{if(!(typeof input==='string'||Array.isArray(input))){throw new TypeError('Expected the input to be `string | string[]`');}options=Object.assign({pascalCase:false},options);const postProcess=x=>options.pascalCase?x.charAt(0).toUpperCase()+x.slice(1):x;if(Array.isArray(input)){input=input.map(x=>x.trim()).filter(x=>x.length).join('-');}else{input=input.trim();}if(input.length===0){return'';}if(input.length===1){return options.pascalCase?input.toUpperCase():input.toLowerCase();}const hasUpperCase=input!==input.toLowerCase();if(hasUpperCase){input=preserveCamelCase(input);}input=input.replace(/^[_.\- ]+/,'').toLowerCase().replace(/[_.\- ]+(\w|$)/g,(_,p1)=>p1.toUpperCase()).replace(/\d+(\w|$)/g,m=>m.toUpperCase());return postProcess(input);};module.exports=camelCase;// TODO: Remove this for the next major release
-module.exports["default"]=camelCase;
-
-/***/ }),
-
-/***/ 6179:
+/***/ 9642:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "Ul": () => (/* binding */ _createForOfIteratorHelperLoose),
+/* harmony export */   "gY": () => (/* binding */ _extends),
+/* harmony export */   "gK": () => (/* binding */ _objectWithoutPropertiesLoose)
 /* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6283);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5697);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react_helmet__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(4593);
-/* harmony import */ var gatsby__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(2031);
-/**
- * SEO component that queries for data with
- *  Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */function Seo({description,lang,meta,title}){var _site$siteMetadata,_site$siteMetadata2;const{site}=(0,gatsby__WEBPACK_IMPORTED_MODULE_3__.useStaticQuery)("63159454");const metaDescription=description||site.siteMetadata.description;const defaultTitle=(_site$siteMetadata=site.siteMetadata)===null||_site$siteMetadata===void 0?void 0:_site$siteMetadata.title;return/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_helmet__WEBPACK_IMPORTED_MODULE_2__.Helmet,{htmlAttributes:{lang},title:title,titleTemplate:defaultTitle?`%s | ${defaultTitle}`:null,meta:[{name:`description`,content:metaDescription},{property:`og:title`,content:title},{property:`og:description`,content:metaDescription},{property:`og:type`,content:`website`},{name:`twitter:card`,content:`summary`},{name:`twitter:creator`,content:((_site$siteMetadata2=site.siteMetadata)===null||_site$siteMetadata2===void 0?void 0:_site$siteMetadata2.author)||``},{name:`twitter:title`,content:title},{name:`twitter:description`,content:metaDescription}].concat(meta)});}Seo.defaultProps={lang:`en`,meta:[],description:``};Seo.propTypes={description:(prop_types__WEBPACK_IMPORTED_MODULE_1___default().string),lang:(prop_types__WEBPACK_IMPORTED_MODULE_1___default().string),meta:prop_types__WEBPACK_IMPORTED_MODULE_1___default().arrayOf((prop_types__WEBPACK_IMPORTED_MODULE_1___default().object)),title:(prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired)};/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Seo);
-
-/***/ }),
-
-/***/ 3484:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-// ESM COMPAT FLAG
-__webpack_require__.r(__webpack_exports__);
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  "default": () => (/* binding */ pages)
-});
-
-// EXTERNAL MODULE: external "/Users/owner/paul-salele/frontend/node_modules/react/index.js"
-var index_js_ = __webpack_require__(6283);
-var index_js_default = /*#__PURE__*/__webpack_require__.n(index_js_);
-// EXTERNAL MODULE: ./src/components/seo.js
-var seo = __webpack_require__(6179);
-;// CONCATENATED MODULE: ./node_modules/@headlessui/react/dist/_virtual/_rollupPluginBabelHelpers.js
+/* unused harmony exports arrayLikeToArray, unsupportedIterableToArray */
 function _extends() {
   _extends = Object.assign || function (target) {
     for (var i = 1; i < arguments.length; i++) {
@@ -129,8 +90,328 @@ function _createForOfIteratorHelperLoose(o, allowArrayLike) {
 
 //# sourceMappingURL=_rollupPluginBabelHelpers.js.map
 
-;// CONCATENATED MODULE: ./node_modules/@headlessui/react/dist/utils/match.esm.js
-function match_esm_match(value, lookup) {
+
+/***/ }),
+
+/***/ 7587:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "d": () => (/* binding */ Description),
+/* harmony export */   "f": () => (/* binding */ useDescriptions)
+/* harmony export */ });
+/* harmony import */ var _virtual_rollupPluginBabelHelpers_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(9642);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6283);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _utils_render_esm_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(8529);
+/* harmony import */ var _hooks_use_iso_morphic_effect_esm_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(852);
+/* harmony import */ var _hooks_use_id_esm_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2506);
+
+
+
+
+
+
+var DescriptionContext = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.createContext)(null);
+
+function useDescriptionContext() {
+  var context = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(DescriptionContext);
+
+  if (context === null) {
+    var err = new Error('You used a <Description /> component, but it is not inside a relevant parent.');
+    if (Error.captureStackTrace) Error.captureStackTrace(err, useDescriptionContext);
+    throw err;
+  }
+
+  return context;
+}
+
+function useDescriptions() {
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
+      descriptionIds = _useState[0],
+      setDescriptionIds = _useState[1];
+
+  return [// The actual id's as string or undefined
+  descriptionIds.length > 0 ? descriptionIds.join(' ') : undefined, // The provider component
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(function () {
+    return function DescriptionProvider(props) {
+      var register = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(function (value) {
+        setDescriptionIds(function (existing) {
+          return [].concat(existing, [value]);
+        });
+        return function () {
+          return setDescriptionIds(function (existing) {
+            var clone = existing.slice();
+            var idx = clone.indexOf(value);
+            if (idx !== -1) clone.splice(idx, 1);
+            return clone;
+          });
+        };
+      }, []);
+      var contextBag = (0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(function () {
+        return {
+          register: register,
+          slot: props.slot,
+          name: props.name,
+          props: props.props
+        };
+      }, [register, props.slot, props.name, props.props]);
+      return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(DescriptionContext.Provider, {
+        value: contextBag
+      }, props.children);
+    };
+  }, [setDescriptionIds])];
+} // ---
+
+var DEFAULT_DESCRIPTION_TAG = 'p';
+function Description(props) {
+  var context = useDescriptionContext();
+  var id = "headlessui-description-" + (0,_hooks_use_id_esm_js__WEBPACK_IMPORTED_MODULE_1__/* .useId */ .M)();
+  (0,_hooks_use_iso_morphic_effect_esm_js__WEBPACK_IMPORTED_MODULE_2__/* .useIsoMorphicEffect */ .e)(function () {
+    return context.register(id);
+  }, [id, context.register]);
+  var passThroughProps = props;
+
+  var propsWeControl = (0,_virtual_rollupPluginBabelHelpers_js__WEBPACK_IMPORTED_MODULE_3__/* ["extends"] */ .gY)({}, context.props, {
+    id: id
+  });
+
+  return (0,_utils_render_esm_js__WEBPACK_IMPORTED_MODULE_4__/* .render */ .sY)({
+    props: (0,_virtual_rollupPluginBabelHelpers_js__WEBPACK_IMPORTED_MODULE_3__/* ["extends"] */ .gY)({}, passThroughProps, propsWeControl),
+    slot: context.slot || {},
+    defaultTag: DEFAULT_DESCRIPTION_TAG,
+    name: context.name || 'Description'
+  });
+}
+
+
+//# sourceMappingURL=description.esm.js.map
+
+
+/***/ }),
+
+/***/ 2659:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "R": () => (/* binding */ Keys)
+/* harmony export */ });
+// TODO: This must already exist somewhere, right? 🤔
+// Ref: https://www.w3.org/TR/uievents-key/#named-key-attribute-values
+var Keys;
+
+(function (Keys) {
+  Keys["Space"] = " ";
+  Keys["Enter"] = "Enter";
+  Keys["Escape"] = "Escape";
+  Keys["Backspace"] = "Backspace";
+  Keys["ArrowLeft"] = "ArrowLeft";
+  Keys["ArrowUp"] = "ArrowUp";
+  Keys["ArrowRight"] = "ArrowRight";
+  Keys["ArrowDown"] = "ArrowDown";
+  Keys["Home"] = "Home";
+  Keys["End"] = "End";
+  Keys["PageUp"] = "PageUp";
+  Keys["PageDown"] = "PageDown";
+  Keys["Tab"] = "Tab";
+})(Keys || (Keys = {}));
+
+
+//# sourceMappingURL=keyboard.esm.js.map
+
+
+/***/ }),
+
+/***/ 2506:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "M": () => (/* binding */ useId)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6283);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _use_iso_morphic_effect_esm_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(852);
+/* harmony import */ var _use_server_handoff_complete_esm_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5989);
+
+
+
+
+// didn't take care of the Suspense case. To fix this we used the approach the @reach-ui/auto-id
+// uses.
+//
+// Credits: https://github.com/reach/reach-ui/blob/develop/packages/auto-id/src/index.tsx
+
+var id = 0;
+
+function generateId() {
+  return ++id;
+}
+
+function useId() {
+  var ready = (0,_use_server_handoff_complete_esm_js__WEBPACK_IMPORTED_MODULE_1__/* .useServerHandoffComplete */ .H)();
+
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(ready ? generateId : null),
+      id = _useState[0],
+      setId = _useState[1];
+
+  (0,_use_iso_morphic_effect_esm_js__WEBPACK_IMPORTED_MODULE_2__/* .useIsoMorphicEffect */ .e)(function () {
+    if (id === null) setId(generateId());
+  }, [id]);
+  return id != null ? '' + id : undefined;
+}
+
+
+//# sourceMappingURL=use-id.esm.js.map
+
+
+/***/ }),
+
+/***/ 852:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "e": () => (/* binding */ useIsoMorphicEffect)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6283);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var useIsoMorphicEffect = typeof window !== 'undefined' ? react__WEBPACK_IMPORTED_MODULE_0__.useLayoutEffect : react__WEBPACK_IMPORTED_MODULE_0__.useEffect;
+
+
+//# sourceMappingURL=use-iso-morphic-effect.esm.js.map
+
+
+/***/ }),
+
+/***/ 5989:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "H": () => (/* binding */ useServerHandoffComplete)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6283);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var state = {
+  serverHandoffComplete: false
+};
+function useServerHandoffComplete() {
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(state.serverHandoffComplete),
+      serverHandoffComplete = _useState[0],
+      setServerHandoffComplete = _useState[1];
+
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    if (serverHandoffComplete === true) return;
+    setServerHandoffComplete(true);
+  }, [serverHandoffComplete]);
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    if (state.serverHandoffComplete === false) state.serverHandoffComplete = true;
+  }, []);
+  return serverHandoffComplete;
+}
+
+
+//# sourceMappingURL=use-server-handoff-complete.esm.js.map
+
+
+/***/ }),
+
+/***/ 7471:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "T": () => (/* binding */ useSyncRefs)
+/* harmony export */ });
+/* harmony import */ var _virtual_rollupPluginBabelHelpers_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(9642);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6283);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+
+function useSyncRefs() {
+  for (var _len = arguments.length, refs = new Array(_len), _key = 0; _key < _len; _key++) {
+    refs[_key] = arguments[_key];
+  }
+
+  var cache = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(refs);
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    cache.current = refs;
+  }, [refs]);
+  return (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(function (value) {
+    for (var _iterator = (0,_virtual_rollupPluginBabelHelpers_js__WEBPACK_IMPORTED_MODULE_1__/* .createForOfIteratorHelperLoose */ .Ul)(cache.current), _step; !(_step = _iterator()).done;) {
+      var ref = _step.value;
+      if (ref == null) continue;
+      if (typeof ref === 'function') ref(value);else ref.current = value;
+    }
+  }, [cache]);
+}
+
+
+//# sourceMappingURL=use-sync-refs.esm.js.map
+
+
+/***/ }),
+
+/***/ 9016:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "P": () => (/* binding */ isDisabledReactIssue7711)
+/* harmony export */ });
+// See: https://github.com/facebook/react/issues/7711
+// See: https://github.com/facebook/react/pull/20612
+// See: https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#concept-fe-disabled (2.)
+function isDisabledReactIssue7711(element) {
+  var _ref, _parent;
+
+  var parent = element.parentElement;
+  var legend = null;
+
+  while (parent && !(parent instanceof HTMLFieldSetElement)) {
+    if (parent instanceof HTMLLegendElement) legend = parent;
+    parent = parent.parentElement;
+  }
+
+  var isParentDisabled = (_ref = ((_parent = parent) == null ? void 0 : _parent.getAttribute('disabled')) === '') != null ? _ref : false;
+  if (isParentDisabled && isFirstLegend(legend)) return false;
+  return isParentDisabled;
+}
+
+function isFirstLegend(element) {
+  if (!element) return false;
+  var previous = element.previousElementSibling;
+
+  while (previous !== null) {
+    if (previous instanceof HTMLLegendElement) return false;
+    previous = previous.previousElementSibling;
+  }
+
+  return true;
+}
+
+
+//# sourceMappingURL=bugs.esm.js.map
+
+
+/***/ }),
+
+/***/ 133:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "E": () => (/* binding */ match)
+/* harmony export */ });
+function match(value, lookup) {
   if (value in lookup) {
     var returnValue = lookup[value];
 
@@ -144,14 +425,30 @@ function match_esm_match(value, lookup) {
   var error = new Error("Tried to handle \"" + value + "\" but there is no handler defined. Only defined handlers are: " + Object.keys(lookup).map(function (key) {
     return "\"" + key + "\"";
   }).join(', ') + ".");
-  if (Error.captureStackTrace) Error.captureStackTrace(error, match_esm_match);
+  if (Error.captureStackTrace) Error.captureStackTrace(error, match);
   throw error;
 }
 
 
 //# sourceMappingURL=match.esm.js.map
 
-;// CONCATENATED MODULE: ./node_modules/@headlessui/react/dist/utils/render.esm.js
+
+/***/ }),
+
+/***/ 8529:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "AN": () => (/* binding */ Features),
+/* harmony export */   "l4": () => (/* binding */ RenderStrategy),
+/* harmony export */   "yV": () => (/* binding */ forwardRefWithAs),
+/* harmony export */   "sY": () => (/* binding */ render)
+/* harmony export */ });
+/* harmony import */ var _virtual_rollupPluginBabelHelpers_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(9642);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6283);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _match_esm_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(133);
 
 
 
@@ -200,7 +497,7 @@ function render(_ref) {
   if (featureFlags & Features.Static) {
     var _props$static = props["static"],
         isStatic = _props$static === void 0 ? false : _props$static,
-        rest = _objectWithoutPropertiesLoose(props, ["static"]); // When the `static` prop is passed as `true`, then the user is in control, thus we don't care about anything else
+        rest = (0,_virtual_rollupPluginBabelHelpers_js__WEBPACK_IMPORTED_MODULE_1__/* .objectWithoutPropertiesLoose */ .gK)(props, ["static"]); // When the `static` prop is passed as `true`, then the user is in control, thus we don't care about anything else
 
 
     if (isStatic) return _render(rest, slot, defaultTag, name);
@@ -211,13 +508,13 @@ function render(_ref) {
 
     var _props$unmount = props.unmount,
         unmount = _props$unmount === void 0 ? true : _props$unmount,
-        _rest = _objectWithoutPropertiesLoose(props, ["unmount"]);
+        _rest = (0,_virtual_rollupPluginBabelHelpers_js__WEBPACK_IMPORTED_MODULE_1__/* .objectWithoutPropertiesLoose */ .gK)(props, ["unmount"]);
 
     var strategy = unmount ? RenderStrategy.Unmount : RenderStrategy.Hidden;
-    return match_esm_match(strategy, (_match = {}, _match[RenderStrategy.Unmount] = function () {
+    return (0,_match_esm_js__WEBPACK_IMPORTED_MODULE_2__/* .match */ .E)(strategy, (_match = {}, _match[RenderStrategy.Unmount] = function () {
       return null;
     }, _match[RenderStrategy.Hidden] = function () {
-      return _render(_extends({}, _rest, {
+      return _render((0,_virtual_rollupPluginBabelHelpers_js__WEBPACK_IMPORTED_MODULE_1__/* ["extends"] */ .gY)({}, _rest, {
         hidden: true,
         style: {
           display: 'none'
@@ -243,7 +540,7 @@ function _render(props, slot, tag, name) {
       children = _omit.children,
       _omit$refName = _omit.refName,
       refName = _omit$refName === void 0 ? 'ref' : _omit$refName,
-      passThroughProps = _objectWithoutPropertiesLoose(_omit, ["as", "children", "refName"]); // This allows us to use `<HeadlessUIComponent as={MyComponent} refName="innerRef" />`
+      passThroughProps = (0,_virtual_rollupPluginBabelHelpers_js__WEBPACK_IMPORTED_MODULE_1__/* .objectWithoutPropertiesLoose */ .gK)(_omit, ["as", "children", "refName"]); // This allows us to use `<HeadlessUIComponent as={MyComponent} refName="innerRef" />`
 
 
   var refRelatedProps = props.ref !== undefined ? (_ref2 = {}, _ref2[refName] = props.ref, _ref2) : {};
@@ -253,9 +550,9 @@ function _render(props, slot, tag, name) {
     passThroughProps.className = passThroughProps.className(slot);
   }
 
-  if (Component === index_js_.Fragment) {
+  if (Component === react__WEBPACK_IMPORTED_MODULE_0__.Fragment) {
     if (Object.keys(passThroughProps).length > 0) {
-      if (!(0,index_js_.isValidElement)(resolvedChildren) || Array.isArray(resolvedChildren) && resolvedChildren.length > 1) {
+      if (!(0,react__WEBPACK_IMPORTED_MODULE_0__.isValidElement)(resolvedChildren) || Array.isArray(resolvedChildren) && resolvedChildren.length > 1) {
         throw new Error(['Passing props on "Fragment"!', '', "The current component <" + name + " /> is rendering a \"Fragment\".", "However we need to passthrough the following props:", Object.keys(passThroughProps).map(function (line) {
           return "  - " + line;
         }).join('\n'), '', 'You can apply a few solutions:', ['Add an `as="..."` prop, to ensure that we render an actual element instead of a "Fragment".', 'Render a single element as the child so that we can forward the props onto that element.'].map(function (line) {
@@ -263,12 +560,12 @@ function _render(props, slot, tag, name) {
         }).join('\n')].join('\n'));
       }
 
-      return (0,index_js_.cloneElement)(resolvedChildren, Object.assign({}, // Filter out undefined values so that they don't override the existing values
+      return (0,react__WEBPACK_IMPORTED_MODULE_0__.cloneElement)(resolvedChildren, Object.assign({}, // Filter out undefined values so that they don't override the existing values
       mergeEventFunctions(compact(omit(passThroughProps, ['ref'])), resolvedChildren.props, ['onClick']), refRelatedProps));
     }
   }
 
-  return (0,index_js_.createElement)(Component, Object.assign({}, omit(passThroughProps, ['ref']), Component !== index_js_.Fragment && refRelatedProps), resolvedChildren);
+  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(Component, Object.assign({}, omit(passThroughProps, ['ref']), Component !== react__WEBPACK_IMPORTED_MODULE_0__.Fragment && refRelatedProps), resolvedChildren);
 }
 /**
  * We can use this function for the following useCase:
@@ -304,7 +601,7 @@ function mergeEventFunctions(passThroughProps, existingProps, functionsToMerge) 
     }
   };
 
-  for (var _iterator = _createForOfIteratorHelperLoose(functionsToMerge), _step; !(_step = _iterator()).done;) {
+  for (var _iterator = (0,_virtual_rollupPluginBabelHelpers_js__WEBPACK_IMPORTED_MODULE_1__/* .createForOfIteratorHelperLoose */ .Ul)(functionsToMerge), _step; !(_step = _iterator()).done;) {
     _loop();
   }
 
@@ -319,7 +616,7 @@ function mergeEventFunctions(passThroughProps, existingProps, functionsToMerge) 
 function forwardRefWithAs(component) {
   var _component$displayNam;
 
-  return Object.assign((0,index_js_.forwardRef)(component), {
+  return Object.assign((0,react__WEBPACK_IMPORTED_MODULE_0__.forwardRef)(component), {
     displayName: (_component$displayNam = component.displayName) != null ? _component$displayNam : component.name
   });
 }
@@ -341,7 +638,7 @@ function omit(object, keysToOmit) {
 
   var clone = Object.assign({}, object);
 
-  for (var _iterator2 = _createForOfIteratorHelperLoose(keysToOmit), _step2; !(_step2 = _iterator2()).done;) {
+  for (var _iterator2 = (0,_virtual_rollupPluginBabelHelpers_js__WEBPACK_IMPORTED_MODULE_1__/* .createForOfIteratorHelperLoose */ .Ul)(keysToOmit), _step2; !(_step2 = _iterator2()).done;) {
     var key = _step2.value;
     if (key in clone) delete clone[key];
   }
@@ -352,1764 +649,31 @@ function omit(object, keysToOmit) {
 
 //# sourceMappingURL=render.esm.js.map
 
-;// CONCATENATED MODULE: ./node_modules/@headlessui/react/dist/hooks/use-iso-morphic-effect.esm.js
 
-
-var useIsoMorphicEffect = typeof window !== 'undefined' ? index_js_.useLayoutEffect : index_js_.useEffect;
-
-
-//# sourceMappingURL=use-iso-morphic-effect.esm.js.map
-
-;// CONCATENATED MODULE: ./node_modules/@headlessui/react/dist/hooks/use-server-handoff-complete.esm.js
-
-
-var state = {
-  serverHandoffComplete: false
-};
-function useServerHandoffComplete() {
-  var _useState = (0,index_js_.useState)(state.serverHandoffComplete),
-      serverHandoffComplete = _useState[0],
-      setServerHandoffComplete = _useState[1];
-
-  (0,index_js_.useEffect)(function () {
-    if (serverHandoffComplete === true) return;
-    setServerHandoffComplete(true);
-  }, [serverHandoffComplete]);
-  (0,index_js_.useEffect)(function () {
-    if (state.serverHandoffComplete === false) state.serverHandoffComplete = true;
-  }, []);
-  return serverHandoffComplete;
-}
-
-
-//# sourceMappingURL=use-server-handoff-complete.esm.js.map
-
-;// CONCATENATED MODULE: ./node_modules/@headlessui/react/dist/hooks/use-id.esm.js
-
-
-
-
-// didn't take care of the Suspense case. To fix this we used the approach the @reach-ui/auto-id
-// uses.
-//
-// Credits: https://github.com/reach/reach-ui/blob/develop/packages/auto-id/src/index.tsx
-
-var id = 0;
-
-function generateId() {
-  return ++id;
-}
-
-function useId() {
-  var ready = useServerHandoffComplete();
-
-  var _useState = (0,index_js_.useState)(ready ? generateId : null),
-      id = _useState[0],
-      setId = _useState[1];
-
-  useIsoMorphicEffect(function () {
-    if (id === null) setId(generateId());
-  }, [id]);
-  return id != null ? '' + id : undefined;
-}
-
-
-//# sourceMappingURL=use-id.esm.js.map
-
-;// CONCATENATED MODULE: ./node_modules/@headlessui/react/dist/hooks/use-is-mounted.esm.js
-
-
-function useIsMounted() {
-  var mounted = (0,index_js_.useRef)(false);
-  (0,index_js_.useEffect)(function () {
-    mounted.current = true;
-    return function () {
-      mounted.current = false;
-    };
-  }, []);
-  return mounted;
-}
-
-
-//# sourceMappingURL=use-is-mounted.esm.js.map
-
-;// CONCATENATED MODULE: ./node_modules/@headlessui/react/dist/internal/open-closed.esm.js
-
-
-var Context = /*#__PURE__*/(0,index_js_.createContext)(null);
-Context.displayName = 'OpenClosedContext';
-var State;
-
-(function (State) {
-  State[State["Open"] = 0] = "Open";
-  State[State["Closed"] = 1] = "Closed";
-})(State || (State = {}));
-
-function useOpenClosed() {
-  return (0,index_js_.useContext)(Context);
-}
-function OpenClosedProvider(_ref) {
-  var value = _ref.value,
-      children = _ref.children;
-  return index_js_default().createElement(Context.Provider, {
-    value: value
-  }, children);
-}
-
-
-//# sourceMappingURL=open-closed.esm.js.map
-
-;// CONCATENATED MODULE: ./node_modules/@headlessui/react/dist/hooks/use-is-initial-render.esm.js
-
-
-function useIsInitialRender() {
-  var initial = (0,index_js_.useRef)(true);
-  (0,index_js_.useEffect)(function () {
-    initial.current = false;
-  }, []);
-  return initial.current;
-}
-
-
-//# sourceMappingURL=use-is-initial-render.esm.js.map
-
-;// CONCATENATED MODULE: ./node_modules/@headlessui/react/dist/utils/disposables.esm.js
-
-
-function disposables() {
-  var disposables = [];
-  var api = {
-    requestAnimationFrame: function (_requestAnimationFrame) {
-      function requestAnimationFrame() {
-        return _requestAnimationFrame.apply(this, arguments);
-      }
-
-      requestAnimationFrame.toString = function () {
-        return _requestAnimationFrame.toString();
-      };
-
-      return requestAnimationFrame;
-    }(function () {
-      var raf = requestAnimationFrame.apply(void 0, arguments);
-      api.add(function () {
-        return cancelAnimationFrame(raf);
-      });
-    }),
-    nextFrame: function nextFrame() {
-      for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-        args[_key] = arguments[_key];
-      }
-
-      api.requestAnimationFrame(function () {
-        api.requestAnimationFrame.apply(api, args);
-      });
-    },
-    setTimeout: function (_setTimeout) {
-      function setTimeout() {
-        return _setTimeout.apply(this, arguments);
-      }
-
-      setTimeout.toString = function () {
-        return _setTimeout.toString();
-      };
-
-      return setTimeout;
-    }(function () {
-      var timer = setTimeout.apply(void 0, arguments);
-      api.add(function () {
-        return clearTimeout(timer);
-      });
-    }),
-    add: function add(cb) {
-      disposables.push(cb);
-    },
-    dispose: function dispose() {
-      for (var _iterator = _createForOfIteratorHelperLoose(disposables.splice(0)), _step; !(_step = _iterator()).done;) {
-        var dispose = _step.value;
-        dispose();
-      }
-    }
-  };
-  return api;
-}
-
-
-//# sourceMappingURL=disposables.esm.js.map
-
-;// CONCATENATED MODULE: ./node_modules/@headlessui/react/dist/utils/once.esm.js
-function once(cb) {
-  var state = {
-    called: false
-  };
-  return function () {
-    if (state.called) return;
-    state.called = true;
-    return cb.apply(void 0, arguments);
-  };
-}
-
-
-//# sourceMappingURL=once.esm.js.map
-
-;// CONCATENATED MODULE: ./node_modules/@headlessui/react/dist/components/transitions/utils/transition.esm.js
-
-
-
-function addClasses(node) {
-  var _node$classList;
-
-  for (var _len = arguments.length, classes = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
-    classes[_key - 1] = arguments[_key];
-  }
-
-  node && classes.length > 0 && (_node$classList = node.classList).add.apply(_node$classList, classes);
-}
-
-function removeClasses(node) {
-  var _node$classList2;
-
-  for (var _len2 = arguments.length, classes = new Array(_len2 > 1 ? _len2 - 1 : 0), _key2 = 1; _key2 < _len2; _key2++) {
-    classes[_key2 - 1] = arguments[_key2];
-  }
-
-  node && classes.length > 0 && (_node$classList2 = node.classList).remove.apply(_node$classList2, classes);
-}
-
-var Reason;
-
-(function (Reason) {
-  Reason["Finished"] = "finished";
-  Reason["Cancelled"] = "cancelled";
-})(Reason || (Reason = {}));
-
-function waitForTransition(node, done) {
-  var d = disposables();
-  if (!node) return d.dispose; // Safari returns a comma separated list of values, so let's sort them and take the highest value.
-
-  var _getComputedStyle = getComputedStyle(node),
-      transitionDuration = _getComputedStyle.transitionDuration,
-      transitionDelay = _getComputedStyle.transitionDelay;
-
-  var _map = [transitionDuration, transitionDelay].map(function (value) {
-    var _value$split$filter$m = value.split(',') // Remove falsy we can't work with
-    .filter(Boolean) // Values are returned as `0.3s` or `75ms`
-    .map(function (v) {
-      return v.includes('ms') ? parseFloat(v) : parseFloat(v) * 1000;
-    }).sort(function (a, z) {
-      return z - a;
-    }),
-        _value$split$filter$m2 = _value$split$filter$m[0],
-        resolvedValue = _value$split$filter$m2 === void 0 ? 0 : _value$split$filter$m2;
-
-    return resolvedValue;
-  }),
-      durationMs = _map[0],
-      delaysMs = _map[1]; // Waiting for the transition to end. We could use the `transitionend` event, however when no
-  // actual transition/duration is defined then the `transitionend` event is not fired.
-  //
-  // TODO: Downside is, when you slow down transitions via devtools this timeout is still using the
-  // full 100% speed instead of the 25% or 10%.
-
-
-  if (durationMs !== 0) {
-    d.setTimeout(function () {
-      done(Reason.Finished);
-    }, durationMs + delaysMs);
-  } else {
-    // No transition is happening, so we should cleanup already. Otherwise we have to wait until we
-    // get disposed.
-    done(Reason.Finished);
-  } // If we get disposed before the timeout runs we should cleanup anyway
-
-
-  d.add(function () {
-    return done(Reason.Cancelled);
-  });
-  return d.dispose;
-}
-
-function transition(node, base, from, to, entered, done) {
-  var d = disposables();
-
-  var _done = done !== undefined ? once(done) : function () {};
-
-  removeClasses.apply(void 0, [node].concat(entered));
-  addClasses.apply(void 0, [node].concat(base, from));
-  d.nextFrame(function () {
-    removeClasses.apply(void 0, [node].concat(from));
-    addClasses.apply(void 0, [node].concat(to));
-    d.add(waitForTransition(node, function (reason) {
-      removeClasses.apply(void 0, [node].concat(to, base));
-      addClasses.apply(void 0, [node].concat(entered));
-      return _done(reason);
-    }));
-  }); // Once we get disposed, we should ensure that we cleanup after ourselves. In case of an unmount,
-  // the node itself will be nullified and will be a no-op. In case of a full transition the classes
-  // are already removed which is also a no-op. However if you go from enter -> leave mid-transition
-  // then we have some leftovers that should be cleaned.
-
-  d.add(function () {
-    return removeClasses.apply(void 0, [node].concat(base, from, to, entered));
-  }); // When we get disposed early, than we should also call the done method but switch the reason.
-
-  d.add(function () {
-    return _done(Reason.Cancelled);
-  });
-  return d.dispose;
-}
-
-
-//# sourceMappingURL=transition.esm.js.map
-
-;// CONCATENATED MODULE: ./node_modules/@headlessui/react/dist/components/transitions/transition.esm.js
-
-
-
-
-
-
-
-
-
-
-
-
-function useSplitClasses(classes) {
-  if (classes === void 0) {
-    classes = '';
-  }
-
-  return (0,index_js_.useMemo)(function () {
-    return classes.split(' ').filter(function (className) {
-      return className.trim().length > 1;
-    });
-  }, [classes]);
-}
-
-var TransitionContext = /*#__PURE__*/(0,index_js_.createContext)(null);
-TransitionContext.displayName = 'TransitionContext';
-var TreeStates;
-
-(function (TreeStates) {
-  TreeStates["Visible"] = "visible";
-  TreeStates["Hidden"] = "hidden";
-})(TreeStates || (TreeStates = {}));
-
-function useTransitionContext() {
-  var context = (0,index_js_.useContext)(TransitionContext);
-
-  if (context === null) {
-    throw new Error('A <Transition.Child /> is used but it is missing a parent <Transition /> or <Transition.Root />.');
-  }
-
-  return context;
-}
-
-function useParentNesting() {
-  var context = (0,index_js_.useContext)(NestingContext);
-
-  if (context === null) {
-    throw new Error('A <Transition.Child /> is used but it is missing a parent <Transition /> or <Transition.Root />.');
-  }
-
-  return context;
-}
-
-var NestingContext = /*#__PURE__*/(0,index_js_.createContext)(null);
-NestingContext.displayName = 'NestingContext';
-
-function hasChildren(bag) {
-  if ('children' in bag) return hasChildren(bag.children);
-  return bag.current.filter(function (_ref) {
-    var state = _ref.state;
-    return state === TreeStates.Visible;
-  }).length > 0;
-}
-
-function useNesting(done) {
-  var doneRef = (0,index_js_.useRef)(done);
-  var transitionableChildren = (0,index_js_.useRef)([]);
-  var mounted = useIsMounted();
-  (0,index_js_.useEffect)(function () {
-    doneRef.current = done;
-  }, [done]);
-  var unregister = (0,index_js_.useCallback)(function (childId, strategy) {
-    var _match;
-
-    if (strategy === void 0) {
-      strategy = RenderStrategy.Hidden;
-    }
-
-    var idx = transitionableChildren.current.findIndex(function (_ref2) {
-      var id = _ref2.id;
-      return id === childId;
-    });
-    if (idx === -1) return;
-    match_esm_match(strategy, (_match = {}, _match[RenderStrategy.Unmount] = function () {
-      transitionableChildren.current.splice(idx, 1);
-    }, _match[RenderStrategy.Hidden] = function () {
-      transitionableChildren.current[idx].state = TreeStates.Hidden;
-    }, _match));
-
-    if (!hasChildren(transitionableChildren) && mounted.current) {
-      doneRef.current == null ? void 0 : doneRef.current();
-    }
-  }, [doneRef, mounted, transitionableChildren]);
-  var register = (0,index_js_.useCallback)(function (childId) {
-    var child = transitionableChildren.current.find(function (_ref3) {
-      var id = _ref3.id;
-      return id === childId;
-    });
-
-    if (!child) {
-      transitionableChildren.current.push({
-        id: childId,
-        state: TreeStates.Visible
-      });
-    } else if (child.state !== TreeStates.Visible) {
-      child.state = TreeStates.Visible;
-    }
-
-    return function () {
-      return unregister(childId, RenderStrategy.Unmount);
-    };
-  }, [transitionableChildren, unregister]);
-  return (0,index_js_.useMemo)(function () {
-    return {
-      children: transitionableChildren,
-      register: register,
-      unregister: unregister
-    };
-  }, [register, unregister, transitionableChildren]);
-}
-
-function noop() {}
-
-var eventNames = ['beforeEnter', 'afterEnter', 'beforeLeave', 'afterLeave'];
-
-function ensureEventHooksExist(events) {
-  var result = {};
-
-  for (var _iterator = _createForOfIteratorHelperLoose(eventNames), _step; !(_step = _iterator()).done;) {
-    var _events$name;
-
-    var name = _step.value;
-    result[name] = (_events$name = events[name]) != null ? _events$name : noop;
-  }
-
-  return result;
-}
-
-function useEvents(events) {
-  var eventsRef = (0,index_js_.useRef)(ensureEventHooksExist(events));
-  (0,index_js_.useEffect)(function () {
-    eventsRef.current = ensureEventHooksExist(events);
-  }, [events]);
-  return eventsRef;
-} // ---
-
-
-var DEFAULT_TRANSITION_CHILD_TAG = 'div';
-var TransitionChildRenderFeatures = Features.RenderStrategy;
-
-function TransitionChild(props) {
-  var _match3;
-
-  var beforeEnter = props.beforeEnter,
-      afterEnter = props.afterEnter,
-      beforeLeave = props.beforeLeave,
-      afterLeave = props.afterLeave,
-      enter = props.enter,
-      enterFrom = props.enterFrom,
-      enterTo = props.enterTo,
-      entered = props.entered,
-      leave = props.leave,
-      leaveFrom = props.leaveFrom,
-      leaveTo = props.leaveTo,
-      rest = _objectWithoutPropertiesLoose(props, ["beforeEnter", "afterEnter", "beforeLeave", "afterLeave", "enter", "enterFrom", "enterTo", "entered", "leave", "leaveFrom", "leaveTo"]);
-
-  var container = (0,index_js_.useRef)(null);
-
-  var _useState = (0,index_js_.useState)(TreeStates.Visible),
-      state = _useState[0],
-      setState = _useState[1];
-
-  var strategy = rest.unmount ? RenderStrategy.Unmount : RenderStrategy.Hidden;
-
-  var _useTransitionContext = useTransitionContext(),
-      show = _useTransitionContext.show,
-      appear = _useTransitionContext.appear;
-
-  var _useParentNesting = useParentNesting(),
-      register = _useParentNesting.register,
-      unregister = _useParentNesting.unregister;
-
-  var initial = useIsInitialRender();
-  var id = useId();
-  var isTransitioning = (0,index_js_.useRef)(false);
-  var nesting = useNesting(function () {
-    // When all children have been unmounted we can only hide ourselves if and only if we are not
-    // transitioning ourselves. Otherwise we would unmount before the transitions are finished.
-    if (!isTransitioning.current) {
-      setState(TreeStates.Hidden);
-      unregister(id);
-      events.current.afterLeave();
-    }
-  });
-  useIsoMorphicEffect(function () {
-    if (!id) return;
-    return register(id);
-  }, [register, id]);
-  useIsoMorphicEffect(function () {
-    var _match2;
-
-    // If we are in another mode than the Hidden mode then ignore
-    if (strategy !== RenderStrategy.Hidden) return;
-    if (!id) return; // Make sure that we are visible
-
-    if (show && state !== TreeStates.Visible) {
-      setState(TreeStates.Visible);
-      return;
-    }
-
-    match_esm_match(state, (_match2 = {}, _match2[TreeStates.Hidden] = function () {
-      return unregister(id);
-    }, _match2[TreeStates.Visible] = function () {
-      return register(id);
-    }, _match2));
-  }, [state, id, register, unregister, show, strategy]);
-  var enterClasses = useSplitClasses(enter);
-  var enterFromClasses = useSplitClasses(enterFrom);
-  var enterToClasses = useSplitClasses(enterTo);
-  var enteredClasses = useSplitClasses(entered);
-  var leaveClasses = useSplitClasses(leave);
-  var leaveFromClasses = useSplitClasses(leaveFrom);
-  var leaveToClasses = useSplitClasses(leaveTo);
-  var events = useEvents({
-    beforeEnter: beforeEnter,
-    afterEnter: afterEnter,
-    beforeLeave: beforeLeave,
-    afterLeave: afterLeave
-  });
-  var ready = useServerHandoffComplete();
-  (0,index_js_.useEffect)(function () {
-    if (ready && state === TreeStates.Visible && container.current === null) {
-      throw new Error('Did you forget to passthrough the `ref` to the actual DOM node?');
-    }
-  }, [container, state, ready]); // Skipping initial transition
-
-  var skip = initial && !appear;
-  useIsoMorphicEffect(function () {
-    var node = container.current;
-    if (!node) return;
-    if (skip) return;
-    isTransitioning.current = true;
-    if (show) events.current.beforeEnter();
-    if (!show) events.current.beforeLeave();
-    return show ? transition(node, enterClasses, enterFromClasses, enterToClasses, enteredClasses, function (reason) {
-      isTransitioning.current = false;
-      if (reason === Reason.Finished) events.current.afterEnter();
-    }) : transition(node, leaveClasses, leaveFromClasses, leaveToClasses, enteredClasses, function (reason) {
-      isTransitioning.current = false;
-      if (reason !== Reason.Finished) return; // When we don't have children anymore we can safely unregister from the parent and hide
-      // ourselves.
-
-      if (!hasChildren(nesting)) {
-        setState(TreeStates.Hidden);
-        unregister(id);
-        events.current.afterLeave();
-      }
-    });
-  }, [events, id, isTransitioning, unregister, nesting, container, skip, show, enterClasses, enterFromClasses, enterToClasses, leaveClasses, leaveFromClasses, leaveToClasses]);
-  var propsWeControl = {
-    ref: container
-  };
-  var passthroughProps = rest;
-  return index_js_default().createElement(NestingContext.Provider, {
-    value: nesting
-  }, index_js_default().createElement(OpenClosedProvider, {
-    value: match_esm_match(state, (_match3 = {}, _match3[TreeStates.Visible] = State.Open, _match3[TreeStates.Hidden] = State.Closed, _match3))
-  }, render({
-    props: _extends({}, passthroughProps, propsWeControl),
-    defaultTag: DEFAULT_TRANSITION_CHILD_TAG,
-    features: TransitionChildRenderFeatures,
-    visible: state === TreeStates.Visible,
-    name: 'Transition.Child'
-  })));
-}
-
-function Transition(props) {
-  // @ts-expect-error
-  var show = props.show,
-      _props$appear = props.appear,
-      appear = _props$appear === void 0 ? false : _props$appear,
-      unmount = props.unmount,
-      passthroughProps = _objectWithoutPropertiesLoose(props, ["show", "appear", "unmount"]);
-
-  var usesOpenClosedState = useOpenClosed();
-
-  if (show === undefined && usesOpenClosedState !== null) {
-    var _match4;
-
-    show = match_esm_match(usesOpenClosedState, (_match4 = {}, _match4[State.Open] = true, _match4[State.Closed] = false, _match4));
-  }
-
-  if (![true, false].includes(show)) {
-    throw new Error('A <Transition /> is used but it is missing a `show={true | false}` prop.');
-  }
-
-  var _useState2 = (0,index_js_.useState)(show ? TreeStates.Visible : TreeStates.Hidden),
-      state = _useState2[0],
-      setState = _useState2[1];
-
-  var nestingBag = useNesting(function () {
-    setState(TreeStates.Hidden);
-  });
-  var initial = useIsInitialRender();
-  var transitionBag = (0,index_js_.useMemo)(function () {
-    return {
-      show: show,
-      appear: appear || !initial
-    };
-  }, [show, appear, initial]);
-  (0,index_js_.useEffect)(function () {
-    if (show) {
-      setState(TreeStates.Visible);
-    } else if (!hasChildren(nestingBag)) {
-      setState(TreeStates.Hidden);
-    }
-  }, [show, nestingBag]);
-  var sharedProps = {
-    unmount: unmount
-  };
-  return index_js_default().createElement(NestingContext.Provider, {
-    value: nestingBag
-  }, index_js_default().createElement(TransitionContext.Provider, {
-    value: transitionBag
-  }, render({
-    props: _extends({}, sharedProps, {
-      as: index_js_.Fragment,
-      children: index_js_default().createElement(TransitionChild, Object.assign({}, sharedProps, passthroughProps))
-    }),
-    defaultTag: index_js_.Fragment,
-    features: TransitionChildRenderFeatures,
-    visible: state === TreeStates.Visible,
-    name: 'Transition'
-  })));
-}
-
-Transition.Child = function Child(props) {
-  var hasTransitionContext = (0,index_js_.useContext)(TransitionContext) !== null;
-  var hasOpenClosedContext = useOpenClosed() !== null;
-  return !hasTransitionContext && hasOpenClosedContext ? index_js_default().createElement(Transition, Object.assign({}, props)) : index_js_default().createElement(TransitionChild, Object.assign({}, props));
-};
-
-Transition.Root = Transition;
-
-
-//# sourceMappingURL=transition.esm.js.map
-
-;// CONCATENATED MODULE: ./node_modules/@headlessui/react/dist/hooks/use-sync-refs.esm.js
-
-
-
-function useSyncRefs() {
-  for (var _len = arguments.length, refs = new Array(_len), _key = 0; _key < _len; _key++) {
-    refs[_key] = arguments[_key];
-  }
-
-  var cache = (0,index_js_.useRef)(refs);
-  (0,index_js_.useEffect)(function () {
-    cache.current = refs;
-  }, [refs]);
-  return (0,index_js_.useCallback)(function (value) {
-    for (var _iterator = _createForOfIteratorHelperLoose(cache.current), _step; !(_step = _iterator()).done;) {
-      var ref = _step.value;
-      if (ref == null) continue;
-      if (typeof ref === 'function') ref(value);else ref.current = value;
-    }
-  }, [cache]);
-}
-
-
-//# sourceMappingURL=use-sync-refs.esm.js.map
-
-;// CONCATENATED MODULE: ./node_modules/@headlessui/react/dist/components/keyboard.esm.js
-// TODO: This must already exist somewhere, right? 🤔
-// Ref: https://www.w3.org/TR/uievents-key/#named-key-attribute-values
-var Keys;
-
-(function (Keys) {
-  Keys["Space"] = " ";
-  Keys["Enter"] = "Enter";
-  Keys["Escape"] = "Escape";
-  Keys["Backspace"] = "Backspace";
-  Keys["ArrowLeft"] = "ArrowLeft";
-  Keys["ArrowUp"] = "ArrowUp";
-  Keys["ArrowRight"] = "ArrowRight";
-  Keys["ArrowDown"] = "ArrowDown";
-  Keys["Home"] = "Home";
-  Keys["End"] = "End";
-  Keys["PageUp"] = "PageUp";
-  Keys["PageDown"] = "PageDown";
-  Keys["Tab"] = "Tab";
-})(Keys || (Keys = {}));
-
-
-//# sourceMappingURL=keyboard.esm.js.map
-
-;// CONCATENATED MODULE: ./node_modules/@headlessui/react/dist/utils/bugs.esm.js
-// See: https://github.com/facebook/react/issues/7711
-// See: https://github.com/facebook/react/pull/20612
-// See: https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#concept-fe-disabled (2.)
-function isDisabledReactIssue7711(element) {
-  var _ref, _parent;
-
-  var parent = element.parentElement;
-  var legend = null;
-
-  while (parent && !(parent instanceof HTMLFieldSetElement)) {
-    if (parent instanceof HTMLLegendElement) legend = parent;
-    parent = parent.parentElement;
-  }
-
-  var isParentDisabled = (_ref = ((_parent = parent) == null ? void 0 : _parent.getAttribute('disabled')) === '') != null ? _ref : false;
-  if (isParentDisabled && isFirstLegend(legend)) return false;
-  return isParentDisabled;
-}
-
-function isFirstLegend(element) {
-  if (!element) return false;
-  var previous = element.previousElementSibling;
-
-  while (previous !== null) {
-    if (previous instanceof HTMLLegendElement) return false;
-    previous = previous.previousElementSibling;
-  }
-
-  return true;
-}
-
-
-//# sourceMappingURL=bugs.esm.js.map
-
-;// CONCATENATED MODULE: ./node_modules/@headlessui/react/dist/hooks/use-window-event.esm.js
-
-
-function useWindowEvent(type, listener, options) {
-  var listenerRef = (0,index_js_.useRef)(listener);
-  listenerRef.current = listener;
-  (0,index_js_.useEffect)(function () {
-    function handler(event) {
-      listenerRef.current.call(window, event);
-    }
-
-    window.addEventListener(type, handler, options);
-    return function () {
-      return window.removeEventListener(type, handler, options);
-    };
-  }, [type, options]);
-}
-
-
-//# sourceMappingURL=use-window-event.esm.js.map
-
-;// CONCATENATED MODULE: ./node_modules/@headlessui/react/dist/utils/focus-management.esm.js
-
-
-//  - https://stackoverflow.com/a/30753870
-
-var focusableSelector = /*#__PURE__*/['[contentEditable=true]', '[tabindex]', 'a[href]', 'area[href]', 'button:not([disabled])', 'iframe', 'input:not([disabled])', 'select:not([disabled])', 'textarea:not([disabled])'].map( false ? // TODO: Remove this once JSDOM fixes the issue where an element that is
-// "hidden" can be the document.activeElement, because this is not possible
-// in real browsers.
-// TODO: Remove this once JSDOM fixes the issue where an element that is
-0 : function (selector) {
-  return selector + ":not([tabindex='-1'])";
-}).join(',');
-var Focus;
-
-(function (Focus) {
-  /** Focus the first non-disabled element */
-  Focus[Focus["First"] = 1] = "First";
-  /** Focus the previous non-disabled element */
-
-  Focus[Focus["Previous"] = 2] = "Previous";
-  /** Focus the next non-disabled element */
-
-  Focus[Focus["Next"] = 4] = "Next";
-  /** Focus the last non-disabled element */
-
-  Focus[Focus["Last"] = 8] = "Last";
-  /** Wrap tab around */
-
-  Focus[Focus["WrapAround"] = 16] = "WrapAround";
-  /** Prevent scrolling the focusable elements into view */
-
-  Focus[Focus["NoScroll"] = 32] = "NoScroll";
-})(Focus || (Focus = {}));
-
-var FocusResult;
-
-(function (FocusResult) {
-  /** Something went wrong while trying to focus. */
-  FocusResult[FocusResult["Error"] = 0] = "Error";
-  /** When `Focus.WrapAround` is enabled, going from position `N` to `N+1` where `N` is the last index in the array, then we overflow. */
-
-  FocusResult[FocusResult["Overflow"] = 1] = "Overflow";
-  /** Focus was successful. */
-
-  FocusResult[FocusResult["Success"] = 2] = "Success";
-  /** When `Focus.WrapAround` is enabled, going from position `N` to `N-1` where `N` is the first index in the array, then we underflow. */
-
-  FocusResult[FocusResult["Underflow"] = 3] = "Underflow";
-})(FocusResult || (FocusResult = {}));
-
-var Direction;
-
-(function (Direction) {
-  Direction[Direction["Previous"] = -1] = "Previous";
-  Direction[Direction["Next"] = 1] = "Next";
-})(Direction || (Direction = {}));
-
-function getFocusableElements(container) {
-  if (container === void 0) {
-    container = document.body;
-  }
-
-  if (container == null) return [];
-  return Array.from(container.querySelectorAll(focusableSelector));
-}
-var FocusableMode;
-
-(function (FocusableMode) {
-  /** The element itself must be focusable. */
-  FocusableMode[FocusableMode["Strict"] = 0] = "Strict";
-  /** The element should be inside of a focusable element. */
-
-  FocusableMode[FocusableMode["Loose"] = 1] = "Loose";
-})(FocusableMode || (FocusableMode = {}));
-
-function isFocusableElement(element, mode) {
-  var _match;
-
-  if (mode === void 0) {
-    mode = FocusableMode.Strict;
-  }
-
-  if (element === document.body) return false;
-  return match(mode, (_match = {}, _match[FocusableMode.Strict] = function () {
-    return element.matches(focusableSelector);
-  }, _match[FocusableMode.Loose] = function () {
-    var next = element;
-
-    while (next !== null) {
-      if (next.matches(focusableSelector)) return true;
-      next = next.parentElement;
-    }
-
-    return false;
-  }, _match));
-}
-function focusElement(element) {
-  element == null ? void 0 : element.focus({
-    preventScroll: true
-  });
-}
-function focusIn(container, focus) {
-  var elements = Array.isArray(container) ? container : getFocusableElements(container);
-  var active = document.activeElement;
-
-  var direction = function () {
-    if (focus & (Focus.First | Focus.Next)) return Direction.Next;
-    if (focus & (Focus.Previous | Focus.Last)) return Direction.Previous;
-    throw new Error('Missing Focus.First, Focus.Previous, Focus.Next or Focus.Last');
-  }();
-
-  var startIndex = function () {
-    if (focus & Focus.First) return 0;
-    if (focus & Focus.Previous) return Math.max(0, elements.indexOf(active)) - 1;
-    if (focus & Focus.Next) return Math.max(0, elements.indexOf(active)) + 1;
-    if (focus & Focus.Last) return elements.length - 1;
-    throw new Error('Missing Focus.First, Focus.Previous, Focus.Next or Focus.Last');
-  }();
-
-  var focusOptions = focus & Focus.NoScroll ? {
-    preventScroll: true
-  } : {};
-  var offset = 0;
-  var total = elements.length;
-  var next = undefined;
-
-  do {
-    var _next;
-
-    // Guard against infinite loops
-    if (offset >= total || offset + total <= 0) return FocusResult.Error;
-    var nextIdx = startIndex + offset;
-
-    if (focus & Focus.WrapAround) {
-      nextIdx = (nextIdx + total) % total;
-    } else {
-      if (nextIdx < 0) return FocusResult.Underflow;
-      if (nextIdx >= total) return FocusResult.Overflow;
-    }
-
-    next = elements[nextIdx]; // Try the focus the next element, might not work if it is "hidden" to the user.
-
-    (_next = next) == null ? void 0 : _next.focus(focusOptions); // Try the next one in line
-
-    offset += direction;
-  } while (next !== document.activeElement); // This is a little weird, but let me try and explain: There are a few scenario's
-  // in chrome for example where a focused `<a>` tag does not get the default focus
-  // styles and sometimes they do. This highly depends on whether you started by
-  // clicking or by using your keyboard. When you programmatically add focus `anchor.focus()`
-  // then the active element (document.activeElement) is this anchor, which is expected.
-  // However in that case the default focus styles are not applied *unless* you
-  // also add this tabindex.
-
-
-  if (!next.hasAttribute('tabindex')) next.setAttribute('tabindex', '0');
-  return FocusResult.Success;
-}
-
-
-//# sourceMappingURL=focus-management.esm.js.map
-
-;// CONCATENATED MODULE: ./node_modules/@headlessui/react/dist/hooks/use-focus-trap.esm.js
-
-
-
-
-
-
-
-var use_focus_trap_esm_Features;
-
-(function (Features) {
-  /** No features enabled for the `useFocusTrap` hook. */
-  Features[Features["None"] = 1] = "None";
-  /** Ensure that we move focus initially into the container. */
-
-  Features[Features["InitialFocus"] = 2] = "InitialFocus";
-  /** Ensure that pressing `Tab` and `Shift+Tab` is trapped within the container. */
-
-  Features[Features["TabLock"] = 4] = "TabLock";
-  /** Ensure that programmatically moving focus outside of the container is disallowed. */
-
-  Features[Features["FocusLock"] = 8] = "FocusLock";
-  /** Ensure that we restore the focus when unmounting the component that uses this `useFocusTrap` hook. */
-
-  Features[Features["RestoreFocus"] = 16] = "RestoreFocus";
-  /** Enable all features. */
-
-  Features[Features["All"] = 30] = "All";
-})(use_focus_trap_esm_Features || (use_focus_trap_esm_Features = {}));
-
-function useFocusTrap(container, features, _temp) {
-  if (features === void 0) {
-    features = use_focus_trap_esm_Features.All;
-  }
-
-  var _ref = _temp === void 0 ? {} : _temp,
-      initialFocus = _ref.initialFocus,
-      containers = _ref.containers;
-
-  var restoreElement = (0,index_js_.useRef)(typeof window !== 'undefined' ? document.activeElement : null);
-  var previousActiveElement = (0,index_js_.useRef)(null);
-  var mounted = useIsMounted();
-  var featuresRestoreFocus = Boolean(features & use_focus_trap_esm_Features.RestoreFocus);
-  var featuresInitialFocus = Boolean(features & use_focus_trap_esm_Features.InitialFocus); // Capture the currently focused element, before we enable the focus trap.
-
-  (0,index_js_.useEffect)(function () {
-    if (!featuresRestoreFocus) return;
-    restoreElement.current = document.activeElement;
-  }, [featuresRestoreFocus]); // Restore the focus when we unmount the component.
-
-  (0,index_js_.useEffect)(function () {
-    if (!featuresRestoreFocus) return;
-    return function () {
-      focusElement(restoreElement.current);
-      restoreElement.current = null;
-    };
-  }, [featuresRestoreFocus]); // Handle initial focus
-
-  (0,index_js_.useEffect)(function () {
-    if (!featuresInitialFocus) return;
-    if (!container.current) return;
-    var activeElement = document.activeElement;
-
-    if (initialFocus == null ? void 0 : initialFocus.current) {
-      if ((initialFocus == null ? void 0 : initialFocus.current) === activeElement) {
-        previousActiveElement.current = activeElement;
-        return; // Initial focus ref is already the active element
-      }
-    } else if (container.current.contains(activeElement)) {
-      previousActiveElement.current = activeElement;
-      return; // Already focused within Dialog
-    } // Try to focus the initialFocus ref
-
-
-    if (initialFocus == null ? void 0 : initialFocus.current) {
-      focusElement(initialFocus.current);
-    } else {
-      if (focusIn(container.current, Focus.First) === FocusResult.Error) {
-        console.warn('There are no focusable elements inside the <FocusTrap />');
-      }
-    }
-
-    previousActiveElement.current = document.activeElement;
-  }, [container, initialFocus, featuresInitialFocus]); // Handle `Tab` & `Shift+Tab` keyboard events
-
-  useWindowEvent('keydown', function (event) {
-    if (!(features & use_focus_trap_esm_Features.TabLock)) return;
-    if (!container.current) return;
-    if (event.key !== Keys.Tab) return;
-    event.preventDefault();
-
-    if (focusIn(container.current, (event.shiftKey ? Focus.Previous : Focus.Next) | Focus.WrapAround) === FocusResult.Success) {
-      previousActiveElement.current = document.activeElement;
-    }
-  }); // Prevent programmatically escaping the container
-
-  useWindowEvent('focus', function (event) {
-    if (!(features & use_focus_trap_esm_Features.FocusLock)) return;
-    var allContainers = new Set(containers == null ? void 0 : containers.current);
-    allContainers.add(container);
-    if (!allContainers.size) return;
-    var previous = previousActiveElement.current;
-    if (!previous) return;
-    if (!mounted.current) return;
-    var toElement = event.target;
-
-    if (toElement && toElement instanceof HTMLElement) {
-      if (!contains(allContainers, toElement)) {
-        event.preventDefault();
-        event.stopPropagation();
-        focusElement(previous);
-      } else {
-        previousActiveElement.current = toElement;
-        focusElement(toElement);
-      }
-    } else {
-      focusElement(previousActiveElement.current);
-    }
-  }, true);
-}
-
-function contains(containers, element) {
-  for (var _iterator = _createForOfIteratorHelperLoose(containers), _step; !(_step = _iterator()).done;) {
-    var _container$current;
-
-    var container = _step.value;
-    if ((_container$current = container.current) == null ? void 0 : _container$current.contains(element)) return true;
-  }
-
-  return false;
-}
-
-
-//# sourceMappingURL=use-focus-trap.esm.js.map
-
-;// CONCATENATED MODULE: ./node_modules/@headlessui/react/dist/hooks/use-inert-others.esm.js
-
-
-
-var interactables = /*#__PURE__*/new Set();
-var originals = /*#__PURE__*/new Map();
-
-function inert(element) {
-  element.setAttribute('aria-hidden', 'true'); // @ts-expect-error `inert` does not exist on HTMLElement (yet!)
-
-  element.inert = true;
-}
-
-function restore(element) {
-  var original = originals.get(element);
-  if (!original) return;
-  if (original['aria-hidden'] === null) element.removeAttribute('aria-hidden');else element.setAttribute('aria-hidden', original['aria-hidden']); // @ts-expect-error `inert` does not exist on HTMLElement (yet!)
-
-  element.inert = original.inert;
-}
-
-function useInertOthers(container, enabled) {
-  if (enabled === void 0) {
-    enabled = true;
-  }
-
-  useIsoMorphicEffect(function () {
-    if (!enabled) return;
-    if (!container.current) return;
-    var element = container.current; // Mark myself as an interactable element
-
-    interactables.add(element); // Restore elements that now contain an interactable child
-
-    for (var _iterator = _createForOfIteratorHelperLoose(originals.keys()), _step; !(_step = _iterator()).done;) {
-      var original = _step.value;
-
-      if (original.contains(element)) {
-        restore(original);
-        originals["delete"](original);
-      }
-    } // Collect direct children of the body
-
-
-    document.querySelectorAll('body > *').forEach(function (child) {
-      if (!(child instanceof HTMLElement)) return; // Skip non-HTMLElements
-      // Skip the interactables, and the parents of the interactables
-
-      for (var _iterator2 = _createForOfIteratorHelperLoose(interactables), _step2; !(_step2 = _iterator2()).done;) {
-        var interactable = _step2.value;
-        if (child.contains(interactable)) return;
-      } // Keep track of the elements
-
-
-      if (interactables.size === 1) {
-        originals.set(child, {
-          'aria-hidden': child.getAttribute('aria-hidden'),
-          // @ts-expect-error `inert` does not exist on HTMLElement (yet!)
-          inert: child.inert
-        }); // Mutate the element
-
-        inert(child);
-      }
-    });
-    return function () {
-      // Inert is disabled on the current element
-      interactables["delete"](element); // We still have interactable elements, therefore this one and its parent
-      // will become inert as well.
-
-      if (interactables.size > 0) {
-        // Collect direct children of the body
-        document.querySelectorAll('body > *').forEach(function (child) {
-          if (!(child instanceof HTMLElement)) return; // Skip non-HTMLElements
-          // Skip already inert parents
-
-          if (originals.has(child)) return; // Skip the interactables, and the parents of the interactables
-
-          for (var _iterator3 = _createForOfIteratorHelperLoose(interactables), _step3; !(_step3 = _iterator3()).done;) {
-            var interactable = _step3.value;
-            if (child.contains(interactable)) return;
-          }
-
-          originals.set(child, {
-            'aria-hidden': child.getAttribute('aria-hidden'),
-            // @ts-expect-error `inert` does not exist on HTMLElement (yet!)
-            inert: child.inert
-          }); // Mutate the element
-
-          inert(child);
-        });
-      } else {
-        for (var _iterator4 = _createForOfIteratorHelperLoose(originals.keys()), _step4; !(_step4 = _iterator4()).done;) {
-          var _element = _step4.value;
-          // Restore
-          restore(_element); // Cleanup
-
-          originals["delete"](_element);
-        }
-      }
-    };
-  }, [enabled]);
-}
-
-
-//# sourceMappingURL=use-inert-others.esm.js.map
-
-;// CONCATENATED MODULE: ./node_modules/@headlessui/react/dist/internal/portal-force-root.esm.js
-
-
-var ForcePortalRootContext = /*#__PURE__*/(0,index_js_.createContext)(false);
-function usePortalRoot() {
-  return (0,index_js_.useContext)(ForcePortalRootContext);
-}
-function ForcePortalRoot(props) {
-  return index_js_default().createElement(ForcePortalRootContext.Provider, {
-    value: props.force
-  }, props.children);
-}
-
-
-//# sourceMappingURL=portal-force-root.esm.js.map
-
-// EXTERNAL MODULE: ./node_modules/react-dom/index.js
-var react_dom = __webpack_require__(3935);
-;// CONCATENATED MODULE: ./node_modules/@headlessui/react/dist/components/portal/portal.esm.js
-
-
-
-
-
-
-
-
-function usePortalTarget() {
-  var forceInRoot = usePortalRoot();
-  var groupTarget = (0,index_js_.useContext)(PortalGroupContext);
-
-  var _useState = (0,index_js_.useState)(function () {
-    // Group context is used, but still null
-    if (!forceInRoot && groupTarget !== null) return null; // No group context is used, let's create a default portal root
-
-    if (typeof window === 'undefined') return null;
-    var existingRoot = document.getElementById('headlessui-portal-root');
-    if (existingRoot) return existingRoot;
-    var root = document.createElement('div');
-    root.setAttribute('id', 'headlessui-portal-root');
-    return document.body.appendChild(root);
-  }),
-      target = _useState[0],
-      setTarget = _useState[1];
-
-  (0,index_js_.useEffect)(function () {
-    if (forceInRoot) return;
-    if (groupTarget === null) return;
-    setTarget(groupTarget.current);
-  }, [groupTarget, setTarget, forceInRoot]);
-  return target;
-} // ---
-
-
-var DEFAULT_PORTAL_TAG = index_js_.Fragment;
-function Portal(props) {
-  var passthroughProps = props;
-  var target = usePortalTarget();
-
-  var _useState2 = (0,index_js_.useState)(function () {
-    return typeof window === 'undefined' ? null : document.createElement('div');
-  }),
-      element = _useState2[0];
-
-  var ready = useServerHandoffComplete();
-  useIsoMorphicEffect(function () {
-    if (!target) return;
-    if (!element) return;
-    target.appendChild(element);
-    return function () {
-      if (!target) return;
-      if (!element) return;
-      target.removeChild(element);
-
-      if (target.childNodes.length <= 0) {
-        var _target$parentElement;
-
-        (_target$parentElement = target.parentElement) == null ? void 0 : _target$parentElement.removeChild(target);
-      }
-    };
-  }, [target, element]);
-  if (!ready) return null;
-  return !target || !element ? null : (0,react_dom.createPortal)(render({
-    props: passthroughProps,
-    defaultTag: DEFAULT_PORTAL_TAG,
-    name: 'Portal'
-  }), element);
-} // ---
-
-var DEFAULT_GROUP_TAG = index_js_.Fragment;
-var PortalGroupContext = /*#__PURE__*/(0,index_js_.createContext)(null);
-
-function Group(props) {
-  var target = props.target,
-      passthroughProps = _objectWithoutPropertiesLoose(props, ["target"]);
-
-  return index_js_default().createElement(PortalGroupContext.Provider, {
-    value: target
-  }, render({
-    props: passthroughProps,
-    defaultTag: DEFAULT_GROUP_TAG,
-    name: 'Popover.Group'
-  }));
-} // ---
-
-
-Portal.Group = Group;
-
-
-//# sourceMappingURL=portal.esm.js.map
-
-;// CONCATENATED MODULE: ./node_modules/@headlessui/react/dist/components/description/description.esm.js
-
-
-
-
-
-
-var DescriptionContext = /*#__PURE__*/(0,index_js_.createContext)(null);
-
-function useDescriptionContext() {
-  var context = (0,index_js_.useContext)(DescriptionContext);
-
-  if (context === null) {
-    var err = new Error('You used a <Description /> component, but it is not inside a relevant parent.');
-    if (Error.captureStackTrace) Error.captureStackTrace(err, useDescriptionContext);
-    throw err;
-  }
-
-  return context;
-}
-
-function useDescriptions() {
-  var _useState = (0,index_js_.useState)([]),
-      descriptionIds = _useState[0],
-      setDescriptionIds = _useState[1];
-
-  return [// The actual id's as string or undefined
-  descriptionIds.length > 0 ? descriptionIds.join(' ') : undefined, // The provider component
-  (0,index_js_.useMemo)(function () {
-    return function DescriptionProvider(props) {
-      var register = (0,index_js_.useCallback)(function (value) {
-        setDescriptionIds(function (existing) {
-          return [].concat(existing, [value]);
-        });
-        return function () {
-          return setDescriptionIds(function (existing) {
-            var clone = existing.slice();
-            var idx = clone.indexOf(value);
-            if (idx !== -1) clone.splice(idx, 1);
-            return clone;
-          });
-        };
-      }, []);
-      var contextBag = (0,index_js_.useMemo)(function () {
-        return {
-          register: register,
-          slot: props.slot,
-          name: props.name,
-          props: props.props
-        };
-      }, [register, props.slot, props.name, props.props]);
-      return index_js_default().createElement(DescriptionContext.Provider, {
-        value: contextBag
-      }, props.children);
-    };
-  }, [setDescriptionIds])];
-} // ---
-
-var DEFAULT_DESCRIPTION_TAG = 'p';
-function Description(props) {
-  var context = useDescriptionContext();
-  var id = "headlessui-description-" + useId();
-  useIsoMorphicEffect(function () {
-    return context.register(id);
-  }, [id, context.register]);
-  var passThroughProps = props;
-
-  var propsWeControl = _extends({}, context.props, {
-    id: id
-  });
-
-  return render({
-    props: _extends({}, passThroughProps, propsWeControl),
-    slot: context.slot || {},
-    defaultTag: DEFAULT_DESCRIPTION_TAG,
-    name: context.name || 'Description'
-  });
-}
-
-
-//# sourceMappingURL=description.esm.js.map
-
-;// CONCATENATED MODULE: ./node_modules/@headlessui/react/dist/internal/stack-context.esm.js
-
-
-
-var StackContext = /*#__PURE__*/(0,index_js_.createContext)(function () {});
-StackContext.displayName = 'StackContext';
-var StackMessage;
-
-(function (StackMessage) {
-  StackMessage[StackMessage["Add"] = 0] = "Add";
-  StackMessage[StackMessage["Remove"] = 1] = "Remove";
-})(StackMessage || (StackMessage = {}));
-
-function useStackContext() {
-  return (0,index_js_.useContext)(StackContext);
-}
-function StackProvider(_ref) {
-  var children = _ref.children,
-      onUpdate = _ref.onUpdate,
-      type = _ref.type,
-      element = _ref.element;
-  var parentUpdate = useStackContext();
-  var notify = (0,index_js_.useCallback)(function () {
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    // Notify our layer
-    onUpdate == null ? void 0 : onUpdate.apply(void 0, args); // Notify the parent
-
-    parentUpdate.apply(void 0, args);
-  }, [parentUpdate, onUpdate]);
-  useIsoMorphicEffect(function () {
-    notify(StackMessage.Add, type, element);
-    return function () {
-      return notify(StackMessage.Remove, type, element);
-    };
-  }, [notify, type, element]);
-  return index_js_default().createElement(StackContext.Provider, {
-    value: notify
-  }, children);
-}
-
-
-//# sourceMappingURL=stack-context.esm.js.map
-
-;// CONCATENATED MODULE: ./node_modules/@headlessui/react/dist/components/dialog/dialog.esm.js
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-var _reducers;
-var DialogStates;
-
-(function (DialogStates) {
-  DialogStates[DialogStates["Open"] = 0] = "Open";
-  DialogStates[DialogStates["Closed"] = 1] = "Closed";
-})(DialogStates || (DialogStates = {}));
-
-var ActionTypes;
-
-(function (ActionTypes) {
-  ActionTypes[ActionTypes["SetTitleId"] = 0] = "SetTitleId";
-})(ActionTypes || (ActionTypes = {}));
-
-var reducers = (_reducers = {}, _reducers[ActionTypes.SetTitleId] = function (state, action) {
-  if (state.titleId === action.id) return state;
-  return _extends({}, state, {
-    titleId: action.id
-  });
-}, _reducers);
-var DialogContext = /*#__PURE__*/(0,index_js_.createContext)(null);
-DialogContext.displayName = 'DialogContext';
-
-function useDialogContext(component) {
-  var context = (0,index_js_.useContext)(DialogContext);
-
-  if (context === null) {
-    var err = new Error("<" + component + " /> is missing a parent <" + Dialog.displayName + " /> component.");
-    if (Error.captureStackTrace) Error.captureStackTrace(err, useDialogContext);
-    throw err;
-  }
-
-  return context;
-}
-
-function stateReducer(state, action) {
-  return match_esm_match(action.type, reducers, state, action);
-} // ---
-
-
-var DEFAULT_DIALOG_TAG = 'div';
-var DialogRenderFeatures = Features.RenderStrategy | Features.Static;
-var DialogRoot = /*#__PURE__*/forwardRefWithAs(function Dialog(props, ref) {
-  var open = props.open,
-      onClose = props.onClose,
-      initialFocus = props.initialFocus,
-      rest = _objectWithoutPropertiesLoose(props, ["open", "onClose", "initialFocus"]);
-
-  var _useState = (0,index_js_.useState)(0),
-      nestedDialogCount = _useState[0],
-      setNestedDialogCount = _useState[1];
-
-  var usesOpenClosedState = useOpenClosed();
-
-  if (open === undefined && usesOpenClosedState !== null) {
-    var _match;
-
-    // Update the `open` prop based on the open closed state
-    open = match_esm_match(usesOpenClosedState, (_match = {}, _match[State.Open] = true, _match[State.Closed] = false, _match));
-  }
-
-  var containers = (0,index_js_.useRef)(new Set());
-  var internalDialogRef = (0,index_js_.useRef)(null);
-  var dialogRef = useSyncRefs(internalDialogRef, ref); // Validations
-
-  var hasOpen = props.hasOwnProperty('open') || usesOpenClosedState !== null;
-  var hasOnClose = props.hasOwnProperty('onClose');
-
-  if (!hasOpen && !hasOnClose) {
-    throw new Error("You have to provide an `open` and an `onClose` prop to the `Dialog` component.");
-  }
-
-  if (!hasOpen) {
-    throw new Error("You provided an `onClose` prop to the `Dialog`, but forgot an `open` prop.");
-  }
-
-  if (!hasOnClose) {
-    throw new Error("You provided an `open` prop to the `Dialog`, but forgot an `onClose` prop.");
-  }
-
-  if (typeof open !== 'boolean') {
-    throw new Error("You provided an `open` prop to the `Dialog`, but the value is not a boolean. Received: " + open);
-  }
-
-  if (typeof onClose !== 'function') {
-    throw new Error("You provided an `onClose` prop to the `Dialog`, but the value is not a function. Received: " + onClose);
-  }
-
-  var dialogState = open ? DialogStates.Open : DialogStates.Closed;
-
-  var visible = function () {
-    if (usesOpenClosedState !== null) {
-      return usesOpenClosedState === State.Open;
-    }
-
-    return dialogState === DialogStates.Open;
-  }();
-
-  var _useReducer = (0,index_js_.useReducer)(stateReducer, {
-    titleId: null,
-    descriptionId: null
-  }),
-      state = _useReducer[0],
-      dispatch = _useReducer[1];
-
-  var close = (0,index_js_.useCallback)(function () {
-    return onClose(false);
-  }, [onClose]);
-  var setTitleId = (0,index_js_.useCallback)(function (id) {
-    return dispatch({
-      type: ActionTypes.SetTitleId,
-      id: id
-    });
-  }, [dispatch]);
-  var ready = useServerHandoffComplete();
-  var enabled = ready && dialogState === DialogStates.Open;
-  var hasNestedDialogs = nestedDialogCount > 1; // 1 is the current dialog
-
-  var hasParentDialog = (0,index_js_.useContext)(DialogContext) !== null; // If there are multiple dialogs, then you can be the root, the leaf or one
-  // in between. We only care abou whether you are the top most one or not.
-
-  var position = !hasNestedDialogs ? 'leaf' : 'parent';
-  useFocusTrap(internalDialogRef, enabled ? match_esm_match(position, {
-    parent: use_focus_trap_esm_Features.RestoreFocus,
-    leaf: use_focus_trap_esm_Features.All
-  }) : use_focus_trap_esm_Features.None, {
-    initialFocus: initialFocus,
-    containers: containers
-  });
-  useInertOthers(internalDialogRef, hasNestedDialogs ? enabled : false); // Handle outside click
-
-  useWindowEvent('mousedown', function (event) {
-    var _internalDialogRef$cu;
-
-    var target = event.target;
-    if (dialogState !== DialogStates.Open) return;
-    if (hasNestedDialogs) return;
-    if ((_internalDialogRef$cu = internalDialogRef.current) == null ? void 0 : _internalDialogRef$cu.contains(target)) return;
-    close();
-  }); // Handle `Escape` to close
-
-  useWindowEvent('keydown', function (event) {
-    if (event.key !== Keys.Escape) return;
-    if (dialogState !== DialogStates.Open) return;
-    if (hasNestedDialogs) return;
-    event.preventDefault();
-    event.stopPropagation();
-    close();
-  }); // Scroll lock
-
-  (0,index_js_.useEffect)(function () {
-    if (dialogState !== DialogStates.Open) return;
-    if (hasParentDialog) return;
-    var overflow = document.documentElement.style.overflow;
-    var paddingRight = document.documentElement.style.paddingRight;
-    var scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
-    document.documentElement.style.overflow = 'hidden';
-    document.documentElement.style.paddingRight = scrollbarWidth + "px";
-    return function () {
-      document.documentElement.style.overflow = overflow;
-      document.documentElement.style.paddingRight = paddingRight;
-    };
-  }, [dialogState, hasParentDialog]); // Trigger close when the FocusTrap gets hidden
-
-  (0,index_js_.useEffect)(function () {
-    if (dialogState !== DialogStates.Open) return;
-    if (!internalDialogRef.current) return;
-    var observer = new IntersectionObserver(function (entries) {
-      for (var _iterator = _createForOfIteratorHelperLoose(entries), _step; !(_step = _iterator()).done;) {
-        var entry = _step.value;
-
-        if (entry.boundingClientRect.x === 0 && entry.boundingClientRect.y === 0 && entry.boundingClientRect.width === 0 && entry.boundingClientRect.height === 0) {
-          close();
-        }
-      }
-    });
-    observer.observe(internalDialogRef.current);
-    return function () {
-      return observer.disconnect();
-    };
-  }, [dialogState, internalDialogRef, close]);
-
-  var _useDescriptions = useDescriptions(),
-      describedby = _useDescriptions[0],
-      DescriptionProvider = _useDescriptions[1];
-
-  var id = "headlessui-dialog-" + useId();
-  var contextBag = (0,index_js_.useMemo)(function () {
-    return [{
-      dialogState: dialogState,
-      close: close,
-      setTitleId: setTitleId
-    }, state];
-  }, [dialogState, state, close, setTitleId]);
-  var slot = (0,index_js_.useMemo)(function () {
-    return {
-      open: dialogState === DialogStates.Open
-    };
-  }, [dialogState]);
-  var propsWeControl = {
-    ref: dialogRef,
-    id: id,
-    role: 'dialog',
-    'aria-modal': dialogState === DialogStates.Open ? true : undefined,
-    'aria-labelledby': state.titleId,
-    'aria-describedby': describedby,
-    onClick: function onClick(event) {
-      event.stopPropagation();
-    }
-  };
-  var passthroughProps = rest;
-  return index_js_default().createElement(StackProvider, {
-    type: "Dialog",
-    element: internalDialogRef,
-    onUpdate: (0,index_js_.useCallback)(function (message, type, element) {
-      var _match2;
-
-      if (type !== 'Dialog') return;
-      match_esm_match(message, (_match2 = {}, _match2[StackMessage.Add] = function () {
-        containers.current.add(element);
-        setNestedDialogCount(function (count) {
-          return count + 1;
-        });
-      }, _match2[StackMessage.Remove] = function () {
-        containers.current.add(element);
-        setNestedDialogCount(function (count) {
-          return count - 1;
-        });
-      }, _match2));
-    }, [])
-  }, index_js_default().createElement(ForcePortalRoot, {
-    force: true
-  }, index_js_default().createElement(Portal, null, index_js_default().createElement(DialogContext.Provider, {
-    value: contextBag
-  }, index_js_default().createElement(Portal.Group, {
-    target: internalDialogRef
-  }, index_js_default().createElement(ForcePortalRoot, {
-    force: false
-  }, index_js_default().createElement(DescriptionProvider, {
-    slot: slot,
-    name: "Dialog.Description"
-  }, render({
-    props: _extends({}, passthroughProps, propsWeControl),
-    slot: slot,
-    defaultTag: DEFAULT_DIALOG_TAG,
-    features: DialogRenderFeatures,
-    visible: visible,
-    name: 'Dialog'
-  }))))))));
-}); // ---
-
-var DEFAULT_OVERLAY_TAG = 'div';
-var Overlay = /*#__PURE__*/forwardRefWithAs(function Overlay(props, ref) {
-  var _useDialogContext = useDialogContext([Dialog.displayName, Overlay.name].join('.')),
-      _useDialogContext$ = _useDialogContext[0],
-      dialogState = _useDialogContext$.dialogState,
-      close = _useDialogContext$.close;
-
-  var overlayRef = useSyncRefs(ref);
-  var id = "headlessui-dialog-overlay-" + useId();
-  var handleClick = (0,index_js_.useCallback)(function (event) {
-    if (isDisabledReactIssue7711(event.currentTarget)) return event.preventDefault();
-    event.preventDefault();
-    event.stopPropagation();
-    close();
-  }, [close]);
-  var slot = (0,index_js_.useMemo)(function () {
-    return {
-      open: dialogState === DialogStates.Open
-    };
-  }, [dialogState]);
-  var propsWeControl = {
-    ref: overlayRef,
-    id: id,
-    'aria-hidden': true,
-    onClick: handleClick
-  };
-  var passthroughProps = props;
-  return render({
-    props: _extends({}, passthroughProps, propsWeControl),
-    slot: slot,
-    defaultTag: DEFAULT_OVERLAY_TAG,
-    name: 'Dialog.Overlay'
-  });
-}); // ---
-
-var DEFAULT_TITLE_TAG = 'h2';
-
-function Title(props) {
-  var _useDialogContext2 = useDialogContext([Dialog.displayName, Title.name].join('.')),
-      _useDialogContext2$ = _useDialogContext2[0],
-      dialogState = _useDialogContext2$.dialogState,
-      setTitleId = _useDialogContext2$.setTitleId;
-
-  var id = "headlessui-dialog-title-" + useId();
-  (0,index_js_.useEffect)(function () {
-    setTitleId(id);
-    return function () {
-      return setTitleId(null);
-    };
-  }, [id, setTitleId]);
-  var slot = (0,index_js_.useMemo)(function () {
-    return {
-      open: dialogState === DialogStates.Open
-    };
-  }, [dialogState]);
-  var propsWeControl = {
-    id: id
-  };
-  var passthroughProps = props;
-  return render({
-    props: _extends({}, passthroughProps, propsWeControl),
-    slot: slot,
-    defaultTag: DEFAULT_TITLE_TAG,
-    name: 'Dialog.Title'
-  });
-} // ---
-
-
-var Dialog = /*#__PURE__*/Object.assign(DialogRoot, {
-  Overlay: Overlay,
-  Title: Title,
-  Description: Description
+/***/ }),
+
+/***/ 6049:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "rDX": () => (/* reexport */ esm_AnnotationIcon),
+  "KNL": () => (/* reexport */ esm_BookOpenIcon),
+  "IEm": () => (/* reexport */ esm_CogIcon),
+  "OgN": () => (/* reexport */ esm_GiftIcon),
+  "tvw": () => (/* reexport */ esm_HomeIcon),
+  "RSW": () => (/* reexport */ esm_MailOpenIcon),
+  "fVG": () => (/* reexport */ esm_MenuAlt2Icon),
+  "aAc": () => (/* reexport */ esm_ShareIcon),
+  "b0D": () => (/* reexport */ esm_XIcon)
 });
 
+// UNUSED EXPORTS: AcademicCapIcon, AdjustmentsIcon, ArchiveIcon, ArrowCircleDownIcon, ArrowCircleLeftIcon, ArrowCircleRightIcon, ArrowCircleUpIcon, ArrowDownIcon, ArrowLeftIcon, ArrowNarrowDownIcon, ArrowNarrowLeftIcon, ArrowNarrowRightIcon, ArrowNarrowUpIcon, ArrowRightIcon, ArrowSmDownIcon, ArrowSmLeftIcon, ArrowSmRightIcon, ArrowSmUpIcon, ArrowUpIcon, ArrowsExpandIcon, AtSymbolIcon, BackspaceIcon, BadgeCheckIcon, BanIcon, BeakerIcon, BellIcon, BookmarkAltIcon, BookmarkIcon, BriefcaseIcon, CakeIcon, CalculatorIcon, CalendarIcon, CameraIcon, CashIcon, ChartBarIcon, ChartPieIcon, ChartSquareBarIcon, ChatAlt2Icon, ChatAltIcon, ChatIcon, CheckCircleIcon, CheckIcon, ChevronDoubleDownIcon, ChevronDoubleLeftIcon, ChevronDoubleRightIcon, ChevronDoubleUpIcon, ChevronDownIcon, ChevronLeftIcon, ChevronRightIcon, ChevronUpIcon, ChipIcon, ClipboardCheckIcon, ClipboardCopyIcon, ClipboardIcon, ClipboardListIcon, ClockIcon, CloudDownloadIcon, CloudIcon, CloudUploadIcon, CodeIcon, CollectionIcon, ColorSwatchIcon, CreditCardIcon, CubeIcon, CubeTransparentIcon, CurrencyBangladeshiIcon, CurrencyDollarIcon, CurrencyEuroIcon, CurrencyPoundIcon, CurrencyRupeeIcon, CurrencyYenIcon, CursorClickIcon, DatabaseIcon, DesktopComputerIcon, DeviceMobileIcon, DeviceTabletIcon, DocumentAddIcon, DocumentDownloadIcon, DocumentDuplicateIcon, DocumentIcon, DocumentRemoveIcon, DocumentReportIcon, DocumentSearchIcon, DocumentTextIcon, DotsCircleHorizontalIcon, DotsHorizontalIcon, DotsVerticalIcon, DownloadIcon, DuplicateIcon, EmojiHappyIcon, EmojiSadIcon, ExclamationCircleIcon, ExclamationIcon, ExternalLinkIcon, EyeIcon, EyeOffIcon, FastForwardIcon, FilmIcon, FilterIcon, FingerPrintIcon, FireIcon, FlagIcon, FolderAddIcon, FolderDownloadIcon, FolderIcon, FolderOpenIcon, FolderRemoveIcon, GlobeAltIcon, GlobeIcon, HandIcon, HashtagIcon, HeartIcon, IdentificationIcon, InboxIcon, InboxInIcon, InformationCircleIcon, KeyIcon, LibraryIcon, LightBulbIcon, LightningBoltIcon, LinkIcon, LocationMarkerIcon, LockClosedIcon, LockOpenIcon, LoginIcon, LogoutIcon, MailIcon, MapIcon, MenuAlt1Icon, MenuAlt3Icon, MenuAlt4Icon, MenuIcon, MicrophoneIcon, MinusCircleIcon, MinusIcon, MinusSmIcon, MoonIcon, MusicNoteIcon, NewspaperIcon, OfficeBuildingIcon, PaperAirplaneIcon, PaperClipIcon, PauseIcon, PencilAltIcon, PencilIcon, PhoneIcon, PhoneIncomingIcon, PhoneMissedCallIcon, PhoneOutgoingIcon, PhotographIcon, PlayIcon, PlusCircleIcon, PlusIcon, PlusSmIcon, PresentationChartBarIcon, PresentationChartLineIcon, PrinterIcon, PuzzleIcon, QrcodeIcon, QuestionMarkCircleIcon, ReceiptRefundIcon, ReceiptTaxIcon, RefreshIcon, ReplyIcon, RewindIcon, RssIcon, SaveAsIcon, SaveIcon, ScaleIcon, ScissorsIcon, SearchCircleIcon, SearchIcon, SelectorIcon, ServerIcon, ShieldCheckIcon, ShieldExclamationIcon, ShoppingBagIcon, ShoppingCartIcon, SortAscendingIcon, SortDescendingIcon, SparklesIcon, SpeakerphoneIcon, StarIcon, StatusOfflineIcon, StatusOnlineIcon, StopIcon, SunIcon, SupportIcon, SwitchHorizontalIcon, SwitchVerticalIcon, TableIcon, TagIcon, TemplateIcon, TerminalIcon, ThumbDownIcon, ThumbUpIcon, TicketIcon, TranslateIcon, TrashIcon, TrendingDownIcon, TrendingUpIcon, TruckIcon, UploadIcon, UserAddIcon, UserCircleIcon, UserGroupIcon, UserIcon, UserRemoveIcon, UsersIcon, VariableIcon, VideoCameraIcon, ViewBoardsIcon, ViewGridAddIcon, ViewGridIcon, ViewListIcon, VolumeOffIcon, VolumeUpIcon, WifiIcon, XCircleIcon, ZoomInIcon, ZoomOutIcon
 
-//# sourceMappingURL=dialog.esm.js.map
-
-// EXTERNAL MODULE: ./.cache/gatsby-browser-entry.js + 4 modules
-var gatsby_browser_entry = __webpack_require__(2031);
-// EXTERNAL MODULE: ./node_modules/lottie-web/build/player/lottie.js
-var lottie = __webpack_require__(1248);
-var lottie_default = /*#__PURE__*/__webpack_require__.n(lottie);
-;// CONCATENATED MODULE: ./src/components/animations/paul-logo.json
-const paul_logo_namespaceObject = JSON.parse('{"v":"5.6.6","ip":0,"op":300,"fr":60,"w":141,"h":36,"layers":[{"ind":175,"nm":"surface471","ao":0,"ip":0,"op":720,"st":0,"ty":4,"ks":{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"a":0,"k":[88.36,22.65],"ix":2},"a":{"a":0,"k":[70.5,18],"ix":1},"s":{"a":1,"k":[{"i":{"x":[0.67,0.67,0.67],"y":[1,1,1]},"o":{"x":[0.33,0.33,0.33],"y":[0,0,0]},"t":0,"s":[106,106,100]},{"i":{"x":[0.67,0.67,0.67],"y":[1,1,1]},"o":{"x":[0.33,0.33,0.33],"y":[0,0,0]},"t":18,"s":[93,93,100]},{"t":42,"s":[106,106,100]}],"ix":6},"sk":{"k":0},"sa":{"k":0}},"shapes":[{"ty":"gr","hd":false,"nm":"surface471","it":[{"ty":"gr","hd":false,"it":[{"ty":"gr","hd":false,"it":[{"ty":"sh","ks":{"k":{"i":[[0,0],[0,0],[0,0],[0,0],[0.39,0.26],[0.34,-0.34],[0,0],[-0.17,-0.37],[-0.41,0.02],[0,0],[0,0],[0,0],[-0.18,-0.27],[-0.33,0],[-0.19,0.19],[0,0],[0.16,0.38],[0.4,0]],"o":[[0,0],[0,0],[0,0],[0.17,-0.44],[-0.4,-0.27],[0,0],[-0.28,0.29],[0.17,0.37],[0,0],[0,0],[0,0],[-0.12,0.31],[0.19,0.28],[0.27,0.01],[0,0],[0.28,-0.29],[-0.16,-0.37],[0,0]],"v":[[55,88.68],[47.65,88.68],[53.09,75.16],[53.09,75.16],[52.72,73.96],[51.46,74.08],[33.24,92.31],[33.05,93.41],[34,94],[41.36,94],[35.91,107.51],[35.91,107.51],[36.01,108.44],[36.83,108.88],[37.54,108.59],[55.71,90.38],[55.92,89.29],[55,88.68]],"c":true}}},{"ty":"sh","ks":{"k":{"i":[[0,0],[0,0],[0,0]],"o":[[0,0],[0,0],[0,0]],"v":[[49.42,79],[45.5,88.68],[39.69,88.68]],"c":true}}},{"ty":"sh","ks":{"k":{"i":[[0,0],[0,0],[0,0]],"o":[[0,0],[0,0],[0,0]],"v":[[39.53,103.79],[43.45,94],[49.26,94]],"c":true}}},{"ty":"sh","ks":{"k":{"i":[[0,0],[0,0],[0,0],[0,0]],"o":[[0,0],[0,0],[0,0],[0,0]],"v":[[51.26,92],[36.35,92],[37.7,90.66],[52.6,90.66]],"c":true}}},{"ty":"st","lc":1,"lj":1,"ml":10,"o":{"k":100},"w":{"k":1},"c":{"k":[0.92,0.92,0.49,1]},"hd":false},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[-24.34,-54.97]},"a":{"k":[0,0]},"s":{"k":[75,75]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[0,0]},"a":{"k":[0,0]},"s":{"k":[100,100]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"gr","hd":false,"it":[{"ty":"sh","ks":{"k":{"i":[[0,0],[0,0],[0,0],[0,0],[0.29,0.2],[0.25,-0.25],[0,0],[-0.12,-0.28],[-0.3,0.01],[0,0],[0,0],[0,0],[-0.14,-0.2],[-0.25,0],[-0.14,0.14],[0,0],[0.12,0.28],[0.3,0]],"o":[[0,0],[0,0],[0,0],[0.13,-0.33],[-0.3,-0.2],[0,0],[-0.21,0.22],[0.13,0.28],[0,0],[0,0],[0,0],[-0.09,0.23],[0.14,0.21],[0.2,0],[0,0],[0.21,-0.21],[-0.12,-0.28],[0,0]],"v":[[16.91,11.54],[11.4,11.54],[15.48,1.4],[15.48,1.4],[15.2,0.5],[14.26,0.59],[0.59,14.27],[0.45,15.09],[1.16,15.53],[6.68,15.53],[2.6,25.66],[2.59,25.66],[2.67,26.36],[3.29,26.69],[3.82,26.48],[17.45,12.82],[17.6,12],[16.91,11.54]],"c":true}}},{"ty":"sh","ks":{"k":{"i":[[0,0],[0,0],[0,0]],"o":[[0,0],[0,0],[0,0]],"v":[[12.73,4.28],[9.79,11.54],[5.43,11.54]],"c":true}}},{"ty":"sh","ks":{"k":{"i":[[0,0],[0,0],[0,0]],"o":[[0,0],[0,0],[0,0]],"v":[[5.31,22.88],[8.25,15.53],[12.61,15.53]],"c":true}}},{"ty":"sh","ks":{"k":{"i":[[0,0],[0,0],[0,0],[0,0]],"o":[[0,0],[0,0],[0,0],[0,0]],"v":[[14.11,14.03],[2.93,14.03],[3.94,13.03],[15.11,13.03]],"c":true}}},{"ty":"fl","o":{"k":100},"c":{"k":[0,0,0,1]}},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[0,0]},"a":{"k":[0,0]},"s":{"k":[100,100]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"gr","hd":false,"it":[{"ty":"gr","hd":false,"it":[{"ty":"sh","ks":{"k":{"i":[[0,0],[0,0],[0,0],[0,2.15],[2.82,0],[0,0],[0,-2.22],[0,0],[-2.94,0],[0,0],[0,0],[0,0],[0,0.93]],"o":[[0,0],[0,0],[2.89,0],[0,-2.15],[0,0],[-2.94,0],[0,0],[0,2.23],[0,0],[0,0],[0,0],[-1.25,0],[0,0]],"v":[[163.24,94.46],[163.24,93.61],[168.82,93.61],[172.82,90.24],[168.82,86.63],[165,86.63],[160.91,90.5],[160.91,94.5],[165,98.37],[172.18,98.37],[172.18,96.08],[165,96.08],[163.24,94.46]],"c":true}}},{"ty":"sh","ks":{"k":{"i":[[0,0],[-1.29,0],[0,0],[0,-0.89],[1.27,0],[0,0]],"o":[[0,-0.91],[0,0],[1.15,0],[0,0.89],[0,0],[0,0]],"v":[[163.24,90.52],[165.04,88.9],[168.82,88.9],[170.49,90.37],[168.76,91.77],[163.25,91.77]],"c":true}}},{"ty":"st","lc":1,"lj":1,"ml":10,"o":{"k":100},"w":{"k":1},"c":{"k":[0.92,0.92,0.49,1]},"hd":false},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[-24.34,-54.97]},"a":{"k":[0,0]},"s":{"k":[75,75]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[0,0]},"a":{"k":[0,0]},"s":{"k":[100,100]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"gr","hd":false,"it":[{"ty":"gr","hd":false,"it":[{"ty":"sh","ks":{"k":{"i":[[0,0],[0,0],[0,0],[0,1.61],[2.11,0],[0,0],[0,-1.66],[0,0],[-2.2,0],[0,0],[0,0],[0,0],[0,0.7]],"o":[[0,0],[0,0],[2.17,0],[0,-1.61],[0,0],[-2.2,0],[0,0],[0,1.67],[0,0],[0,0],[0,0],[-0.94,0],[0,0]],"v":[[98.09,15.88],[98.09,15.24],[102.28,15.24],[105.28,12.71],[102.28,10.01],[99.41,10],[96.35,12.91],[96.35,15.91],[99.41,18.81],[104.8,18.81],[104.8,17.09],[99.41,17.09],[98.09,15.88]],"c":true}}},{"ty":"sh","ks":{"k":{"i":[[0,0],[-0.97,0],[0,0],[0,-0.67],[0.95,0],[0,0]],"o":[[0,-0.68],[0,0],[0.86,0],[0,0.67],[0,0],[0,0]],"v":[[98.09,12.93],[99.45,11.71],[102.28,11.71],[103.53,12.81],[102.23,13.86],[98.1,13.86]],"c":true}}},{"ty":"fl","o":{"k":100},"c":{"k":[0,0,0,1]}},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[0,0]},"a":{"k":[0,0]},"s":{"k":[100,100]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[0,0]},"a":{"k":[0,0]},"s":{"k":[100,100]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"gr","hd":false,"it":[{"ty":"sh","ks":{"k":{"i":[[0,0],[0,0],[0,0],[0,0]],"o":[[0,0],[0,0],[0,0],[0,0]],"v":[[124,8.25],[126.36,8.25],[126.36,25.08],[124,25.08]],"c":true}}},{"ty":"st","lc":1,"lj":1,"ml":10,"o":{"k":100},"w":{"k":1},"c":{"k":[0.92,0.92,0.49,1]},"hd":false},{"ty":"fl","o":{"k":100},"c":{"k":[0,0,0,1]}},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[0,0]},"a":{"k":[0,0]},"s":{"k":[75,75]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"gr","hd":false,"it":[{"ty":"gr","hd":false,"it":[{"ty":"sh","ks":{"k":{"i":[[0,0],[0,2.15],[2.82,0],[0,0],[0,-2.22],[0,0],[-2.93,0],[0,0],[0,0],[0,0],[0,0.93],[0,0]],"o":[[2.89,0],[0,-2.15],[0,0],[-2.93,0],[0,0],[0,2.23],[0,0],[0,0],[0,0],[-1.29,0],[0,0],[0,0]],"v":[[150.58,93.61],[154.58,90.24],[150.58,86.63],[146.78,86.63],[142.69,90.5],[142.69,94.5],[146.78,98.37],[154,98.37],[154,96.08],[146.8,96.08],[145,94.46],[145,93.61]],"c":true}}},{"ty":"sh","ks":{"k":{"i":[[0,0],[-1.29,0],[0,0],[0,-0.89],[1.27,0],[0,0]],"o":[[0,-0.91],[0,0],[1.16,0],[0,0.89],[0,0],[0,0]],"v":[[145,90.52],[146.8,88.9],[150.59,88.9],[152.26,90.37],[150.52,91.77],[145,91.77]],"c":true}}},{"ty":"st","lc":1,"lj":1,"ml":10,"o":{"k":100},"w":{"k":1},"c":{"k":[0.92,0.92,0.49,1]},"hd":false},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[-24.34,-54.97]},"a":{"k":[0,0]},"s":{"k":[75,75]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[0,0]},"a":{"k":[0,0]},"s":{"k":[100,100]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"gr","hd":false,"it":[{"ty":"sh","ks":{"k":{"i":[[0,0],[0,1.61],[2.11,0],[0,0],[0,-1.66],[0,0],[-2.2,0],[0,0],[0,0],[0,0],[0,0.7],[0,0]],"o":[[2.17,0],[0,-1.61],[0,0],[-2.2,0],[0,0],[0,1.67],[0,0],[0,0],[0,0],[-0.97,0],[0,0],[0,0]],"v":[[88.6,15.24],[91.6,12.71],[88.6,10],[85.75,10],[82.68,12.91],[82.68,15.91],[85.75,18.81],[91.16,18.81],[91.16,17.09],[85.76,17.09],[84.41,15.88],[84.41,15.24]],"c":true}}},{"ty":"sh","ks":{"k":{"i":[[0,0],[-0.97,0],[0,0],[0,-0.67],[0.95,0],[0,0]],"o":[[0,-0.68],[0,0],[0.87,0],[0,0.67],[0,0],[0,0]],"v":[[84.41,12.92],[85.77,11.71],[88.6,11.71],[89.86,12.81],[88.55,13.86],[84.41,13.86]],"c":true}}},{"ty":"fl","o":{"k":100},"c":{"k":[0,0,0,1]}},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[0,0]},"a":{"k":[0,0]},"s":{"k":[100,100]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"gr","hd":false,"it":[{"ty":"sh","ks":{"k":{"i":[[0,0],[0,0],[0,0],[0,0]],"o":[[0,0],[0,0],[0,0],[0,0]],"v":[[105.77,8.25],[108.13,8.25],[108.13,25.08],[105.77,25.08]],"c":true}}},{"ty":"st","lc":1,"lj":1,"ml":10,"o":{"k":100},"w":{"k":1},"c":{"k":[0.92,0.92,0.49,1]},"hd":false},{"ty":"fl","o":{"k":100},"c":{"k":[0,0,0,1]}},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[0,0]},"a":{"k":[0,0]},"s":{"k":[75,75]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"gr","hd":false,"it":[{"ty":"gr","hd":false,"it":[{"ty":"sh","ks":{"k":{"i":[[0,0],[0,0],[0,0],[0,0],[0,-0.91],[0,0],[0,0],[0,-2.13],[-2.77,0],[0,0],[0,1.69],[0,0],[2.93,0]],"o":[[0,0],[0,0],[0,0],[1.29,0],[0,0],[0,0],[-2.89,0],[0,2.13],[0,0],[2,0],[0,0],[0.03,-2.22],[0,0]],"v":[[131.79,86.63],[124.79,86.63],[124.79,88.9],[131.79,88.9],[133.59,90.52],[133.59,91.41],[128,91.41],[124,94.79],[127.93,98.37],[133.43,98.37],[135.86,96.02],[135.85,90.5],[131.79,86.63]],"c":true}}},{"ty":"sh","ks":{"k":{"i":[[0,0],[0.47,0],[0,0],[0,0.87],[-1.24,0],[0,0]],"o":[[0,0.42],[0,0],[-1.18,0],[0,-0.87],[0,0],[0,0]],"v":[[133.57,95.48],[132.92,96.08],[128,96.08],[126.35,94.66],[128.04,93.28],[133.58,93.28]],"c":true}}},{"ty":"st","lc":1,"lj":1,"ml":10,"o":{"k":100},"w":{"k":1},"c":{"k":[0.92,0.92,0.49,1]},"hd":false},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[-24.34,-54.97]},"a":{"k":[0,0]},"s":{"k":[75,75]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[0,0]},"a":{"k":[0,0]},"s":{"k":[100,100]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"gr","hd":false,"it":[{"ty":"sh","ks":{"k":{"i":[[0,0],[0,0],[0,0],[0,0],[0,-0.68],[0,0],[0,0],[0,-1.6],[-2.08,0],[0,0],[0,1.27],[0,0],[2.2,0]],"o":[[0,0],[0,0],[0,0],[0.97,0],[0,0],[0,0],[-2.17,0],[0,1.6],[0,0],[1.5,0],[0,0],[0.02,-1.66],[0,0]],"v":[[74.5,10],[69.25,10],[69.25,11.71],[74.5,11.71],[75.86,12.92],[75.86,13.59],[71.66,13.59],[68.66,16.12],[71.61,18.81],[75.74,18.81],[77.55,17.05],[77.55,12.91],[74.5,10]],"c":true}}},{"ty":"sh","ks":{"k":{"i":[[0,0],[0.35,0],[0,0],[0,0.65],[-0.93,0],[0,0]],"o":[[0,0.32],[0,0],[-0.89,0],[0,-0.65],[0,0],[0,0]],"v":[[75.84,16.64],[75.35,17.09],[71.66,17.09],[70.43,16.03],[71.69,14.99],[75.85,14.99]],"c":true}}},{"ty":"fl","o":{"k":100},"c":{"k":[0,0,0,1]}},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[0,0]},"a":{"k":[0,0]},"s":{"k":[100,100]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"gr","hd":false,"it":[{"ty":"gr","hd":false,"it":[{"ty":"sh","ks":{"k":{"i":[[0,0],[0,0],[0,0.91],[-1.4,0],[0,0],[0,0],[0,0],[0,-2.49],[-4,0],[0,0],[0,-0.98],[1.42,0],[0,0],[0,0],[0,0],[0,2.53],[4.1,0]],"o":[[0,0],[-1.75,0],[0,-0.91],[0,0],[0,0],[0,0],[-3.33,0],[0,2.09],[0,0],[1.85,0],[0,0.98],[0,0],[0,0],[0,0],[3.43,0],[0.02,-2.16],[0,0]],"v":[[117.75,89.55],[114.24,89.55],[112.02,87.77],[114.02,85.99],[121.71,85.99],[121.71,83.37],[114.1,83.37],[109.44,87.68],[114.37,92.01],[117.86,92.01],[120.22,93.88],[118.15,95.75],[109.71,95.75],[109.71,98.37],[118,98.37],[122.78,93.97],[117.75,89.55]],"c":true}}},{"ty":"st","lc":1,"lj":1,"ml":10,"o":{"k":100},"w":{"k":1},"c":{"k":[0.92,0.92,0.49,1]},"hd":false},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[-24.34,-54.97]},"a":{"k":[0,0]},"s":{"k":[75,75]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[0,0]},"a":{"k":[0,0]},"s":{"k":[100,100]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"gr","hd":false,"it":[{"ty":"sh","ks":{"k":{"i":[[0,0],[0,0],[0,0.68],[-1.05,0],[0,0],[0,0],[0,0],[0,-1.87],[-3,0],[0,0],[0,-0.73],[1.06,0],[0,0],[0,0],[0,0],[0,1.9],[3.07,0]],"o":[[0,0],[-1.31,0],[0,-0.68],[0,0],[0,0],[0,0],[-2.5,0],[0,1.57],[0,0],[1.39,0],[0,0.73],[0,0],[0,0],[0,0],[2.57,0],[0.01,-1.62],[0,0]],"v":[[63.98,12.2],[61.34,12.2],[59.68,10.86],[61.18,9.52],[66.95,9.52],[66.95,7.56],[61.24,7.56],[57.74,10.79],[61.44,14.04],[64.06,14.04],[65.83,15.44],[64.28,16.84],[57.94,16.84],[57.94,18.81],[64.16,18.81],[67.75,15.51],[63.98,12.2]],"c":true}}},{"ty":"fl","o":{"k":100},"c":{"k":[0,0,0,1]}},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[0,0]},"a":{"k":[0,0]},"s":{"k":[100,100]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"gr","hd":false,"it":[{"ty":"sh","ks":{"k":{"i":[[0,0],[0,0],[0,0],[0,0]],"o":[[0,0],[0,0],[0,0],[0,0]],"v":[[67.83,8.25],[70.19,8.25],[70.19,25.08],[67.83,25.08]],"c":true}}},{"ty":"st","lc":1,"lj":1,"ml":10,"o":{"k":100},"w":{"k":1},"c":{"k":[0.92,0.92,0.49,1]},"hd":false},{"ty":"fl","o":{"k":100},"c":{"k":[0,0,0,1]}},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[0,0]},"a":{"k":[0,0]},"s":{"k":[75,75]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"gr","hd":false,"it":[{"ty":"gr","hd":false,"it":[{"ty":"sh","ks":{"k":{"i":[[0,0],[1.87,0],[0,0],[0,1.34],[0,0],[0,0],[0,0],[-3.36,0],[0,0],[0,2.71],[0,0],[0,0]],"o":[[0,1.38],[0,0],[-1.87,0],[0,0],[0,0],[0,0],[0,2.71],[0,0],[3.36,0],[0,0],[0,0],[0,0]],"v":[[95.65,93.66],[92.78,96.08],[90.87,96.08],[88,93.66],[88,86.66],[85.6,86.66],[85.6,93.78],[90.69,98.4],[92.87,98.4],[97.96,93.78],[97.96,86.63],[95.65,86.63]],"c":true}}},{"ty":"st","lc":1,"lj":1,"ml":10,"o":{"k":100},"w":{"k":1},"c":{"k":[0.92,0.92,0.49,1]},"hd":false},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[-24.34,-54.97]},"a":{"k":[0,0]},"s":{"k":[75,75]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[0,0]},"a":{"k":[0,0]},"s":{"k":[100,100]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"gr","hd":false,"it":[{"ty":"sh","ks":{"k":{"i":[[0,0],[1.4,0],[0,0],[0,1],[0,0],[0,0],[0,0],[-2.52,0],[0,0],[0,2.03],[0,0],[0,0]],"o":[[0,1.04],[0,0],[-1.4,0],[0,0],[0,0],[0,0],[0,2.03],[0,0],[2.52,0],[0,0],[0,0],[0,0]],"v":[[47.4,15.28],[45.25,17.09],[43.82,17.09],[41.66,15.28],[41.66,10.03],[39.86,10.03],[39.86,15.37],[43.68,18.83],[45.32,18.83],[49.13,15.37],[49.13,10],[47.4,10]],"c":true}}},{"ty":"fl","o":{"k":100},"c":{"k":[0,0,0,1]}},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[0,0]},"a":{"k":[0,0]},"s":{"k":[100,100]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"gr","hd":false,"it":[{"ty":"gr","hd":false,"it":[{"ty":"sh","ks":{"k":{"i":[[0,0],[0,0],[0,0],[0,0],[0,-0.91],[0,0],[0,0],[0,-2.13],[-2.78,0],[0,0],[0,1.69],[0,0],[2.93,0]],"o":[[0,0],[0,0],[0,0],[1.29,0],[0,0],[0,0],[-2.9,0],[0,2.13],[0,0],[2,0],[0,0],[0,-2.22],[0,0]],"v":[[79.24,86.63],[72.24,86.63],[72.24,88.9],[79.24,88.9],[81.05,90.52],[81.05,91.41],[75.44,91.41],[71.44,94.79],[75.37,98.37],[80.9,98.37],[83.33,96.02],[83.33,90.5],[79.24,86.63]],"c":true}}},{"ty":"sh","ks":{"k":{"i":[[0,0],[0.47,0],[0,0],[0,0.87],[-1.25,0],[0,0]],"o":[[0,0.42],[0,0],[-1.18,0],[0,-0.87],[0,0],[0,0]],"v":[[81,95.48],[80.35,96.08],[75.44,96.08],[73.79,94.66],[75.48,93.28],[81,93.28]],"c":true}}},{"ty":"st","lc":1,"lj":1,"ml":10,"o":{"k":100},"w":{"k":1},"c":{"k":[0.92,0.92,0.49,1]},"hd":false},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[-24.34,-54.97]},"a":{"k":[0,0]},"s":{"k":[75,75]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[0,0]},"a":{"k":[0,0]},"s":{"k":[100,100]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"gr","hd":false,"it":[{"ty":"sh","ks":{"k":{"i":[[0,0],[0,0],[0,0],[0,0],[0,-0.68],[0,0],[0,0],[0,-1.6],[-2.09,0],[0,0],[0,1.27],[0,0],[2.2,0]],"o":[[0,0],[0,0],[0,0],[0.97,0],[0,0],[0,0],[-2.18,0],[0,1.6],[0,0],[1.5,0],[0,0],[0,-1.66],[0,0]],"v":[[35.09,10],[29.84,10],[29.84,11.71],[35.09,11.71],[36.45,12.92],[36.45,13.59],[32.24,13.59],[29.24,16.12],[32.19,18.81],[36.34,18.81],[38.16,17.05],[38.16,12.91],[35.09,10]],"c":true}}},{"ty":"sh","ks":{"k":{"i":[[0,0],[0.35,0],[0,0],[0,0.65],[-0.94,0],[0,0]],"o":[[0,0.32],[0,0],[-0.89,0],[0,-0.65],[0,0],[0,0]],"v":[[36.41,16.64],[35.93,17.09],[32.24,17.09],[31,16.03],[32.27,14.99],[36.41,14.99]],"c":true}}},{"ty":"fl","o":{"k":100},"c":{"k":[0,0,0,1]}},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[0,0]},"a":{"k":[0,0]},"s":{"k":[100,100]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"gr","hd":false,"it":[{"ty":"gr","hd":false,"it":[{"ty":"sh","ks":{"k":{"i":[[0,0],[0,0],[0,0],[0,0],[-0.4,-0.39],[0.04,-0.55],[0.4,-0.4],[0.56,0.04],[0,0],[0,-1.69],[0,0],[0,0],[0,0],[-0.07,0.08],[-0.1,-0.02],[0,0],[-0.93,0.91],[0.08,1.29],[3.38,0]],"o":[[0,0],[0,0],[0,0],[0.55,-0.06],[0.4,0.39],[0.04,0.57],[-0.41,0.4],[0,0],[-1.65,0],[0,0],[0,0],[0,0],[-0.02,-0.1],[0.08,-0.07],[0,0],[1.29,0.11],[0.93,-0.9],[-0.04,-2.45],[0,0]],"v":[[66.27,83.37],[58.58,83.37],[58.58,86],[66.38,86],[67.88,86.52],[68.45,88],[67.88,89.51],[66.36,90.07],[61,90.07],[58.64,92.45],[58.64,98.38],[61.26,98.38],[61.26,93],[61.35,92.71],[61.64,92.62],[66.31,92.62],[69.8,91.36],[71.14,87.91],[66.27,83.37]],"c":true}}},{"ty":"st","lc":1,"lj":1,"ml":10,"o":{"k":100},"w":{"k":1},"c":{"k":[0.92,0.92,0.49,1]},"hd":false},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[-24.34,-54.97]},"a":{"k":[0,0]},"s":{"k":[75,75]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[0,0]},"a":{"k":[0,0]},"s":{"k":[100,100]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"gr","hd":false,"it":[{"ty":"sh","ks":{"k":{"i":[[0,0],[0,0],[0,0],[0,0],[-0.3,-0.29],[0.03,-0.41],[0.3,-0.3],[0.42,0.03],[0,0],[0,-1.27],[0,0],[0,0],[0,0],[-0.05,0.06],[-0.08,-0.01],[0,0],[-0.7,0.68],[0.06,0.97],[2.54,0]],"o":[[0,0],[0,0],[0,0],[0.41,-0.04],[0.3,0.29],[0.03,0.43],[-0.3,0.3],[0,0],[-1.24,0],[0,0],[0,0],[0,0],[-0.02,-0.08],[0.06,-0.05],[0,0],[0.97,0.08],[0.7,-0.68],[-0.03,-1.84],[0,0]],"v":[[25.36,7.56],[19.6,7.56],[19.6,9.53],[25.45,9.53],[26.57,9.92],[27,11.03],[26.57,12.17],[25.43,12.59],[21.41,12.59],[19.64,14.37],[19.64,18.82],[21.61,18.82],[21.61,14.78],[21.68,14.57],[21.89,14.5],[25.39,14.5],[28.01,13.55],[29.02,10.96],[25.36,7.56]],"c":true}}},{"ty":"fl","o":{"k":100},"c":{"k":[0,0,0,1]}},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[0,0]},"a":{"k":[0,0]},"s":{"k":[100,100]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"gr","hd":false,"it":[{"ty":"gr","hd":false,"it":[{"ty":"sh","ks":{"k":{"i":[[0,0],[1.15,0],[0,0],[0,-0.91],[0,0],[0,0],[0,0.87]],"o":[[0,-0.89],[0,0],[-1.29,0],[0,0],[0,0],[1.29,0],[0,0]],"v":[[170.48,90.37],[168.82,88.9],[165,88.9],[163.2,90.52],[163.2,91.77],[168.71,91.77],[170.48,90.37]],"c":true}}},{"ty":"st","lc":1,"lj":1,"ml":10,"o":{"k":100},"w":{"k":1},"c":{"k":[0.92,0.92,0.49,1]},"hd":false},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[-24.34,-54.97]},"a":{"k":[0,0]},"s":{"k":[75,75]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[0,0]},"a":{"k":[0,0]},"s":{"k":[100,100]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"gr","hd":false,"it":[{"ty":"sh","ks":{"k":{"i":[[0,0],[1.16,0],[0,0],[0,-0.91],[0,0],[0,0],[0,0.87]],"o":[[0,-0.89],[0,0],[-1.29,0],[0,0],[0,0],[1.27,0],[0,0]],"v":[[152.25,90.37],[150.58,88.9],[146.8,88.9],[145,90.52],[145,91.77],[150.51,91.77],[152.25,90.37]],"c":true}}},{"ty":"st","lc":1,"lj":1,"ml":10,"o":{"k":100},"w":{"k":1},"c":{"k":[0.92,0.92,0.49,1]},"hd":false},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[-24.34,-54.97]},"a":{"k":[0,0]},"s":{"k":[75,75]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"gr","hd":false,"it":[{"ty":"gr","hd":false,"it":[{"ty":"sh","ks":{"k":{"i":[[0,0],[-1.18,0],[0,0],[0,0.42],[0,0],[0,0],[0,-0.87]],"o":[[0,0.87],[0,0],[0.47,0],[0,0],[0,0],[-1.21,0],[0,0]],"v":[[126.34,94.66],[127.99,96.08],[132.92,96.08],[133.57,95.48],[133.57,93.28],[128,93.28],[126.34,94.66]],"c":true}}},{"ty":"st","lc":1,"lj":1,"ml":10,"o":{"k":100},"w":{"k":1},"c":{"k":[0.92,0.92,0.49,1]},"hd":false},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[-24.34,-54.97]},"a":{"k":[0,0]},"s":{"k":[75,75]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[0,0]},"a":{"k":[0,0]},"s":{"k":[100,100]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"gr","hd":false,"it":[{"ty":"sh","ks":{"k":{"i":[[0,0],[0,0],[0,0]],"o":[[0,0],[0,0],[0,0]],"v":[[16.97,5.66],[7.24,15.39],[13.05,15.39]],"c":true}}},{"ty":"st","lc":1,"lj":1,"ml":10,"o":{"k":100},"w":{"k":1},"c":{"k":[0.92,0.92,0.49,1]},"hd":false},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[0,0]},"a":{"k":[0,0]},"s":{"k":[75,75]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"gr","hd":false,"it":[{"ty":"gr","hd":false,"it":[{"ty":"sh","ks":{"k":{"i":[[0,0],[0,0],[0,0]],"o":[[0,0],[0,0],[0,0]],"v":[[7.08,30.45],[16.81,20.71],[11,20.71]],"c":true}}},{"ty":"st","lc":1,"lj":1,"ml":10,"o":{"k":100},"w":{"k":1},"c":{"k":[0.92,0.92,0.49,1]},"hd":false},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[0,0]},"a":{"k":[0,0]},"s":{"k":[75,75]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[0,0]},"a":{"k":[0,0]},"s":{"k":[100,100]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"gr","hd":false,"it":[{"ty":"gr","hd":false,"it":[{"ty":"sh","ks":{"k":{"i":[[0,0],[-1.18,0],[0,0],[0,0.42],[0,0],[0,0],[0,-0.87]],"o":[[0,0.87],[0,0],[0.47,0],[0,0],[0,0],[-1.25,0],[0,0]],"v":[[73.79,94.66],[75.44,96.08],[80.37,96.08],[81.02,95.48],[81.02,93.28],[75.48,93.28],[73.79,94.66]],"c":true}}},{"ty":"st","lc":1,"lj":1,"ml":10,"o":{"k":100},"w":{"k":1},"c":{"k":[0.92,0.92,0.49,1]},"hd":false},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[-24.34,-54.97]},"a":{"k":[0,0]},"s":{"k":[75,75]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[0,0]},"a":{"k":[0,0]},"s":{"k":[100,100]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"gr","hd":false,"it":[{"ty":"sh","ks":{"k":{"i":[[0,0],[0,0],[0,0],[0,0]],"o":[[0,0],[0,0],[0,0],[0,0]],"v":[[3.9,18.72],[18.8,18.72],[20.15,17.38],[5.25,17.38]],"c":true}}},{"ty":"st","lc":1,"lj":1,"ml":10,"o":{"k":100},"w":{"k":1},"c":{"k":[0.92,0.92,0.49,1]},"hd":false},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[0,0]},"a":{"k":[0,0]},"s":{"k":[75,75]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[0,0]},"a":{"k":[0,0]},"s":{"k":[100,100]},"sk":{"k":0},"sa":{"k":0},"hd":false}]}]}],"meta":{"g":"LF SVG to Lottie"}}');
-;// CONCATENATED MODULE: ./src/components/nav-components/lottielogo.js
-function LottieLogo(){const container=(0,index_js_.useRef)(null);(0,index_js_.useEffect)(()=>{lottie_default().loadAnimation({container:container.current,renderer:'svg',loop:true,autoplay:true,animationData:paul_logo_namespaceObject});},[]);return/*#__PURE__*/index_js_default().createElement("div",{ref:container});}/* harmony default export */ const lottielogo = (LottieLogo);
+// EXTERNAL MODULE: external "/Users/owner/paul-salele/frontend/node_modules/react/index.js"
+var index_js_ = __webpack_require__(6283);
 ;// CONCATENATED MODULE: ./node_modules/@heroicons/react/outline/esm/AcademicCapIcon.js
 
 
@@ -6533,8 +5097,1627 @@ function ZoomOutIcon(props) {
 
 
 
+
+/***/ }),
+
+/***/ 1224:
+/***/ ((module) => {
+
+"use strict";
+const preserveCamelCase=string=>{let isLastCharLower=false;let isLastCharUpper=false;let isLastLastCharUpper=false;for(let i=0;i<string.length;i++){const character=string[i];if(isLastCharLower&&/[a-zA-Z]/.test(character)&&character.toUpperCase()===character){string=string.slice(0,i)+'-'+string.slice(i);isLastCharLower=false;isLastLastCharUpper=isLastCharUpper;isLastCharUpper=true;i++;}else if(isLastCharUpper&&isLastLastCharUpper&&/[a-zA-Z]/.test(character)&&character.toLowerCase()===character){string=string.slice(0,i-1)+'-'+string.slice(i-1);isLastLastCharUpper=isLastCharUpper;isLastCharUpper=false;isLastCharLower=true;}else{isLastCharLower=character.toLowerCase()===character&&character.toUpperCase()!==character;isLastLastCharUpper=isLastCharUpper;isLastCharUpper=character.toUpperCase()===character&&character.toLowerCase()!==character;}}return string;};const camelCase=(input,options)=>{if(!(typeof input==='string'||Array.isArray(input))){throw new TypeError('Expected the input to be `string | string[]`');}options=Object.assign({pascalCase:false},options);const postProcess=x=>options.pascalCase?x.charAt(0).toUpperCase()+x.slice(1):x;if(Array.isArray(input)){input=input.map(x=>x.trim()).filter(x=>x.length).join('-');}else{input=input.trim();}if(input.length===0){return'';}if(input.length===1){return options.pascalCase?input.toUpperCase():input.toLowerCase();}const hasUpperCase=input!==input.toLowerCase();if(hasUpperCase){input=preserveCamelCase(input);}input=input.replace(/^[_.\- ]+/,'').toLowerCase().replace(/[_.\- ]+(\w|$)/g,(_,p1)=>p1.toUpperCase()).replace(/\d+(\w|$)/g,m=>m.toUpperCase());return postProcess(input);};module.exports=camelCase;// TODO: Remove this for the next major release
+module.exports["default"]=camelCase;
+
+/***/ }),
+
+/***/ 7317:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "Z": () => (/* binding */ TopNavBar)
+});
+
+// EXTERNAL MODULE: external "/Users/owner/paul-salele/frontend/node_modules/react/index.js"
+var index_js_ = __webpack_require__(6283);
+var index_js_default = /*#__PURE__*/__webpack_require__.n(index_js_);
+// EXTERNAL MODULE: ./node_modules/@headlessui/react/dist/_virtual/_rollupPluginBabelHelpers.js
+var _rollupPluginBabelHelpers = __webpack_require__(9642);
+// EXTERNAL MODULE: ./node_modules/@headlessui/react/dist/utils/match.esm.js
+var match_esm = __webpack_require__(133);
+// EXTERNAL MODULE: ./node_modules/@headlessui/react/dist/utils/render.esm.js
+var render_esm = __webpack_require__(8529);
+// EXTERNAL MODULE: ./node_modules/@headlessui/react/dist/hooks/use-iso-morphic-effect.esm.js
+var use_iso_morphic_effect_esm = __webpack_require__(852);
+// EXTERNAL MODULE: ./node_modules/@headlessui/react/dist/hooks/use-server-handoff-complete.esm.js
+var use_server_handoff_complete_esm = __webpack_require__(5989);
+// EXTERNAL MODULE: ./node_modules/@headlessui/react/dist/hooks/use-id.esm.js
+var use_id_esm = __webpack_require__(2506);
+;// CONCATENATED MODULE: ./node_modules/@headlessui/react/dist/hooks/use-is-mounted.esm.js
+
+
+function useIsMounted() {
+  var mounted = (0,index_js_.useRef)(false);
+  (0,index_js_.useEffect)(function () {
+    mounted.current = true;
+    return function () {
+      mounted.current = false;
+    };
+  }, []);
+  return mounted;
+}
+
+
+//# sourceMappingURL=use-is-mounted.esm.js.map
+
+;// CONCATENATED MODULE: ./node_modules/@headlessui/react/dist/internal/open-closed.esm.js
+
+
+var Context = /*#__PURE__*/(0,index_js_.createContext)(null);
+Context.displayName = 'OpenClosedContext';
+var State;
+
+(function (State) {
+  State[State["Open"] = 0] = "Open";
+  State[State["Closed"] = 1] = "Closed";
+})(State || (State = {}));
+
+function useOpenClosed() {
+  return (0,index_js_.useContext)(Context);
+}
+function OpenClosedProvider(_ref) {
+  var value = _ref.value,
+      children = _ref.children;
+  return index_js_default().createElement(Context.Provider, {
+    value: value
+  }, children);
+}
+
+
+//# sourceMappingURL=open-closed.esm.js.map
+
+;// CONCATENATED MODULE: ./node_modules/@headlessui/react/dist/hooks/use-is-initial-render.esm.js
+
+
+function useIsInitialRender() {
+  var initial = (0,index_js_.useRef)(true);
+  (0,index_js_.useEffect)(function () {
+    initial.current = false;
+  }, []);
+  return initial.current;
+}
+
+
+//# sourceMappingURL=use-is-initial-render.esm.js.map
+
+;// CONCATENATED MODULE: ./node_modules/@headlessui/react/dist/utils/disposables.esm.js
+
+
+function disposables() {
+  var disposables = [];
+  var api = {
+    requestAnimationFrame: function (_requestAnimationFrame) {
+      function requestAnimationFrame() {
+        return _requestAnimationFrame.apply(this, arguments);
+      }
+
+      requestAnimationFrame.toString = function () {
+        return _requestAnimationFrame.toString();
+      };
+
+      return requestAnimationFrame;
+    }(function () {
+      var raf = requestAnimationFrame.apply(void 0, arguments);
+      api.add(function () {
+        return cancelAnimationFrame(raf);
+      });
+    }),
+    nextFrame: function nextFrame() {
+      for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+        args[_key] = arguments[_key];
+      }
+
+      api.requestAnimationFrame(function () {
+        api.requestAnimationFrame.apply(api, args);
+      });
+    },
+    setTimeout: function (_setTimeout) {
+      function setTimeout() {
+        return _setTimeout.apply(this, arguments);
+      }
+
+      setTimeout.toString = function () {
+        return _setTimeout.toString();
+      };
+
+      return setTimeout;
+    }(function () {
+      var timer = setTimeout.apply(void 0, arguments);
+      api.add(function () {
+        return clearTimeout(timer);
+      });
+    }),
+    add: function add(cb) {
+      disposables.push(cb);
+    },
+    dispose: function dispose() {
+      for (var _iterator = (0,_rollupPluginBabelHelpers/* createForOfIteratorHelperLoose */.Ul)(disposables.splice(0)), _step; !(_step = _iterator()).done;) {
+        var dispose = _step.value;
+        dispose();
+      }
+    }
+  };
+  return api;
+}
+
+
+//# sourceMappingURL=disposables.esm.js.map
+
+;// CONCATENATED MODULE: ./node_modules/@headlessui/react/dist/utils/once.esm.js
+function once(cb) {
+  var state = {
+    called: false
+  };
+  return function () {
+    if (state.called) return;
+    state.called = true;
+    return cb.apply(void 0, arguments);
+  };
+}
+
+
+//# sourceMappingURL=once.esm.js.map
+
+;// CONCATENATED MODULE: ./node_modules/@headlessui/react/dist/components/transitions/utils/transition.esm.js
+
+
+
+function addClasses(node) {
+  var _node$classList;
+
+  for (var _len = arguments.length, classes = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+    classes[_key - 1] = arguments[_key];
+  }
+
+  node && classes.length > 0 && (_node$classList = node.classList).add.apply(_node$classList, classes);
+}
+
+function removeClasses(node) {
+  var _node$classList2;
+
+  for (var _len2 = arguments.length, classes = new Array(_len2 > 1 ? _len2 - 1 : 0), _key2 = 1; _key2 < _len2; _key2++) {
+    classes[_key2 - 1] = arguments[_key2];
+  }
+
+  node && classes.length > 0 && (_node$classList2 = node.classList).remove.apply(_node$classList2, classes);
+}
+
+var Reason;
+
+(function (Reason) {
+  Reason["Finished"] = "finished";
+  Reason["Cancelled"] = "cancelled";
+})(Reason || (Reason = {}));
+
+function waitForTransition(node, done) {
+  var d = disposables();
+  if (!node) return d.dispose; // Safari returns a comma separated list of values, so let's sort them and take the highest value.
+
+  var _getComputedStyle = getComputedStyle(node),
+      transitionDuration = _getComputedStyle.transitionDuration,
+      transitionDelay = _getComputedStyle.transitionDelay;
+
+  var _map = [transitionDuration, transitionDelay].map(function (value) {
+    var _value$split$filter$m = value.split(',') // Remove falsy we can't work with
+    .filter(Boolean) // Values are returned as `0.3s` or `75ms`
+    .map(function (v) {
+      return v.includes('ms') ? parseFloat(v) : parseFloat(v) * 1000;
+    }).sort(function (a, z) {
+      return z - a;
+    }),
+        _value$split$filter$m2 = _value$split$filter$m[0],
+        resolvedValue = _value$split$filter$m2 === void 0 ? 0 : _value$split$filter$m2;
+
+    return resolvedValue;
+  }),
+      durationMs = _map[0],
+      delaysMs = _map[1]; // Waiting for the transition to end. We could use the `transitionend` event, however when no
+  // actual transition/duration is defined then the `transitionend` event is not fired.
+  //
+  // TODO: Downside is, when you slow down transitions via devtools this timeout is still using the
+  // full 100% speed instead of the 25% or 10%.
+
+
+  if (durationMs !== 0) {
+    d.setTimeout(function () {
+      done(Reason.Finished);
+    }, durationMs + delaysMs);
+  } else {
+    // No transition is happening, so we should cleanup already. Otherwise we have to wait until we
+    // get disposed.
+    done(Reason.Finished);
+  } // If we get disposed before the timeout runs we should cleanup anyway
+
+
+  d.add(function () {
+    return done(Reason.Cancelled);
+  });
+  return d.dispose;
+}
+
+function transition(node, base, from, to, entered, done) {
+  var d = disposables();
+
+  var _done = done !== undefined ? once(done) : function () {};
+
+  removeClasses.apply(void 0, [node].concat(entered));
+  addClasses.apply(void 0, [node].concat(base, from));
+  d.nextFrame(function () {
+    removeClasses.apply(void 0, [node].concat(from));
+    addClasses.apply(void 0, [node].concat(to));
+    d.add(waitForTransition(node, function (reason) {
+      removeClasses.apply(void 0, [node].concat(to, base));
+      addClasses.apply(void 0, [node].concat(entered));
+      return _done(reason);
+    }));
+  }); // Once we get disposed, we should ensure that we cleanup after ourselves. In case of an unmount,
+  // the node itself will be nullified and will be a no-op. In case of a full transition the classes
+  // are already removed which is also a no-op. However if you go from enter -> leave mid-transition
+  // then we have some leftovers that should be cleaned.
+
+  d.add(function () {
+    return removeClasses.apply(void 0, [node].concat(base, from, to, entered));
+  }); // When we get disposed early, than we should also call the done method but switch the reason.
+
+  d.add(function () {
+    return _done(Reason.Cancelled);
+  });
+  return d.dispose;
+}
+
+
+//# sourceMappingURL=transition.esm.js.map
+
+;// CONCATENATED MODULE: ./node_modules/@headlessui/react/dist/components/transitions/transition.esm.js
+
+
+
+
+
+
+
+
+
+
+
+
+function useSplitClasses(classes) {
+  if (classes === void 0) {
+    classes = '';
+  }
+
+  return (0,index_js_.useMemo)(function () {
+    return classes.split(' ').filter(function (className) {
+      return className.trim().length > 1;
+    });
+  }, [classes]);
+}
+
+var TransitionContext = /*#__PURE__*/(0,index_js_.createContext)(null);
+TransitionContext.displayName = 'TransitionContext';
+var TreeStates;
+
+(function (TreeStates) {
+  TreeStates["Visible"] = "visible";
+  TreeStates["Hidden"] = "hidden";
+})(TreeStates || (TreeStates = {}));
+
+function useTransitionContext() {
+  var context = (0,index_js_.useContext)(TransitionContext);
+
+  if (context === null) {
+    throw new Error('A <Transition.Child /> is used but it is missing a parent <Transition /> or <Transition.Root />.');
+  }
+
+  return context;
+}
+
+function useParentNesting() {
+  var context = (0,index_js_.useContext)(NestingContext);
+
+  if (context === null) {
+    throw new Error('A <Transition.Child /> is used but it is missing a parent <Transition /> or <Transition.Root />.');
+  }
+
+  return context;
+}
+
+var NestingContext = /*#__PURE__*/(0,index_js_.createContext)(null);
+NestingContext.displayName = 'NestingContext';
+
+function hasChildren(bag) {
+  if ('children' in bag) return hasChildren(bag.children);
+  return bag.current.filter(function (_ref) {
+    var state = _ref.state;
+    return state === TreeStates.Visible;
+  }).length > 0;
+}
+
+function useNesting(done) {
+  var doneRef = (0,index_js_.useRef)(done);
+  var transitionableChildren = (0,index_js_.useRef)([]);
+  var mounted = useIsMounted();
+  (0,index_js_.useEffect)(function () {
+    doneRef.current = done;
+  }, [done]);
+  var unregister = (0,index_js_.useCallback)(function (childId, strategy) {
+    var _match;
+
+    if (strategy === void 0) {
+      strategy = render_esm/* RenderStrategy.Hidden */.l4.Hidden;
+    }
+
+    var idx = transitionableChildren.current.findIndex(function (_ref2) {
+      var id = _ref2.id;
+      return id === childId;
+    });
+    if (idx === -1) return;
+    (0,match_esm/* match */.E)(strategy, (_match = {}, _match[render_esm/* RenderStrategy.Unmount */.l4.Unmount] = function () {
+      transitionableChildren.current.splice(idx, 1);
+    }, _match[render_esm/* RenderStrategy.Hidden */.l4.Hidden] = function () {
+      transitionableChildren.current[idx].state = TreeStates.Hidden;
+    }, _match));
+
+    if (!hasChildren(transitionableChildren) && mounted.current) {
+      doneRef.current == null ? void 0 : doneRef.current();
+    }
+  }, [doneRef, mounted, transitionableChildren]);
+  var register = (0,index_js_.useCallback)(function (childId) {
+    var child = transitionableChildren.current.find(function (_ref3) {
+      var id = _ref3.id;
+      return id === childId;
+    });
+
+    if (!child) {
+      transitionableChildren.current.push({
+        id: childId,
+        state: TreeStates.Visible
+      });
+    } else if (child.state !== TreeStates.Visible) {
+      child.state = TreeStates.Visible;
+    }
+
+    return function () {
+      return unregister(childId, render_esm/* RenderStrategy.Unmount */.l4.Unmount);
+    };
+  }, [transitionableChildren, unregister]);
+  return (0,index_js_.useMemo)(function () {
+    return {
+      children: transitionableChildren,
+      register: register,
+      unregister: unregister
+    };
+  }, [register, unregister, transitionableChildren]);
+}
+
+function noop() {}
+
+var eventNames = ['beforeEnter', 'afterEnter', 'beforeLeave', 'afterLeave'];
+
+function ensureEventHooksExist(events) {
+  var result = {};
+
+  for (var _iterator = (0,_rollupPluginBabelHelpers/* createForOfIteratorHelperLoose */.Ul)(eventNames), _step; !(_step = _iterator()).done;) {
+    var _events$name;
+
+    var name = _step.value;
+    result[name] = (_events$name = events[name]) != null ? _events$name : noop;
+  }
+
+  return result;
+}
+
+function useEvents(events) {
+  var eventsRef = (0,index_js_.useRef)(ensureEventHooksExist(events));
+  (0,index_js_.useEffect)(function () {
+    eventsRef.current = ensureEventHooksExist(events);
+  }, [events]);
+  return eventsRef;
+} // ---
+
+
+var DEFAULT_TRANSITION_CHILD_TAG = 'div';
+var TransitionChildRenderFeatures = render_esm/* Features.RenderStrategy */.AN.RenderStrategy;
+
+function TransitionChild(props) {
+  var _match3;
+
+  var beforeEnter = props.beforeEnter,
+      afterEnter = props.afterEnter,
+      beforeLeave = props.beforeLeave,
+      afterLeave = props.afterLeave,
+      enter = props.enter,
+      enterFrom = props.enterFrom,
+      enterTo = props.enterTo,
+      entered = props.entered,
+      leave = props.leave,
+      leaveFrom = props.leaveFrom,
+      leaveTo = props.leaveTo,
+      rest = (0,_rollupPluginBabelHelpers/* objectWithoutPropertiesLoose */.gK)(props, ["beforeEnter", "afterEnter", "beforeLeave", "afterLeave", "enter", "enterFrom", "enterTo", "entered", "leave", "leaveFrom", "leaveTo"]);
+
+  var container = (0,index_js_.useRef)(null);
+
+  var _useState = (0,index_js_.useState)(TreeStates.Visible),
+      state = _useState[0],
+      setState = _useState[1];
+
+  var strategy = rest.unmount ? render_esm/* RenderStrategy.Unmount */.l4.Unmount : render_esm/* RenderStrategy.Hidden */.l4.Hidden;
+
+  var _useTransitionContext = useTransitionContext(),
+      show = _useTransitionContext.show,
+      appear = _useTransitionContext.appear;
+
+  var _useParentNesting = useParentNesting(),
+      register = _useParentNesting.register,
+      unregister = _useParentNesting.unregister;
+
+  var initial = useIsInitialRender();
+  var id = (0,use_id_esm/* useId */.M)();
+  var isTransitioning = (0,index_js_.useRef)(false);
+  var nesting = useNesting(function () {
+    // When all children have been unmounted we can only hide ourselves if and only if we are not
+    // transitioning ourselves. Otherwise we would unmount before the transitions are finished.
+    if (!isTransitioning.current) {
+      setState(TreeStates.Hidden);
+      unregister(id);
+      events.current.afterLeave();
+    }
+  });
+  (0,use_iso_morphic_effect_esm/* useIsoMorphicEffect */.e)(function () {
+    if (!id) return;
+    return register(id);
+  }, [register, id]);
+  (0,use_iso_morphic_effect_esm/* useIsoMorphicEffect */.e)(function () {
+    var _match2;
+
+    // If we are in another mode than the Hidden mode then ignore
+    if (strategy !== render_esm/* RenderStrategy.Hidden */.l4.Hidden) return;
+    if (!id) return; // Make sure that we are visible
+
+    if (show && state !== TreeStates.Visible) {
+      setState(TreeStates.Visible);
+      return;
+    }
+
+    (0,match_esm/* match */.E)(state, (_match2 = {}, _match2[TreeStates.Hidden] = function () {
+      return unregister(id);
+    }, _match2[TreeStates.Visible] = function () {
+      return register(id);
+    }, _match2));
+  }, [state, id, register, unregister, show, strategy]);
+  var enterClasses = useSplitClasses(enter);
+  var enterFromClasses = useSplitClasses(enterFrom);
+  var enterToClasses = useSplitClasses(enterTo);
+  var enteredClasses = useSplitClasses(entered);
+  var leaveClasses = useSplitClasses(leave);
+  var leaveFromClasses = useSplitClasses(leaveFrom);
+  var leaveToClasses = useSplitClasses(leaveTo);
+  var events = useEvents({
+    beforeEnter: beforeEnter,
+    afterEnter: afterEnter,
+    beforeLeave: beforeLeave,
+    afterLeave: afterLeave
+  });
+  var ready = (0,use_server_handoff_complete_esm/* useServerHandoffComplete */.H)();
+  (0,index_js_.useEffect)(function () {
+    if (ready && state === TreeStates.Visible && container.current === null) {
+      throw new Error('Did you forget to passthrough the `ref` to the actual DOM node?');
+    }
+  }, [container, state, ready]); // Skipping initial transition
+
+  var skip = initial && !appear;
+  (0,use_iso_morphic_effect_esm/* useIsoMorphicEffect */.e)(function () {
+    var node = container.current;
+    if (!node) return;
+    if (skip) return;
+    isTransitioning.current = true;
+    if (show) events.current.beforeEnter();
+    if (!show) events.current.beforeLeave();
+    return show ? transition(node, enterClasses, enterFromClasses, enterToClasses, enteredClasses, function (reason) {
+      isTransitioning.current = false;
+      if (reason === Reason.Finished) events.current.afterEnter();
+    }) : transition(node, leaveClasses, leaveFromClasses, leaveToClasses, enteredClasses, function (reason) {
+      isTransitioning.current = false;
+      if (reason !== Reason.Finished) return; // When we don't have children anymore we can safely unregister from the parent and hide
+      // ourselves.
+
+      if (!hasChildren(nesting)) {
+        setState(TreeStates.Hidden);
+        unregister(id);
+        events.current.afterLeave();
+      }
+    });
+  }, [events, id, isTransitioning, unregister, nesting, container, skip, show, enterClasses, enterFromClasses, enterToClasses, leaveClasses, leaveFromClasses, leaveToClasses]);
+  var propsWeControl = {
+    ref: container
+  };
+  var passthroughProps = rest;
+  return index_js_default().createElement(NestingContext.Provider, {
+    value: nesting
+  }, index_js_default().createElement(OpenClosedProvider, {
+    value: (0,match_esm/* match */.E)(state, (_match3 = {}, _match3[TreeStates.Visible] = State.Open, _match3[TreeStates.Hidden] = State.Closed, _match3))
+  }, (0,render_esm/* render */.sY)({
+    props: (0,_rollupPluginBabelHelpers/* extends */.gY)({}, passthroughProps, propsWeControl),
+    defaultTag: DEFAULT_TRANSITION_CHILD_TAG,
+    features: TransitionChildRenderFeatures,
+    visible: state === TreeStates.Visible,
+    name: 'Transition.Child'
+  })));
+}
+
+function Transition(props) {
+  // @ts-expect-error
+  var show = props.show,
+      _props$appear = props.appear,
+      appear = _props$appear === void 0 ? false : _props$appear,
+      unmount = props.unmount,
+      passthroughProps = (0,_rollupPluginBabelHelpers/* objectWithoutPropertiesLoose */.gK)(props, ["show", "appear", "unmount"]);
+
+  var usesOpenClosedState = useOpenClosed();
+
+  if (show === undefined && usesOpenClosedState !== null) {
+    var _match4;
+
+    show = (0,match_esm/* match */.E)(usesOpenClosedState, (_match4 = {}, _match4[State.Open] = true, _match4[State.Closed] = false, _match4));
+  }
+
+  if (![true, false].includes(show)) {
+    throw new Error('A <Transition /> is used but it is missing a `show={true | false}` prop.');
+  }
+
+  var _useState2 = (0,index_js_.useState)(show ? TreeStates.Visible : TreeStates.Hidden),
+      state = _useState2[0],
+      setState = _useState2[1];
+
+  var nestingBag = useNesting(function () {
+    setState(TreeStates.Hidden);
+  });
+  var initial = useIsInitialRender();
+  var transitionBag = (0,index_js_.useMemo)(function () {
+    return {
+      show: show,
+      appear: appear || !initial
+    };
+  }, [show, appear, initial]);
+  (0,index_js_.useEffect)(function () {
+    if (show) {
+      setState(TreeStates.Visible);
+    } else if (!hasChildren(nestingBag)) {
+      setState(TreeStates.Hidden);
+    }
+  }, [show, nestingBag]);
+  var sharedProps = {
+    unmount: unmount
+  };
+  return index_js_default().createElement(NestingContext.Provider, {
+    value: nestingBag
+  }, index_js_default().createElement(TransitionContext.Provider, {
+    value: transitionBag
+  }, (0,render_esm/* render */.sY)({
+    props: (0,_rollupPluginBabelHelpers/* extends */.gY)({}, sharedProps, {
+      as: index_js_.Fragment,
+      children: index_js_default().createElement(TransitionChild, Object.assign({}, sharedProps, passthroughProps))
+    }),
+    defaultTag: index_js_.Fragment,
+    features: TransitionChildRenderFeatures,
+    visible: state === TreeStates.Visible,
+    name: 'Transition'
+  })));
+}
+
+Transition.Child = function Child(props) {
+  var hasTransitionContext = (0,index_js_.useContext)(TransitionContext) !== null;
+  var hasOpenClosedContext = useOpenClosed() !== null;
+  return !hasTransitionContext && hasOpenClosedContext ? index_js_default().createElement(Transition, Object.assign({}, props)) : index_js_default().createElement(TransitionChild, Object.assign({}, props));
+};
+
+Transition.Root = Transition;
+
+
+//# sourceMappingURL=transition.esm.js.map
+
+// EXTERNAL MODULE: ./node_modules/@headlessui/react/dist/hooks/use-sync-refs.esm.js
+var use_sync_refs_esm = __webpack_require__(7471);
+// EXTERNAL MODULE: ./node_modules/@headlessui/react/dist/components/keyboard.esm.js
+var keyboard_esm = __webpack_require__(2659);
+// EXTERNAL MODULE: ./node_modules/@headlessui/react/dist/utils/bugs.esm.js
+var bugs_esm = __webpack_require__(9016);
+;// CONCATENATED MODULE: ./node_modules/@headlessui/react/dist/hooks/use-window-event.esm.js
+
+
+function useWindowEvent(type, listener, options) {
+  var listenerRef = (0,index_js_.useRef)(listener);
+  listenerRef.current = listener;
+  (0,index_js_.useEffect)(function () {
+    function handler(event) {
+      listenerRef.current.call(window, event);
+    }
+
+    window.addEventListener(type, handler, options);
+    return function () {
+      return window.removeEventListener(type, handler, options);
+    };
+  }, [type, options]);
+}
+
+
+//# sourceMappingURL=use-window-event.esm.js.map
+
+;// CONCATENATED MODULE: ./node_modules/@headlessui/react/dist/utils/focus-management.esm.js
+
+
+//  - https://stackoverflow.com/a/30753870
+
+var focusableSelector = /*#__PURE__*/['[contentEditable=true]', '[tabindex]', 'a[href]', 'area[href]', 'button:not([disabled])', 'iframe', 'input:not([disabled])', 'select:not([disabled])', 'textarea:not([disabled])'].map( false ? // TODO: Remove this once JSDOM fixes the issue where an element that is
+// "hidden" can be the document.activeElement, because this is not possible
+// in real browsers.
+// TODO: Remove this once JSDOM fixes the issue where an element that is
+0 : function (selector) {
+  return selector + ":not([tabindex='-1'])";
+}).join(',');
+var Focus;
+
+(function (Focus) {
+  /** Focus the first non-disabled element */
+  Focus[Focus["First"] = 1] = "First";
+  /** Focus the previous non-disabled element */
+
+  Focus[Focus["Previous"] = 2] = "Previous";
+  /** Focus the next non-disabled element */
+
+  Focus[Focus["Next"] = 4] = "Next";
+  /** Focus the last non-disabled element */
+
+  Focus[Focus["Last"] = 8] = "Last";
+  /** Wrap tab around */
+
+  Focus[Focus["WrapAround"] = 16] = "WrapAround";
+  /** Prevent scrolling the focusable elements into view */
+
+  Focus[Focus["NoScroll"] = 32] = "NoScroll";
+})(Focus || (Focus = {}));
+
+var FocusResult;
+
+(function (FocusResult) {
+  /** Something went wrong while trying to focus. */
+  FocusResult[FocusResult["Error"] = 0] = "Error";
+  /** When `Focus.WrapAround` is enabled, going from position `N` to `N+1` where `N` is the last index in the array, then we overflow. */
+
+  FocusResult[FocusResult["Overflow"] = 1] = "Overflow";
+  /** Focus was successful. */
+
+  FocusResult[FocusResult["Success"] = 2] = "Success";
+  /** When `Focus.WrapAround` is enabled, going from position `N` to `N-1` where `N` is the first index in the array, then we underflow. */
+
+  FocusResult[FocusResult["Underflow"] = 3] = "Underflow";
+})(FocusResult || (FocusResult = {}));
+
+var Direction;
+
+(function (Direction) {
+  Direction[Direction["Previous"] = -1] = "Previous";
+  Direction[Direction["Next"] = 1] = "Next";
+})(Direction || (Direction = {}));
+
+function getFocusableElements(container) {
+  if (container === void 0) {
+    container = document.body;
+  }
+
+  if (container == null) return [];
+  return Array.from(container.querySelectorAll(focusableSelector));
+}
+var FocusableMode;
+
+(function (FocusableMode) {
+  /** The element itself must be focusable. */
+  FocusableMode[FocusableMode["Strict"] = 0] = "Strict";
+  /** The element should be inside of a focusable element. */
+
+  FocusableMode[FocusableMode["Loose"] = 1] = "Loose";
+})(FocusableMode || (FocusableMode = {}));
+
+function isFocusableElement(element, mode) {
+  var _match;
+
+  if (mode === void 0) {
+    mode = FocusableMode.Strict;
+  }
+
+  if (element === document.body) return false;
+  return match(mode, (_match = {}, _match[FocusableMode.Strict] = function () {
+    return element.matches(focusableSelector);
+  }, _match[FocusableMode.Loose] = function () {
+    var next = element;
+
+    while (next !== null) {
+      if (next.matches(focusableSelector)) return true;
+      next = next.parentElement;
+    }
+
+    return false;
+  }, _match));
+}
+function focusElement(element) {
+  element == null ? void 0 : element.focus({
+    preventScroll: true
+  });
+}
+function focusIn(container, focus) {
+  var elements = Array.isArray(container) ? container : getFocusableElements(container);
+  var active = document.activeElement;
+
+  var direction = function () {
+    if (focus & (Focus.First | Focus.Next)) return Direction.Next;
+    if (focus & (Focus.Previous | Focus.Last)) return Direction.Previous;
+    throw new Error('Missing Focus.First, Focus.Previous, Focus.Next or Focus.Last');
+  }();
+
+  var startIndex = function () {
+    if (focus & Focus.First) return 0;
+    if (focus & Focus.Previous) return Math.max(0, elements.indexOf(active)) - 1;
+    if (focus & Focus.Next) return Math.max(0, elements.indexOf(active)) + 1;
+    if (focus & Focus.Last) return elements.length - 1;
+    throw new Error('Missing Focus.First, Focus.Previous, Focus.Next or Focus.Last');
+  }();
+
+  var focusOptions = focus & Focus.NoScroll ? {
+    preventScroll: true
+  } : {};
+  var offset = 0;
+  var total = elements.length;
+  var next = undefined;
+
+  do {
+    var _next;
+
+    // Guard against infinite loops
+    if (offset >= total || offset + total <= 0) return FocusResult.Error;
+    var nextIdx = startIndex + offset;
+
+    if (focus & Focus.WrapAround) {
+      nextIdx = (nextIdx + total) % total;
+    } else {
+      if (nextIdx < 0) return FocusResult.Underflow;
+      if (nextIdx >= total) return FocusResult.Overflow;
+    }
+
+    next = elements[nextIdx]; // Try the focus the next element, might not work if it is "hidden" to the user.
+
+    (_next = next) == null ? void 0 : _next.focus(focusOptions); // Try the next one in line
+
+    offset += direction;
+  } while (next !== document.activeElement); // This is a little weird, but let me try and explain: There are a few scenario's
+  // in chrome for example where a focused `<a>` tag does not get the default focus
+  // styles and sometimes they do. This highly depends on whether you started by
+  // clicking or by using your keyboard. When you programmatically add focus `anchor.focus()`
+  // then the active element (document.activeElement) is this anchor, which is expected.
+  // However in that case the default focus styles are not applied *unless* you
+  // also add this tabindex.
+
+
+  if (!next.hasAttribute('tabindex')) next.setAttribute('tabindex', '0');
+  return FocusResult.Success;
+}
+
+
+//# sourceMappingURL=focus-management.esm.js.map
+
+;// CONCATENATED MODULE: ./node_modules/@headlessui/react/dist/hooks/use-focus-trap.esm.js
+
+
+
+
+
+
+
+var Features;
+
+(function (Features) {
+  /** No features enabled for the `useFocusTrap` hook. */
+  Features[Features["None"] = 1] = "None";
+  /** Ensure that we move focus initially into the container. */
+
+  Features[Features["InitialFocus"] = 2] = "InitialFocus";
+  /** Ensure that pressing `Tab` and `Shift+Tab` is trapped within the container. */
+
+  Features[Features["TabLock"] = 4] = "TabLock";
+  /** Ensure that programmatically moving focus outside of the container is disallowed. */
+
+  Features[Features["FocusLock"] = 8] = "FocusLock";
+  /** Ensure that we restore the focus when unmounting the component that uses this `useFocusTrap` hook. */
+
+  Features[Features["RestoreFocus"] = 16] = "RestoreFocus";
+  /** Enable all features. */
+
+  Features[Features["All"] = 30] = "All";
+})(Features || (Features = {}));
+
+function useFocusTrap(container, features, _temp) {
+  if (features === void 0) {
+    features = Features.All;
+  }
+
+  var _ref = _temp === void 0 ? {} : _temp,
+      initialFocus = _ref.initialFocus,
+      containers = _ref.containers;
+
+  var restoreElement = (0,index_js_.useRef)(typeof window !== 'undefined' ? document.activeElement : null);
+  var previousActiveElement = (0,index_js_.useRef)(null);
+  var mounted = useIsMounted();
+  var featuresRestoreFocus = Boolean(features & Features.RestoreFocus);
+  var featuresInitialFocus = Boolean(features & Features.InitialFocus); // Capture the currently focused element, before we enable the focus trap.
+
+  (0,index_js_.useEffect)(function () {
+    if (!featuresRestoreFocus) return;
+    restoreElement.current = document.activeElement;
+  }, [featuresRestoreFocus]); // Restore the focus when we unmount the component.
+
+  (0,index_js_.useEffect)(function () {
+    if (!featuresRestoreFocus) return;
+    return function () {
+      focusElement(restoreElement.current);
+      restoreElement.current = null;
+    };
+  }, [featuresRestoreFocus]); // Handle initial focus
+
+  (0,index_js_.useEffect)(function () {
+    if (!featuresInitialFocus) return;
+    if (!container.current) return;
+    var activeElement = document.activeElement;
+
+    if (initialFocus == null ? void 0 : initialFocus.current) {
+      if ((initialFocus == null ? void 0 : initialFocus.current) === activeElement) {
+        previousActiveElement.current = activeElement;
+        return; // Initial focus ref is already the active element
+      }
+    } else if (container.current.contains(activeElement)) {
+      previousActiveElement.current = activeElement;
+      return; // Already focused within Dialog
+    } // Try to focus the initialFocus ref
+
+
+    if (initialFocus == null ? void 0 : initialFocus.current) {
+      focusElement(initialFocus.current);
+    } else {
+      if (focusIn(container.current, Focus.First) === FocusResult.Error) {
+        console.warn('There are no focusable elements inside the <FocusTrap />');
+      }
+    }
+
+    previousActiveElement.current = document.activeElement;
+  }, [container, initialFocus, featuresInitialFocus]); // Handle `Tab` & `Shift+Tab` keyboard events
+
+  useWindowEvent('keydown', function (event) {
+    if (!(features & Features.TabLock)) return;
+    if (!container.current) return;
+    if (event.key !== keyboard_esm/* Keys.Tab */.R.Tab) return;
+    event.preventDefault();
+
+    if (focusIn(container.current, (event.shiftKey ? Focus.Previous : Focus.Next) | Focus.WrapAround) === FocusResult.Success) {
+      previousActiveElement.current = document.activeElement;
+    }
+  }); // Prevent programmatically escaping the container
+
+  useWindowEvent('focus', function (event) {
+    if (!(features & Features.FocusLock)) return;
+    var allContainers = new Set(containers == null ? void 0 : containers.current);
+    allContainers.add(container);
+    if (!allContainers.size) return;
+    var previous = previousActiveElement.current;
+    if (!previous) return;
+    if (!mounted.current) return;
+    var toElement = event.target;
+
+    if (toElement && toElement instanceof HTMLElement) {
+      if (!contains(allContainers, toElement)) {
+        event.preventDefault();
+        event.stopPropagation();
+        focusElement(previous);
+      } else {
+        previousActiveElement.current = toElement;
+        focusElement(toElement);
+      }
+    } else {
+      focusElement(previousActiveElement.current);
+    }
+  }, true);
+}
+
+function contains(containers, element) {
+  for (var _iterator = (0,_rollupPluginBabelHelpers/* createForOfIteratorHelperLoose */.Ul)(containers), _step; !(_step = _iterator()).done;) {
+    var _container$current;
+
+    var container = _step.value;
+    if ((_container$current = container.current) == null ? void 0 : _container$current.contains(element)) return true;
+  }
+
+  return false;
+}
+
+
+//# sourceMappingURL=use-focus-trap.esm.js.map
+
+;// CONCATENATED MODULE: ./node_modules/@headlessui/react/dist/hooks/use-inert-others.esm.js
+
+
+
+var interactables = /*#__PURE__*/new Set();
+var originals = /*#__PURE__*/new Map();
+
+function inert(element) {
+  element.setAttribute('aria-hidden', 'true'); // @ts-expect-error `inert` does not exist on HTMLElement (yet!)
+
+  element.inert = true;
+}
+
+function restore(element) {
+  var original = originals.get(element);
+  if (!original) return;
+  if (original['aria-hidden'] === null) element.removeAttribute('aria-hidden');else element.setAttribute('aria-hidden', original['aria-hidden']); // @ts-expect-error `inert` does not exist on HTMLElement (yet!)
+
+  element.inert = original.inert;
+}
+
+function useInertOthers(container, enabled) {
+  if (enabled === void 0) {
+    enabled = true;
+  }
+
+  (0,use_iso_morphic_effect_esm/* useIsoMorphicEffect */.e)(function () {
+    if (!enabled) return;
+    if (!container.current) return;
+    var element = container.current; // Mark myself as an interactable element
+
+    interactables.add(element); // Restore elements that now contain an interactable child
+
+    for (var _iterator = (0,_rollupPluginBabelHelpers/* createForOfIteratorHelperLoose */.Ul)(originals.keys()), _step; !(_step = _iterator()).done;) {
+      var original = _step.value;
+
+      if (original.contains(element)) {
+        restore(original);
+        originals["delete"](original);
+      }
+    } // Collect direct children of the body
+
+
+    document.querySelectorAll('body > *').forEach(function (child) {
+      if (!(child instanceof HTMLElement)) return; // Skip non-HTMLElements
+      // Skip the interactables, and the parents of the interactables
+
+      for (var _iterator2 = (0,_rollupPluginBabelHelpers/* createForOfIteratorHelperLoose */.Ul)(interactables), _step2; !(_step2 = _iterator2()).done;) {
+        var interactable = _step2.value;
+        if (child.contains(interactable)) return;
+      } // Keep track of the elements
+
+
+      if (interactables.size === 1) {
+        originals.set(child, {
+          'aria-hidden': child.getAttribute('aria-hidden'),
+          // @ts-expect-error `inert` does not exist on HTMLElement (yet!)
+          inert: child.inert
+        }); // Mutate the element
+
+        inert(child);
+      }
+    });
+    return function () {
+      // Inert is disabled on the current element
+      interactables["delete"](element); // We still have interactable elements, therefore this one and its parent
+      // will become inert as well.
+
+      if (interactables.size > 0) {
+        // Collect direct children of the body
+        document.querySelectorAll('body > *').forEach(function (child) {
+          if (!(child instanceof HTMLElement)) return; // Skip non-HTMLElements
+          // Skip already inert parents
+
+          if (originals.has(child)) return; // Skip the interactables, and the parents of the interactables
+
+          for (var _iterator3 = (0,_rollupPluginBabelHelpers/* createForOfIteratorHelperLoose */.Ul)(interactables), _step3; !(_step3 = _iterator3()).done;) {
+            var interactable = _step3.value;
+            if (child.contains(interactable)) return;
+          }
+
+          originals.set(child, {
+            'aria-hidden': child.getAttribute('aria-hidden'),
+            // @ts-expect-error `inert` does not exist on HTMLElement (yet!)
+            inert: child.inert
+          }); // Mutate the element
+
+          inert(child);
+        });
+      } else {
+        for (var _iterator4 = (0,_rollupPluginBabelHelpers/* createForOfIteratorHelperLoose */.Ul)(originals.keys()), _step4; !(_step4 = _iterator4()).done;) {
+          var _element = _step4.value;
+          // Restore
+          restore(_element); // Cleanup
+
+          originals["delete"](_element);
+        }
+      }
+    };
+  }, [enabled]);
+}
+
+
+//# sourceMappingURL=use-inert-others.esm.js.map
+
+;// CONCATENATED MODULE: ./node_modules/@headlessui/react/dist/internal/portal-force-root.esm.js
+
+
+var ForcePortalRootContext = /*#__PURE__*/(0,index_js_.createContext)(false);
+function usePortalRoot() {
+  return (0,index_js_.useContext)(ForcePortalRootContext);
+}
+function ForcePortalRoot(props) {
+  return index_js_default().createElement(ForcePortalRootContext.Provider, {
+    value: props.force
+  }, props.children);
+}
+
+
+//# sourceMappingURL=portal-force-root.esm.js.map
+
+// EXTERNAL MODULE: ./node_modules/react-dom/index.js
+var react_dom = __webpack_require__(3935);
+;// CONCATENATED MODULE: ./node_modules/@headlessui/react/dist/components/portal/portal.esm.js
+
+
+
+
+
+
+
+
+function usePortalTarget() {
+  var forceInRoot = usePortalRoot();
+  var groupTarget = (0,index_js_.useContext)(PortalGroupContext);
+
+  var _useState = (0,index_js_.useState)(function () {
+    // Group context is used, but still null
+    if (!forceInRoot && groupTarget !== null) return null; // No group context is used, let's create a default portal root
+
+    if (typeof window === 'undefined') return null;
+    var existingRoot = document.getElementById('headlessui-portal-root');
+    if (existingRoot) return existingRoot;
+    var root = document.createElement('div');
+    root.setAttribute('id', 'headlessui-portal-root');
+    return document.body.appendChild(root);
+  }),
+      target = _useState[0],
+      setTarget = _useState[1];
+
+  (0,index_js_.useEffect)(function () {
+    if (forceInRoot) return;
+    if (groupTarget === null) return;
+    setTarget(groupTarget.current);
+  }, [groupTarget, setTarget, forceInRoot]);
+  return target;
+} // ---
+
+
+var DEFAULT_PORTAL_TAG = index_js_.Fragment;
+function Portal(props) {
+  var passthroughProps = props;
+  var target = usePortalTarget();
+
+  var _useState2 = (0,index_js_.useState)(function () {
+    return typeof window === 'undefined' ? null : document.createElement('div');
+  }),
+      element = _useState2[0];
+
+  var ready = (0,use_server_handoff_complete_esm/* useServerHandoffComplete */.H)();
+  (0,use_iso_morphic_effect_esm/* useIsoMorphicEffect */.e)(function () {
+    if (!target) return;
+    if (!element) return;
+    target.appendChild(element);
+    return function () {
+      if (!target) return;
+      if (!element) return;
+      target.removeChild(element);
+
+      if (target.childNodes.length <= 0) {
+        var _target$parentElement;
+
+        (_target$parentElement = target.parentElement) == null ? void 0 : _target$parentElement.removeChild(target);
+      }
+    };
+  }, [target, element]);
+  if (!ready) return null;
+  return !target || !element ? null : (0,react_dom.createPortal)((0,render_esm/* render */.sY)({
+    props: passthroughProps,
+    defaultTag: DEFAULT_PORTAL_TAG,
+    name: 'Portal'
+  }), element);
+} // ---
+
+var DEFAULT_GROUP_TAG = index_js_.Fragment;
+var PortalGroupContext = /*#__PURE__*/(0,index_js_.createContext)(null);
+
+function Group(props) {
+  var target = props.target,
+      passthroughProps = (0,_rollupPluginBabelHelpers/* objectWithoutPropertiesLoose */.gK)(props, ["target"]);
+
+  return index_js_default().createElement(PortalGroupContext.Provider, {
+    value: target
+  }, (0,render_esm/* render */.sY)({
+    props: passthroughProps,
+    defaultTag: DEFAULT_GROUP_TAG,
+    name: 'Popover.Group'
+  }));
+} // ---
+
+
+Portal.Group = Group;
+
+
+//# sourceMappingURL=portal.esm.js.map
+
+// EXTERNAL MODULE: ./node_modules/@headlessui/react/dist/components/description/description.esm.js
+var description_esm = __webpack_require__(7587);
+;// CONCATENATED MODULE: ./node_modules/@headlessui/react/dist/internal/stack-context.esm.js
+
+
+
+var StackContext = /*#__PURE__*/(0,index_js_.createContext)(function () {});
+StackContext.displayName = 'StackContext';
+var StackMessage;
+
+(function (StackMessage) {
+  StackMessage[StackMessage["Add"] = 0] = "Add";
+  StackMessage[StackMessage["Remove"] = 1] = "Remove";
+})(StackMessage || (StackMessage = {}));
+
+function useStackContext() {
+  return (0,index_js_.useContext)(StackContext);
+}
+function StackProvider(_ref) {
+  var children = _ref.children,
+      onUpdate = _ref.onUpdate,
+      type = _ref.type,
+      element = _ref.element;
+  var parentUpdate = useStackContext();
+  var notify = (0,index_js_.useCallback)(function () {
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    // Notify our layer
+    onUpdate == null ? void 0 : onUpdate.apply(void 0, args); // Notify the parent
+
+    parentUpdate.apply(void 0, args);
+  }, [parentUpdate, onUpdate]);
+  (0,use_iso_morphic_effect_esm/* useIsoMorphicEffect */.e)(function () {
+    notify(StackMessage.Add, type, element);
+    return function () {
+      return notify(StackMessage.Remove, type, element);
+    };
+  }, [notify, type, element]);
+  return index_js_default().createElement(StackContext.Provider, {
+    value: notify
+  }, children);
+}
+
+
+//# sourceMappingURL=stack-context.esm.js.map
+
+;// CONCATENATED MODULE: ./node_modules/@headlessui/react/dist/components/dialog/dialog.esm.js
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var _reducers;
+var DialogStates;
+
+(function (DialogStates) {
+  DialogStates[DialogStates["Open"] = 0] = "Open";
+  DialogStates[DialogStates["Closed"] = 1] = "Closed";
+})(DialogStates || (DialogStates = {}));
+
+var ActionTypes;
+
+(function (ActionTypes) {
+  ActionTypes[ActionTypes["SetTitleId"] = 0] = "SetTitleId";
+})(ActionTypes || (ActionTypes = {}));
+
+var reducers = (_reducers = {}, _reducers[ActionTypes.SetTitleId] = function (state, action) {
+  if (state.titleId === action.id) return state;
+  return (0,_rollupPluginBabelHelpers/* extends */.gY)({}, state, {
+    titleId: action.id
+  });
+}, _reducers);
+var DialogContext = /*#__PURE__*/(0,index_js_.createContext)(null);
+DialogContext.displayName = 'DialogContext';
+
+function useDialogContext(component) {
+  var context = (0,index_js_.useContext)(DialogContext);
+
+  if (context === null) {
+    var err = new Error("<" + component + " /> is missing a parent <" + Dialog.displayName + " /> component.");
+    if (Error.captureStackTrace) Error.captureStackTrace(err, useDialogContext);
+    throw err;
+  }
+
+  return context;
+}
+
+function stateReducer(state, action) {
+  return (0,match_esm/* match */.E)(action.type, reducers, state, action);
+} // ---
+
+
+var DEFAULT_DIALOG_TAG = 'div';
+var DialogRenderFeatures = render_esm/* Features.RenderStrategy */.AN.RenderStrategy | render_esm/* Features.Static */.AN.Static;
+var DialogRoot = /*#__PURE__*/(0,render_esm/* forwardRefWithAs */.yV)(function Dialog(props, ref) {
+  var open = props.open,
+      onClose = props.onClose,
+      initialFocus = props.initialFocus,
+      rest = (0,_rollupPluginBabelHelpers/* objectWithoutPropertiesLoose */.gK)(props, ["open", "onClose", "initialFocus"]);
+
+  var _useState = (0,index_js_.useState)(0),
+      nestedDialogCount = _useState[0],
+      setNestedDialogCount = _useState[1];
+
+  var usesOpenClosedState = useOpenClosed();
+
+  if (open === undefined && usesOpenClosedState !== null) {
+    var _match;
+
+    // Update the `open` prop based on the open closed state
+    open = (0,match_esm/* match */.E)(usesOpenClosedState, (_match = {}, _match[State.Open] = true, _match[State.Closed] = false, _match));
+  }
+
+  var containers = (0,index_js_.useRef)(new Set());
+  var internalDialogRef = (0,index_js_.useRef)(null);
+  var dialogRef = (0,use_sync_refs_esm/* useSyncRefs */.T)(internalDialogRef, ref); // Validations
+
+  var hasOpen = props.hasOwnProperty('open') || usesOpenClosedState !== null;
+  var hasOnClose = props.hasOwnProperty('onClose');
+
+  if (!hasOpen && !hasOnClose) {
+    throw new Error("You have to provide an `open` and an `onClose` prop to the `Dialog` component.");
+  }
+
+  if (!hasOpen) {
+    throw new Error("You provided an `onClose` prop to the `Dialog`, but forgot an `open` prop.");
+  }
+
+  if (!hasOnClose) {
+    throw new Error("You provided an `open` prop to the `Dialog`, but forgot an `onClose` prop.");
+  }
+
+  if (typeof open !== 'boolean') {
+    throw new Error("You provided an `open` prop to the `Dialog`, but the value is not a boolean. Received: " + open);
+  }
+
+  if (typeof onClose !== 'function') {
+    throw new Error("You provided an `onClose` prop to the `Dialog`, but the value is not a function. Received: " + onClose);
+  }
+
+  var dialogState = open ? DialogStates.Open : DialogStates.Closed;
+
+  var visible = function () {
+    if (usesOpenClosedState !== null) {
+      return usesOpenClosedState === State.Open;
+    }
+
+    return dialogState === DialogStates.Open;
+  }();
+
+  var _useReducer = (0,index_js_.useReducer)(stateReducer, {
+    titleId: null,
+    descriptionId: null
+  }),
+      state = _useReducer[0],
+      dispatch = _useReducer[1];
+
+  var close = (0,index_js_.useCallback)(function () {
+    return onClose(false);
+  }, [onClose]);
+  var setTitleId = (0,index_js_.useCallback)(function (id) {
+    return dispatch({
+      type: ActionTypes.SetTitleId,
+      id: id
+    });
+  }, [dispatch]);
+  var ready = (0,use_server_handoff_complete_esm/* useServerHandoffComplete */.H)();
+  var enabled = ready && dialogState === DialogStates.Open;
+  var hasNestedDialogs = nestedDialogCount > 1; // 1 is the current dialog
+
+  var hasParentDialog = (0,index_js_.useContext)(DialogContext) !== null; // If there are multiple dialogs, then you can be the root, the leaf or one
+  // in between. We only care abou whether you are the top most one or not.
+
+  var position = !hasNestedDialogs ? 'leaf' : 'parent';
+  useFocusTrap(internalDialogRef, enabled ? (0,match_esm/* match */.E)(position, {
+    parent: Features.RestoreFocus,
+    leaf: Features.All
+  }) : Features.None, {
+    initialFocus: initialFocus,
+    containers: containers
+  });
+  useInertOthers(internalDialogRef, hasNestedDialogs ? enabled : false); // Handle outside click
+
+  useWindowEvent('mousedown', function (event) {
+    var _internalDialogRef$cu;
+
+    var target = event.target;
+    if (dialogState !== DialogStates.Open) return;
+    if (hasNestedDialogs) return;
+    if ((_internalDialogRef$cu = internalDialogRef.current) == null ? void 0 : _internalDialogRef$cu.contains(target)) return;
+    close();
+  }); // Handle `Escape` to close
+
+  useWindowEvent('keydown', function (event) {
+    if (event.key !== keyboard_esm/* Keys.Escape */.R.Escape) return;
+    if (dialogState !== DialogStates.Open) return;
+    if (hasNestedDialogs) return;
+    event.preventDefault();
+    event.stopPropagation();
+    close();
+  }); // Scroll lock
+
+  (0,index_js_.useEffect)(function () {
+    if (dialogState !== DialogStates.Open) return;
+    if (hasParentDialog) return;
+    var overflow = document.documentElement.style.overflow;
+    var paddingRight = document.documentElement.style.paddingRight;
+    var scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+    document.documentElement.style.overflow = 'hidden';
+    document.documentElement.style.paddingRight = scrollbarWidth + "px";
+    return function () {
+      document.documentElement.style.overflow = overflow;
+      document.documentElement.style.paddingRight = paddingRight;
+    };
+  }, [dialogState, hasParentDialog]); // Trigger close when the FocusTrap gets hidden
+
+  (0,index_js_.useEffect)(function () {
+    if (dialogState !== DialogStates.Open) return;
+    if (!internalDialogRef.current) return;
+    var observer = new IntersectionObserver(function (entries) {
+      for (var _iterator = (0,_rollupPluginBabelHelpers/* createForOfIteratorHelperLoose */.Ul)(entries), _step; !(_step = _iterator()).done;) {
+        var entry = _step.value;
+
+        if (entry.boundingClientRect.x === 0 && entry.boundingClientRect.y === 0 && entry.boundingClientRect.width === 0 && entry.boundingClientRect.height === 0) {
+          close();
+        }
+      }
+    });
+    observer.observe(internalDialogRef.current);
+    return function () {
+      return observer.disconnect();
+    };
+  }, [dialogState, internalDialogRef, close]);
+
+  var _useDescriptions = (0,description_esm/* useDescriptions */.f)(),
+      describedby = _useDescriptions[0],
+      DescriptionProvider = _useDescriptions[1];
+
+  var id = "headlessui-dialog-" + (0,use_id_esm/* useId */.M)();
+  var contextBag = (0,index_js_.useMemo)(function () {
+    return [{
+      dialogState: dialogState,
+      close: close,
+      setTitleId: setTitleId
+    }, state];
+  }, [dialogState, state, close, setTitleId]);
+  var slot = (0,index_js_.useMemo)(function () {
+    return {
+      open: dialogState === DialogStates.Open
+    };
+  }, [dialogState]);
+  var propsWeControl = {
+    ref: dialogRef,
+    id: id,
+    role: 'dialog',
+    'aria-modal': dialogState === DialogStates.Open ? true : undefined,
+    'aria-labelledby': state.titleId,
+    'aria-describedby': describedby,
+    onClick: function onClick(event) {
+      event.stopPropagation();
+    }
+  };
+  var passthroughProps = rest;
+  return index_js_default().createElement(StackProvider, {
+    type: "Dialog",
+    element: internalDialogRef,
+    onUpdate: (0,index_js_.useCallback)(function (message, type, element) {
+      var _match2;
+
+      if (type !== 'Dialog') return;
+      (0,match_esm/* match */.E)(message, (_match2 = {}, _match2[StackMessage.Add] = function () {
+        containers.current.add(element);
+        setNestedDialogCount(function (count) {
+          return count + 1;
+        });
+      }, _match2[StackMessage.Remove] = function () {
+        containers.current.add(element);
+        setNestedDialogCount(function (count) {
+          return count - 1;
+        });
+      }, _match2));
+    }, [])
+  }, index_js_default().createElement(ForcePortalRoot, {
+    force: true
+  }, index_js_default().createElement(Portal, null, index_js_default().createElement(DialogContext.Provider, {
+    value: contextBag
+  }, index_js_default().createElement(Portal.Group, {
+    target: internalDialogRef
+  }, index_js_default().createElement(ForcePortalRoot, {
+    force: false
+  }, index_js_default().createElement(DescriptionProvider, {
+    slot: slot,
+    name: "Dialog.Description"
+  }, (0,render_esm/* render */.sY)({
+    props: (0,_rollupPluginBabelHelpers/* extends */.gY)({}, passthroughProps, propsWeControl),
+    slot: slot,
+    defaultTag: DEFAULT_DIALOG_TAG,
+    features: DialogRenderFeatures,
+    visible: visible,
+    name: 'Dialog'
+  }))))))));
+}); // ---
+
+var DEFAULT_OVERLAY_TAG = 'div';
+var Overlay = /*#__PURE__*/(0,render_esm/* forwardRefWithAs */.yV)(function Overlay(props, ref) {
+  var _useDialogContext = useDialogContext([Dialog.displayName, Overlay.name].join('.')),
+      _useDialogContext$ = _useDialogContext[0],
+      dialogState = _useDialogContext$.dialogState,
+      close = _useDialogContext$.close;
+
+  var overlayRef = (0,use_sync_refs_esm/* useSyncRefs */.T)(ref);
+  var id = "headlessui-dialog-overlay-" + (0,use_id_esm/* useId */.M)();
+  var handleClick = (0,index_js_.useCallback)(function (event) {
+    if ((0,bugs_esm/* isDisabledReactIssue7711 */.P)(event.currentTarget)) return event.preventDefault();
+    event.preventDefault();
+    event.stopPropagation();
+    close();
+  }, [close]);
+  var slot = (0,index_js_.useMemo)(function () {
+    return {
+      open: dialogState === DialogStates.Open
+    };
+  }, [dialogState]);
+  var propsWeControl = {
+    ref: overlayRef,
+    id: id,
+    'aria-hidden': true,
+    onClick: handleClick
+  };
+  var passthroughProps = props;
+  return (0,render_esm/* render */.sY)({
+    props: (0,_rollupPluginBabelHelpers/* extends */.gY)({}, passthroughProps, propsWeControl),
+    slot: slot,
+    defaultTag: DEFAULT_OVERLAY_TAG,
+    name: 'Dialog.Overlay'
+  });
+}); // ---
+
+var DEFAULT_TITLE_TAG = 'h2';
+
+function Title(props) {
+  var _useDialogContext2 = useDialogContext([Dialog.displayName, Title.name].join('.')),
+      _useDialogContext2$ = _useDialogContext2[0],
+      dialogState = _useDialogContext2$.dialogState,
+      setTitleId = _useDialogContext2$.setTitleId;
+
+  var id = "headlessui-dialog-title-" + (0,use_id_esm/* useId */.M)();
+  (0,index_js_.useEffect)(function () {
+    setTitleId(id);
+    return function () {
+      return setTitleId(null);
+    };
+  }, [id, setTitleId]);
+  var slot = (0,index_js_.useMemo)(function () {
+    return {
+      open: dialogState === DialogStates.Open
+    };
+  }, [dialogState]);
+  var propsWeControl = {
+    id: id
+  };
+  var passthroughProps = props;
+  return (0,render_esm/* render */.sY)({
+    props: (0,_rollupPluginBabelHelpers/* extends */.gY)({}, passthroughProps, propsWeControl),
+    slot: slot,
+    defaultTag: DEFAULT_TITLE_TAG,
+    name: 'Dialog.Title'
+  });
+} // ---
+
+
+var Dialog = /*#__PURE__*/Object.assign(DialogRoot, {
+  Overlay: Overlay,
+  Title: Title,
+  Description: description_esm/* Description */.d
+});
+
+
+//# sourceMappingURL=dialog.esm.js.map
+
+// EXTERNAL MODULE: ./.cache/gatsby-browser-entry.js + 4 modules
+var gatsby_browser_entry = __webpack_require__(2031);
+// EXTERNAL MODULE: ./node_modules/lottie-web/build/player/lottie.js
+var lottie = __webpack_require__(1248);
+var lottie_default = /*#__PURE__*/__webpack_require__.n(lottie);
+;// CONCATENATED MODULE: ./src/components/animations/paul-logo.json
+const paul_logo_namespaceObject = JSON.parse('{"v":"5.6.6","ip":0,"op":300,"fr":60,"w":141,"h":36,"layers":[{"ind":175,"nm":"surface471","ao":0,"ip":0,"op":720,"st":0,"ty":4,"ks":{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"a":0,"k":[88.36,22.65],"ix":2},"a":{"a":0,"k":[70.5,18],"ix":1},"s":{"a":1,"k":[{"i":{"x":[0.67,0.67,0.67],"y":[1,1,1]},"o":{"x":[0.33,0.33,0.33],"y":[0,0,0]},"t":0,"s":[106,106,100]},{"i":{"x":[0.67,0.67,0.67],"y":[1,1,1]},"o":{"x":[0.33,0.33,0.33],"y":[0,0,0]},"t":18,"s":[93,93,100]},{"t":42,"s":[106,106,100]}],"ix":6},"sk":{"k":0},"sa":{"k":0}},"shapes":[{"ty":"gr","hd":false,"nm":"surface471","it":[{"ty":"gr","hd":false,"it":[{"ty":"gr","hd":false,"it":[{"ty":"sh","ks":{"k":{"i":[[0,0],[0,0],[0,0],[0,0],[0.39,0.26],[0.34,-0.34],[0,0],[-0.17,-0.37],[-0.41,0.02],[0,0],[0,0],[0,0],[-0.18,-0.27],[-0.33,0],[-0.19,0.19],[0,0],[0.16,0.38],[0.4,0]],"o":[[0,0],[0,0],[0,0],[0.17,-0.44],[-0.4,-0.27],[0,0],[-0.28,0.29],[0.17,0.37],[0,0],[0,0],[0,0],[-0.12,0.31],[0.19,0.28],[0.27,0.01],[0,0],[0.28,-0.29],[-0.16,-0.37],[0,0]],"v":[[55,88.68],[47.65,88.68],[53.09,75.16],[53.09,75.16],[52.72,73.96],[51.46,74.08],[33.24,92.31],[33.05,93.41],[34,94],[41.36,94],[35.91,107.51],[35.91,107.51],[36.01,108.44],[36.83,108.88],[37.54,108.59],[55.71,90.38],[55.92,89.29],[55,88.68]],"c":true}}},{"ty":"sh","ks":{"k":{"i":[[0,0],[0,0],[0,0]],"o":[[0,0],[0,0],[0,0]],"v":[[49.42,79],[45.5,88.68],[39.69,88.68]],"c":true}}},{"ty":"sh","ks":{"k":{"i":[[0,0],[0,0],[0,0]],"o":[[0,0],[0,0],[0,0]],"v":[[39.53,103.79],[43.45,94],[49.26,94]],"c":true}}},{"ty":"sh","ks":{"k":{"i":[[0,0],[0,0],[0,0],[0,0]],"o":[[0,0],[0,0],[0,0],[0,0]],"v":[[51.26,92],[36.35,92],[37.7,90.66],[52.6,90.66]],"c":true}}},{"ty":"st","lc":1,"lj":1,"ml":10,"o":{"k":100},"w":{"k":1},"c":{"k":[0.92,0.92,0.49,1]},"hd":false},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[-24.34,-54.97]},"a":{"k":[0,0]},"s":{"k":[75,75]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[0,0]},"a":{"k":[0,0]},"s":{"k":[100,100]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"gr","hd":false,"it":[{"ty":"sh","ks":{"k":{"i":[[0,0],[0,0],[0,0],[0,0],[0.29,0.2],[0.25,-0.25],[0,0],[-0.12,-0.28],[-0.3,0.01],[0,0],[0,0],[0,0],[-0.14,-0.2],[-0.25,0],[-0.14,0.14],[0,0],[0.12,0.28],[0.3,0]],"o":[[0,0],[0,0],[0,0],[0.13,-0.33],[-0.3,-0.2],[0,0],[-0.21,0.22],[0.13,0.28],[0,0],[0,0],[0,0],[-0.09,0.23],[0.14,0.21],[0.2,0],[0,0],[0.21,-0.21],[-0.12,-0.28],[0,0]],"v":[[16.91,11.54],[11.4,11.54],[15.48,1.4],[15.48,1.4],[15.2,0.5],[14.26,0.59],[0.59,14.27],[0.45,15.09],[1.16,15.53],[6.68,15.53],[2.6,25.66],[2.59,25.66],[2.67,26.36],[3.29,26.69],[3.82,26.48],[17.45,12.82],[17.6,12],[16.91,11.54]],"c":true}}},{"ty":"sh","ks":{"k":{"i":[[0,0],[0,0],[0,0]],"o":[[0,0],[0,0],[0,0]],"v":[[12.73,4.28],[9.79,11.54],[5.43,11.54]],"c":true}}},{"ty":"sh","ks":{"k":{"i":[[0,0],[0,0],[0,0]],"o":[[0,0],[0,0],[0,0]],"v":[[5.31,22.88],[8.25,15.53],[12.61,15.53]],"c":true}}},{"ty":"sh","ks":{"k":{"i":[[0,0],[0,0],[0,0],[0,0]],"o":[[0,0],[0,0],[0,0],[0,0]],"v":[[14.11,14.03],[2.93,14.03],[3.94,13.03],[15.11,13.03]],"c":true}}},{"ty":"fl","o":{"k":100},"c":{"k":[0,0,0,1]}},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[0,0]},"a":{"k":[0,0]},"s":{"k":[100,100]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"gr","hd":false,"it":[{"ty":"gr","hd":false,"it":[{"ty":"sh","ks":{"k":{"i":[[0,0],[0,0],[0,0],[0,2.15],[2.82,0],[0,0],[0,-2.22],[0,0],[-2.94,0],[0,0],[0,0],[0,0],[0,0.93]],"o":[[0,0],[0,0],[2.89,0],[0,-2.15],[0,0],[-2.94,0],[0,0],[0,2.23],[0,0],[0,0],[0,0],[-1.25,0],[0,0]],"v":[[163.24,94.46],[163.24,93.61],[168.82,93.61],[172.82,90.24],[168.82,86.63],[165,86.63],[160.91,90.5],[160.91,94.5],[165,98.37],[172.18,98.37],[172.18,96.08],[165,96.08],[163.24,94.46]],"c":true}}},{"ty":"sh","ks":{"k":{"i":[[0,0],[-1.29,0],[0,0],[0,-0.89],[1.27,0],[0,0]],"o":[[0,-0.91],[0,0],[1.15,0],[0,0.89],[0,0],[0,0]],"v":[[163.24,90.52],[165.04,88.9],[168.82,88.9],[170.49,90.37],[168.76,91.77],[163.25,91.77]],"c":true}}},{"ty":"st","lc":1,"lj":1,"ml":10,"o":{"k":100},"w":{"k":1},"c":{"k":[0.92,0.92,0.49,1]},"hd":false},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[-24.34,-54.97]},"a":{"k":[0,0]},"s":{"k":[75,75]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[0,0]},"a":{"k":[0,0]},"s":{"k":[100,100]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"gr","hd":false,"it":[{"ty":"gr","hd":false,"it":[{"ty":"sh","ks":{"k":{"i":[[0,0],[0,0],[0,0],[0,1.61],[2.11,0],[0,0],[0,-1.66],[0,0],[-2.2,0],[0,0],[0,0],[0,0],[0,0.7]],"o":[[0,0],[0,0],[2.17,0],[0,-1.61],[0,0],[-2.2,0],[0,0],[0,1.67],[0,0],[0,0],[0,0],[-0.94,0],[0,0]],"v":[[98.09,15.88],[98.09,15.24],[102.28,15.24],[105.28,12.71],[102.28,10.01],[99.41,10],[96.35,12.91],[96.35,15.91],[99.41,18.81],[104.8,18.81],[104.8,17.09],[99.41,17.09],[98.09,15.88]],"c":true}}},{"ty":"sh","ks":{"k":{"i":[[0,0],[-0.97,0],[0,0],[0,-0.67],[0.95,0],[0,0]],"o":[[0,-0.68],[0,0],[0.86,0],[0,0.67],[0,0],[0,0]],"v":[[98.09,12.93],[99.45,11.71],[102.28,11.71],[103.53,12.81],[102.23,13.86],[98.1,13.86]],"c":true}}},{"ty":"fl","o":{"k":100},"c":{"k":[0,0,0,1]}},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[0,0]},"a":{"k":[0,0]},"s":{"k":[100,100]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[0,0]},"a":{"k":[0,0]},"s":{"k":[100,100]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"gr","hd":false,"it":[{"ty":"sh","ks":{"k":{"i":[[0,0],[0,0],[0,0],[0,0]],"o":[[0,0],[0,0],[0,0],[0,0]],"v":[[124,8.25],[126.36,8.25],[126.36,25.08],[124,25.08]],"c":true}}},{"ty":"st","lc":1,"lj":1,"ml":10,"o":{"k":100},"w":{"k":1},"c":{"k":[0.92,0.92,0.49,1]},"hd":false},{"ty":"fl","o":{"k":100},"c":{"k":[0,0,0,1]}},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[0,0]},"a":{"k":[0,0]},"s":{"k":[75,75]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"gr","hd":false,"it":[{"ty":"gr","hd":false,"it":[{"ty":"sh","ks":{"k":{"i":[[0,0],[0,2.15],[2.82,0],[0,0],[0,-2.22],[0,0],[-2.93,0],[0,0],[0,0],[0,0],[0,0.93],[0,0]],"o":[[2.89,0],[0,-2.15],[0,0],[-2.93,0],[0,0],[0,2.23],[0,0],[0,0],[0,0],[-1.29,0],[0,0],[0,0]],"v":[[150.58,93.61],[154.58,90.24],[150.58,86.63],[146.78,86.63],[142.69,90.5],[142.69,94.5],[146.78,98.37],[154,98.37],[154,96.08],[146.8,96.08],[145,94.46],[145,93.61]],"c":true}}},{"ty":"sh","ks":{"k":{"i":[[0,0],[-1.29,0],[0,0],[0,-0.89],[1.27,0],[0,0]],"o":[[0,-0.91],[0,0],[1.16,0],[0,0.89],[0,0],[0,0]],"v":[[145,90.52],[146.8,88.9],[150.59,88.9],[152.26,90.37],[150.52,91.77],[145,91.77]],"c":true}}},{"ty":"st","lc":1,"lj":1,"ml":10,"o":{"k":100},"w":{"k":1},"c":{"k":[0.92,0.92,0.49,1]},"hd":false},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[-24.34,-54.97]},"a":{"k":[0,0]},"s":{"k":[75,75]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[0,0]},"a":{"k":[0,0]},"s":{"k":[100,100]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"gr","hd":false,"it":[{"ty":"sh","ks":{"k":{"i":[[0,0],[0,1.61],[2.11,0],[0,0],[0,-1.66],[0,0],[-2.2,0],[0,0],[0,0],[0,0],[0,0.7],[0,0]],"o":[[2.17,0],[0,-1.61],[0,0],[-2.2,0],[0,0],[0,1.67],[0,0],[0,0],[0,0],[-0.97,0],[0,0],[0,0]],"v":[[88.6,15.24],[91.6,12.71],[88.6,10],[85.75,10],[82.68,12.91],[82.68,15.91],[85.75,18.81],[91.16,18.81],[91.16,17.09],[85.76,17.09],[84.41,15.88],[84.41,15.24]],"c":true}}},{"ty":"sh","ks":{"k":{"i":[[0,0],[-0.97,0],[0,0],[0,-0.67],[0.95,0],[0,0]],"o":[[0,-0.68],[0,0],[0.87,0],[0,0.67],[0,0],[0,0]],"v":[[84.41,12.92],[85.77,11.71],[88.6,11.71],[89.86,12.81],[88.55,13.86],[84.41,13.86]],"c":true}}},{"ty":"fl","o":{"k":100},"c":{"k":[0,0,0,1]}},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[0,0]},"a":{"k":[0,0]},"s":{"k":[100,100]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"gr","hd":false,"it":[{"ty":"sh","ks":{"k":{"i":[[0,0],[0,0],[0,0],[0,0]],"o":[[0,0],[0,0],[0,0],[0,0]],"v":[[105.77,8.25],[108.13,8.25],[108.13,25.08],[105.77,25.08]],"c":true}}},{"ty":"st","lc":1,"lj":1,"ml":10,"o":{"k":100},"w":{"k":1},"c":{"k":[0.92,0.92,0.49,1]},"hd":false},{"ty":"fl","o":{"k":100},"c":{"k":[0,0,0,1]}},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[0,0]},"a":{"k":[0,0]},"s":{"k":[75,75]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"gr","hd":false,"it":[{"ty":"gr","hd":false,"it":[{"ty":"sh","ks":{"k":{"i":[[0,0],[0,0],[0,0],[0,0],[0,-0.91],[0,0],[0,0],[0,-2.13],[-2.77,0],[0,0],[0,1.69],[0,0],[2.93,0]],"o":[[0,0],[0,0],[0,0],[1.29,0],[0,0],[0,0],[-2.89,0],[0,2.13],[0,0],[2,0],[0,0],[0.03,-2.22],[0,0]],"v":[[131.79,86.63],[124.79,86.63],[124.79,88.9],[131.79,88.9],[133.59,90.52],[133.59,91.41],[128,91.41],[124,94.79],[127.93,98.37],[133.43,98.37],[135.86,96.02],[135.85,90.5],[131.79,86.63]],"c":true}}},{"ty":"sh","ks":{"k":{"i":[[0,0],[0.47,0],[0,0],[0,0.87],[-1.24,0],[0,0]],"o":[[0,0.42],[0,0],[-1.18,0],[0,-0.87],[0,0],[0,0]],"v":[[133.57,95.48],[132.92,96.08],[128,96.08],[126.35,94.66],[128.04,93.28],[133.58,93.28]],"c":true}}},{"ty":"st","lc":1,"lj":1,"ml":10,"o":{"k":100},"w":{"k":1},"c":{"k":[0.92,0.92,0.49,1]},"hd":false},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[-24.34,-54.97]},"a":{"k":[0,0]},"s":{"k":[75,75]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[0,0]},"a":{"k":[0,0]},"s":{"k":[100,100]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"gr","hd":false,"it":[{"ty":"sh","ks":{"k":{"i":[[0,0],[0,0],[0,0],[0,0],[0,-0.68],[0,0],[0,0],[0,-1.6],[-2.08,0],[0,0],[0,1.27],[0,0],[2.2,0]],"o":[[0,0],[0,0],[0,0],[0.97,0],[0,0],[0,0],[-2.17,0],[0,1.6],[0,0],[1.5,0],[0,0],[0.02,-1.66],[0,0]],"v":[[74.5,10],[69.25,10],[69.25,11.71],[74.5,11.71],[75.86,12.92],[75.86,13.59],[71.66,13.59],[68.66,16.12],[71.61,18.81],[75.74,18.81],[77.55,17.05],[77.55,12.91],[74.5,10]],"c":true}}},{"ty":"sh","ks":{"k":{"i":[[0,0],[0.35,0],[0,0],[0,0.65],[-0.93,0],[0,0]],"o":[[0,0.32],[0,0],[-0.89,0],[0,-0.65],[0,0],[0,0]],"v":[[75.84,16.64],[75.35,17.09],[71.66,17.09],[70.43,16.03],[71.69,14.99],[75.85,14.99]],"c":true}}},{"ty":"fl","o":{"k":100},"c":{"k":[0,0,0,1]}},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[0,0]},"a":{"k":[0,0]},"s":{"k":[100,100]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"gr","hd":false,"it":[{"ty":"gr","hd":false,"it":[{"ty":"sh","ks":{"k":{"i":[[0,0],[0,0],[0,0.91],[-1.4,0],[0,0],[0,0],[0,0],[0,-2.49],[-4,0],[0,0],[0,-0.98],[1.42,0],[0,0],[0,0],[0,0],[0,2.53],[4.1,0]],"o":[[0,0],[-1.75,0],[0,-0.91],[0,0],[0,0],[0,0],[-3.33,0],[0,2.09],[0,0],[1.85,0],[0,0.98],[0,0],[0,0],[0,0],[3.43,0],[0.02,-2.16],[0,0]],"v":[[117.75,89.55],[114.24,89.55],[112.02,87.77],[114.02,85.99],[121.71,85.99],[121.71,83.37],[114.1,83.37],[109.44,87.68],[114.37,92.01],[117.86,92.01],[120.22,93.88],[118.15,95.75],[109.71,95.75],[109.71,98.37],[118,98.37],[122.78,93.97],[117.75,89.55]],"c":true}}},{"ty":"st","lc":1,"lj":1,"ml":10,"o":{"k":100},"w":{"k":1},"c":{"k":[0.92,0.92,0.49,1]},"hd":false},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[-24.34,-54.97]},"a":{"k":[0,0]},"s":{"k":[75,75]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[0,0]},"a":{"k":[0,0]},"s":{"k":[100,100]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"gr","hd":false,"it":[{"ty":"sh","ks":{"k":{"i":[[0,0],[0,0],[0,0.68],[-1.05,0],[0,0],[0,0],[0,0],[0,-1.87],[-3,0],[0,0],[0,-0.73],[1.06,0],[0,0],[0,0],[0,0],[0,1.9],[3.07,0]],"o":[[0,0],[-1.31,0],[0,-0.68],[0,0],[0,0],[0,0],[-2.5,0],[0,1.57],[0,0],[1.39,0],[0,0.73],[0,0],[0,0],[0,0],[2.57,0],[0.01,-1.62],[0,0]],"v":[[63.98,12.2],[61.34,12.2],[59.68,10.86],[61.18,9.52],[66.95,9.52],[66.95,7.56],[61.24,7.56],[57.74,10.79],[61.44,14.04],[64.06,14.04],[65.83,15.44],[64.28,16.84],[57.94,16.84],[57.94,18.81],[64.16,18.81],[67.75,15.51],[63.98,12.2]],"c":true}}},{"ty":"fl","o":{"k":100},"c":{"k":[0,0,0,1]}},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[0,0]},"a":{"k":[0,0]},"s":{"k":[100,100]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"gr","hd":false,"it":[{"ty":"sh","ks":{"k":{"i":[[0,0],[0,0],[0,0],[0,0]],"o":[[0,0],[0,0],[0,0],[0,0]],"v":[[67.83,8.25],[70.19,8.25],[70.19,25.08],[67.83,25.08]],"c":true}}},{"ty":"st","lc":1,"lj":1,"ml":10,"o":{"k":100},"w":{"k":1},"c":{"k":[0.92,0.92,0.49,1]},"hd":false},{"ty":"fl","o":{"k":100},"c":{"k":[0,0,0,1]}},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[0,0]},"a":{"k":[0,0]},"s":{"k":[75,75]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"gr","hd":false,"it":[{"ty":"gr","hd":false,"it":[{"ty":"sh","ks":{"k":{"i":[[0,0],[1.87,0],[0,0],[0,1.34],[0,0],[0,0],[0,0],[-3.36,0],[0,0],[0,2.71],[0,0],[0,0]],"o":[[0,1.38],[0,0],[-1.87,0],[0,0],[0,0],[0,0],[0,2.71],[0,0],[3.36,0],[0,0],[0,0],[0,0]],"v":[[95.65,93.66],[92.78,96.08],[90.87,96.08],[88,93.66],[88,86.66],[85.6,86.66],[85.6,93.78],[90.69,98.4],[92.87,98.4],[97.96,93.78],[97.96,86.63],[95.65,86.63]],"c":true}}},{"ty":"st","lc":1,"lj":1,"ml":10,"o":{"k":100},"w":{"k":1},"c":{"k":[0.92,0.92,0.49,1]},"hd":false},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[-24.34,-54.97]},"a":{"k":[0,0]},"s":{"k":[75,75]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[0,0]},"a":{"k":[0,0]},"s":{"k":[100,100]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"gr","hd":false,"it":[{"ty":"sh","ks":{"k":{"i":[[0,0],[1.4,0],[0,0],[0,1],[0,0],[0,0],[0,0],[-2.52,0],[0,0],[0,2.03],[0,0],[0,0]],"o":[[0,1.04],[0,0],[-1.4,0],[0,0],[0,0],[0,0],[0,2.03],[0,0],[2.52,0],[0,0],[0,0],[0,0]],"v":[[47.4,15.28],[45.25,17.09],[43.82,17.09],[41.66,15.28],[41.66,10.03],[39.86,10.03],[39.86,15.37],[43.68,18.83],[45.32,18.83],[49.13,15.37],[49.13,10],[47.4,10]],"c":true}}},{"ty":"fl","o":{"k":100},"c":{"k":[0,0,0,1]}},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[0,0]},"a":{"k":[0,0]},"s":{"k":[100,100]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"gr","hd":false,"it":[{"ty":"gr","hd":false,"it":[{"ty":"sh","ks":{"k":{"i":[[0,0],[0,0],[0,0],[0,0],[0,-0.91],[0,0],[0,0],[0,-2.13],[-2.78,0],[0,0],[0,1.69],[0,0],[2.93,0]],"o":[[0,0],[0,0],[0,0],[1.29,0],[0,0],[0,0],[-2.9,0],[0,2.13],[0,0],[2,0],[0,0],[0,-2.22],[0,0]],"v":[[79.24,86.63],[72.24,86.63],[72.24,88.9],[79.24,88.9],[81.05,90.52],[81.05,91.41],[75.44,91.41],[71.44,94.79],[75.37,98.37],[80.9,98.37],[83.33,96.02],[83.33,90.5],[79.24,86.63]],"c":true}}},{"ty":"sh","ks":{"k":{"i":[[0,0],[0.47,0],[0,0],[0,0.87],[-1.25,0],[0,0]],"o":[[0,0.42],[0,0],[-1.18,0],[0,-0.87],[0,0],[0,0]],"v":[[81,95.48],[80.35,96.08],[75.44,96.08],[73.79,94.66],[75.48,93.28],[81,93.28]],"c":true}}},{"ty":"st","lc":1,"lj":1,"ml":10,"o":{"k":100},"w":{"k":1},"c":{"k":[0.92,0.92,0.49,1]},"hd":false},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[-24.34,-54.97]},"a":{"k":[0,0]},"s":{"k":[75,75]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[0,0]},"a":{"k":[0,0]},"s":{"k":[100,100]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"gr","hd":false,"it":[{"ty":"sh","ks":{"k":{"i":[[0,0],[0,0],[0,0],[0,0],[0,-0.68],[0,0],[0,0],[0,-1.6],[-2.09,0],[0,0],[0,1.27],[0,0],[2.2,0]],"o":[[0,0],[0,0],[0,0],[0.97,0],[0,0],[0,0],[-2.18,0],[0,1.6],[0,0],[1.5,0],[0,0],[0,-1.66],[0,0]],"v":[[35.09,10],[29.84,10],[29.84,11.71],[35.09,11.71],[36.45,12.92],[36.45,13.59],[32.24,13.59],[29.24,16.12],[32.19,18.81],[36.34,18.81],[38.16,17.05],[38.16,12.91],[35.09,10]],"c":true}}},{"ty":"sh","ks":{"k":{"i":[[0,0],[0.35,0],[0,0],[0,0.65],[-0.94,0],[0,0]],"o":[[0,0.32],[0,0],[-0.89,0],[0,-0.65],[0,0],[0,0]],"v":[[36.41,16.64],[35.93,17.09],[32.24,17.09],[31,16.03],[32.27,14.99],[36.41,14.99]],"c":true}}},{"ty":"fl","o":{"k":100},"c":{"k":[0,0,0,1]}},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[0,0]},"a":{"k":[0,0]},"s":{"k":[100,100]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"gr","hd":false,"it":[{"ty":"gr","hd":false,"it":[{"ty":"sh","ks":{"k":{"i":[[0,0],[0,0],[0,0],[0,0],[-0.4,-0.39],[0.04,-0.55],[0.4,-0.4],[0.56,0.04],[0,0],[0,-1.69],[0,0],[0,0],[0,0],[-0.07,0.08],[-0.1,-0.02],[0,0],[-0.93,0.91],[0.08,1.29],[3.38,0]],"o":[[0,0],[0,0],[0,0],[0.55,-0.06],[0.4,0.39],[0.04,0.57],[-0.41,0.4],[0,0],[-1.65,0],[0,0],[0,0],[0,0],[-0.02,-0.1],[0.08,-0.07],[0,0],[1.29,0.11],[0.93,-0.9],[-0.04,-2.45],[0,0]],"v":[[66.27,83.37],[58.58,83.37],[58.58,86],[66.38,86],[67.88,86.52],[68.45,88],[67.88,89.51],[66.36,90.07],[61,90.07],[58.64,92.45],[58.64,98.38],[61.26,98.38],[61.26,93],[61.35,92.71],[61.64,92.62],[66.31,92.62],[69.8,91.36],[71.14,87.91],[66.27,83.37]],"c":true}}},{"ty":"st","lc":1,"lj":1,"ml":10,"o":{"k":100},"w":{"k":1},"c":{"k":[0.92,0.92,0.49,1]},"hd":false},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[-24.34,-54.97]},"a":{"k":[0,0]},"s":{"k":[75,75]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[0,0]},"a":{"k":[0,0]},"s":{"k":[100,100]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"gr","hd":false,"it":[{"ty":"sh","ks":{"k":{"i":[[0,0],[0,0],[0,0],[0,0],[-0.3,-0.29],[0.03,-0.41],[0.3,-0.3],[0.42,0.03],[0,0],[0,-1.27],[0,0],[0,0],[0,0],[-0.05,0.06],[-0.08,-0.01],[0,0],[-0.7,0.68],[0.06,0.97],[2.54,0]],"o":[[0,0],[0,0],[0,0],[0.41,-0.04],[0.3,0.29],[0.03,0.43],[-0.3,0.3],[0,0],[-1.24,0],[0,0],[0,0],[0,0],[-0.02,-0.08],[0.06,-0.05],[0,0],[0.97,0.08],[0.7,-0.68],[-0.03,-1.84],[0,0]],"v":[[25.36,7.56],[19.6,7.56],[19.6,9.53],[25.45,9.53],[26.57,9.92],[27,11.03],[26.57,12.17],[25.43,12.59],[21.41,12.59],[19.64,14.37],[19.64,18.82],[21.61,18.82],[21.61,14.78],[21.68,14.57],[21.89,14.5],[25.39,14.5],[28.01,13.55],[29.02,10.96],[25.36,7.56]],"c":true}}},{"ty":"fl","o":{"k":100},"c":{"k":[0,0,0,1]}},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[0,0]},"a":{"k":[0,0]},"s":{"k":[100,100]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"gr","hd":false,"it":[{"ty":"gr","hd":false,"it":[{"ty":"sh","ks":{"k":{"i":[[0,0],[1.15,0],[0,0],[0,-0.91],[0,0],[0,0],[0,0.87]],"o":[[0,-0.89],[0,0],[-1.29,0],[0,0],[0,0],[1.29,0],[0,0]],"v":[[170.48,90.37],[168.82,88.9],[165,88.9],[163.2,90.52],[163.2,91.77],[168.71,91.77],[170.48,90.37]],"c":true}}},{"ty":"st","lc":1,"lj":1,"ml":10,"o":{"k":100},"w":{"k":1},"c":{"k":[0.92,0.92,0.49,1]},"hd":false},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[-24.34,-54.97]},"a":{"k":[0,0]},"s":{"k":[75,75]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[0,0]},"a":{"k":[0,0]},"s":{"k":[100,100]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"gr","hd":false,"it":[{"ty":"sh","ks":{"k":{"i":[[0,0],[1.16,0],[0,0],[0,-0.91],[0,0],[0,0],[0,0.87]],"o":[[0,-0.89],[0,0],[-1.29,0],[0,0],[0,0],[1.27,0],[0,0]],"v":[[152.25,90.37],[150.58,88.9],[146.8,88.9],[145,90.52],[145,91.77],[150.51,91.77],[152.25,90.37]],"c":true}}},{"ty":"st","lc":1,"lj":1,"ml":10,"o":{"k":100},"w":{"k":1},"c":{"k":[0.92,0.92,0.49,1]},"hd":false},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[-24.34,-54.97]},"a":{"k":[0,0]},"s":{"k":[75,75]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"gr","hd":false,"it":[{"ty":"gr","hd":false,"it":[{"ty":"sh","ks":{"k":{"i":[[0,0],[-1.18,0],[0,0],[0,0.42],[0,0],[0,0],[0,-0.87]],"o":[[0,0.87],[0,0],[0.47,0],[0,0],[0,0],[-1.21,0],[0,0]],"v":[[126.34,94.66],[127.99,96.08],[132.92,96.08],[133.57,95.48],[133.57,93.28],[128,93.28],[126.34,94.66]],"c":true}}},{"ty":"st","lc":1,"lj":1,"ml":10,"o":{"k":100},"w":{"k":1},"c":{"k":[0.92,0.92,0.49,1]},"hd":false},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[-24.34,-54.97]},"a":{"k":[0,0]},"s":{"k":[75,75]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[0,0]},"a":{"k":[0,0]},"s":{"k":[100,100]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"gr","hd":false,"it":[{"ty":"sh","ks":{"k":{"i":[[0,0],[0,0],[0,0]],"o":[[0,0],[0,0],[0,0]],"v":[[16.97,5.66],[7.24,15.39],[13.05,15.39]],"c":true}}},{"ty":"st","lc":1,"lj":1,"ml":10,"o":{"k":100},"w":{"k":1},"c":{"k":[0.92,0.92,0.49,1]},"hd":false},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[0,0]},"a":{"k":[0,0]},"s":{"k":[75,75]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"gr","hd":false,"it":[{"ty":"gr","hd":false,"it":[{"ty":"sh","ks":{"k":{"i":[[0,0],[0,0],[0,0]],"o":[[0,0],[0,0],[0,0]],"v":[[7.08,30.45],[16.81,20.71],[11,20.71]],"c":true}}},{"ty":"st","lc":1,"lj":1,"ml":10,"o":{"k":100},"w":{"k":1},"c":{"k":[0.92,0.92,0.49,1]},"hd":false},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[0,0]},"a":{"k":[0,0]},"s":{"k":[75,75]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[0,0]},"a":{"k":[0,0]},"s":{"k":[100,100]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"gr","hd":false,"it":[{"ty":"gr","hd":false,"it":[{"ty":"sh","ks":{"k":{"i":[[0,0],[-1.18,0],[0,0],[0,0.42],[0,0],[0,0],[0,-0.87]],"o":[[0,0.87],[0,0],[0.47,0],[0,0],[0,0],[-1.25,0],[0,0]],"v":[[73.79,94.66],[75.44,96.08],[80.37,96.08],[81.02,95.48],[81.02,93.28],[75.48,93.28],[73.79,94.66]],"c":true}}},{"ty":"st","lc":1,"lj":1,"ml":10,"o":{"k":100},"w":{"k":1},"c":{"k":[0.92,0.92,0.49,1]},"hd":false},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[-24.34,-54.97]},"a":{"k":[0,0]},"s":{"k":[75,75]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[0,0]},"a":{"k":[0,0]},"s":{"k":[100,100]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"gr","hd":false,"it":[{"ty":"sh","ks":{"k":{"i":[[0,0],[0,0],[0,0],[0,0]],"o":[[0,0],[0,0],[0,0],[0,0]],"v":[[3.9,18.72],[18.8,18.72],[20.15,17.38],[5.25,17.38]],"c":true}}},{"ty":"st","lc":1,"lj":1,"ml":10,"o":{"k":100},"w":{"k":1},"c":{"k":[0.92,0.92,0.49,1]},"hd":false},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[0,0]},"a":{"k":[0,0]},"s":{"k":[75,75]},"sk":{"k":0},"sa":{"k":0},"hd":false}]},{"ty":"tr","o":{"k":100},"r":{"k":0},"p":{"k":[0,0]},"a":{"k":[0,0]},"s":{"k":[100,100]},"sk":{"k":0},"sa":{"k":0},"hd":false}]}]}],"meta":{"g":"LF SVG to Lottie"}}');
+;// CONCATENATED MODULE: ./src/components/nav-components/lottielogo.js
+function LottieLogo(){const container=(0,index_js_.useRef)(null);(0,index_js_.useEffect)(()=>{lottie_default().loadAnimation({container:container.current,renderer:'svg',loop:true,autoplay:true,animationData:paul_logo_namespaceObject});},[]);return/*#__PURE__*/index_js_default().createElement("div",{ref:container});}/* harmony default export */ const lottielogo = (LottieLogo);
+// EXTERNAL MODULE: ./node_modules/@heroicons/react/outline/esm/index.js + 230 modules
+var esm = __webpack_require__(6049);
 ;// CONCATENATED MODULE: ./src/components/nav-components/topnavbar.js
-const navigation=[{name:"Home",href:"/",icon:esm_HomeIcon,current:true},{name:"Blogs",href:"/",icon:esm_AnnotationIcon,current:false},{name:"White Papers",href:"/",icon:esm_BookOpenIcon,current:false},{name:"Services",href:"/",icon:esm_CogIcon,current:false},{name:"Support",href:"/",icon:esm_GiftIcon,current:false},{name:"Contact",href:"/contact",icon:esm_MailOpenIcon,current:false}];function classNames(...classes){return classes.filter(Boolean).join(" ");}function TopNavBar(){const{0:sidebarOpen,1:setSidebarOpen}=(0,index_js_.useState)(false);return/*#__PURE__*/index_js_default().createElement("div",null,/*#__PURE__*/index_js_default().createElement(Transition.Root,{show:sidebarOpen,as:index_js_.Fragment},/*#__PURE__*/index_js_default().createElement(Dialog,{as:"div",className:"fixed inset-0 flex z-40 md:hidden",onClose:setSidebarOpen},/*#__PURE__*/index_js_default().createElement(Transition.Child,{as:index_js_.Fragment,enter:"transition-opacity ease-linear duration-300",enterFrom:"opacity-0",enterTo:"opacity-100",leave:"transition-opacity ease-linear duration-300",leaveFrom:"opacity-100",leaveTo:"opacity-0"},/*#__PURE__*/index_js_default().createElement(Dialog.Overlay,{className:"fixed inset-0 bg-gray-600 bg-opacity-75"})),/*#__PURE__*/index_js_default().createElement(Transition.Child,{as:index_js_.Fragment,enter:"transition ease-in-out duration-300 transform",enterFrom:"-translate-x-full",enterTo:"translate-x-0",leave:"transition ease-in-out duration-300 transform",leaveFrom:"translate-x-0",leaveTo:"-translate-x-full"},/*#__PURE__*/index_js_default().createElement("div",{className:"relative flex-1 flex flex-col max-w-xs w-full pb-4 bg-purple-900 shadow"},/*#__PURE__*/index_js_default().createElement(Transition.Child,{as:index_js_.Fragment,enter:"ease-in-out duration-300",enterFrom:"opacity-0",enterTo:"opacity-100",leave:"ease-in-out duration-300",leaveFrom:"opacity-100",leaveTo:"opacity-0"},/*#__PURE__*/index_js_default().createElement("div",{className:"absolute top-0 right-0 -mr-12 pt-2"},/*#__PURE__*/index_js_default().createElement("button",{type:"button",className:"group ml-1 flex items-center justify-center h-10 w-10 rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white hover:bg-purple-600",onClick:()=>setSidebarOpen(false)},/*#__PURE__*/index_js_default().createElement("span",{className:"sr-only"},"Close sidebar"),/*#__PURE__*/index_js_default().createElement(esm_XIcon,{className:"h-6 w-6 text-yellow-300 group-hover:text-white ","aria-hidden":"true"})))),/*#__PURE__*/index_js_default().createElement("div",{className:"object-contain content-center h-14"},/*#__PURE__*/index_js_default().createElement(lottielogo,null)),/*#__PURE__*/index_js_default().createElement("div",{className:"mt-5 flex-1 h-0 overflow-y-auto"},/*#__PURE__*/index_js_default().createElement("nav",{className:"px-2 space-y-1"},navigation.map(item=>/*#__PURE__*/index_js_default().createElement("span",{className:"group"},/*#__PURE__*/index_js_default().createElement(gatsby_browser_entry.Link,{key:item.name,href:item.href,className:classNames(item.current?"border-white text-white items-center px-2 pt-2 border-b-2 text-sm font-medium":"text-yellow-300 hover:bg-purple-600 group-hover:text-white","group flex items-center px-2 py-2 text-base font-medium rounded-sm transition-all duration-200 ease-linear")},/*#__PURE__*/index_js_default().createElement(item.icon,{className:classNames(item.current?"text-white":"text-yellow-300 group-hover:text-white","mr-4 flex-shrink-0 h-6 w-6"),"aria-hidden":"true"}),item.name)))),/*#__PURE__*/index_js_default().createElement("div",{className:"italic flex font-medium items-center text-yellow-300 px-2 py-2 mt-10"},/*#__PURE__*/index_js_default().createElement("p",null,"\u201CIt seems to me that we are long overdue for some kind of Biblical-style Jubilee: one that would affect both international debt and consumer debt. It would be salutary not just because it would relieve so much genuine human suffering, but also because it would be our way of reminding ourselves that money is not ineffable, that paying one\u2019s debts is not the essence of morality, that all these things are human arrangements and that if democracy is to mean anything, it is the ability to all agree to arrange things in a different way.\u201D - Graeber, David. Debt (p. 390)"))))),/*#__PURE__*/index_js_default().createElement("div",{className:"flex-shrink-0 w-14","aria-hidden":"true"}))),/*#__PURE__*/index_js_default().createElement("div",{className:"sticky top-0 z-10 flex h-16 md:justify-center bg-purple-900 shadow"},/*#__PURE__*/index_js_default().createElement("button",{type:"button",className:"group px-4 text-yellow-300 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white md:hidden hover:bg-purple-600",onClick:()=>setSidebarOpen(true)},/*#__PURE__*/index_js_default().createElement("span",{className:"sr-only"},"Open sidebar"),/*#__PURE__*/index_js_default().createElement(esm_MenuAlt2Icon,{className:"h-6 w-6 group-hover:text-white ","aria-hidden":"true"})),/*#__PURE__*/index_js_default().createElement(lottielogo,{className:"w-5"}),navigation.map(item=>/*#__PURE__*/index_js_default().createElement(gatsby_browser_entry.Link,{key:item.name,href:item.href,className:classNames(item.current?"border-white text-white inline-flex items-center px-2 pt-2 border-b-2 text-sm font-medium":"text-yellow-300 hover:bg-purple-600 hover:text-white rounded-sm","hidden md:flex group items-center px-2 py-2 text-base font-medium transition-all duration-200 ease-linear")},/*#__PURE__*/index_js_default().createElement(item.icon,{className:classNames(item.current?"text-white":"text-yellow-300 group-hover:text-white","mr-4 flex-shrink-0 h-6 w-6 "),"aria-hidden":"true"}),item.name))));}
+const navigation=[{name:"Home",href:"/",icon:esm/* HomeIcon */.tvw,current:true},{name:"Blogs",href:"/",icon:esm/* AnnotationIcon */.rDX,current:false},{name:"White Papers",href:"/",icon:esm/* BookOpenIcon */.KNL,current:false},{name:"Services",href:"/",icon:esm/* CogIcon */.IEm,current:false},{name:"Support",href:"/",icon:esm/* GiftIcon */.OgN,current:false},{name:"Contact",href:"/contact",icon:esm/* MailOpenIcon */.RSW,current:false}];function classNames(...classes){return classes.filter(Boolean).join(" ");}function TopNavBar(){const{0:sidebarOpen,1:setSidebarOpen}=(0,index_js_.useState)(false);return/*#__PURE__*/index_js_default().createElement("div",null,/*#__PURE__*/index_js_default().createElement(Transition.Root,{show:sidebarOpen,as:index_js_.Fragment},/*#__PURE__*/index_js_default().createElement(Dialog,{as:"div",className:"fixed inset-0 flex z-40 md:hidden",onClose:setSidebarOpen},/*#__PURE__*/index_js_default().createElement(Transition.Child,{as:index_js_.Fragment,enter:"transition-opacity ease-linear duration-300",enterFrom:"opacity-0",enterTo:"opacity-100",leave:"transition-opacity ease-linear duration-300",leaveFrom:"opacity-100",leaveTo:"opacity-0"},/*#__PURE__*/index_js_default().createElement(Dialog.Overlay,{className:"fixed inset-0 bg-gray-600 bg-opacity-75"})),/*#__PURE__*/index_js_default().createElement(Transition.Child,{as:index_js_.Fragment,enter:"transition ease-in-out duration-300 transform",enterFrom:"-translate-x-full",enterTo:"translate-x-0",leave:"transition ease-in-out duration-300 transform",leaveFrom:"translate-x-0",leaveTo:"-translate-x-full"},/*#__PURE__*/index_js_default().createElement("div",{className:"relative flex-1 flex flex-col max-w-xs w-full pb-4 bg-purple-900 shadow"},/*#__PURE__*/index_js_default().createElement(Transition.Child,{as:index_js_.Fragment,enter:"ease-in-out duration-300",enterFrom:"opacity-0",enterTo:"opacity-100",leave:"ease-in-out duration-300",leaveFrom:"opacity-100",leaveTo:"opacity-0"},/*#__PURE__*/index_js_default().createElement("div",{className:"absolute top-0 right-0 -mr-12 pt-2"},/*#__PURE__*/index_js_default().createElement("button",{type:"button",className:"group ml-1 flex items-center justify-center h-10 w-10 rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white hover:bg-purple-600",onClick:()=>setSidebarOpen(false)},/*#__PURE__*/index_js_default().createElement("span",{className:"sr-only"},"Close sidebar"),/*#__PURE__*/index_js_default().createElement(esm/* XIcon */.b0D,{className:"h-6 w-6 text-yellow-300 group-hover:text-white ","aria-hidden":"true"})))),/*#__PURE__*/index_js_default().createElement("div",{className:"object-contain content-center h-14"},/*#__PURE__*/index_js_default().createElement(lottielogo,null)),/*#__PURE__*/index_js_default().createElement("div",{className:"mt-5 flex-1 h-0 overflow-y-auto"},/*#__PURE__*/index_js_default().createElement("nav",{className:"px-2 space-y-1"},navigation.map(item=>/*#__PURE__*/index_js_default().createElement("span",{className:"group"},/*#__PURE__*/index_js_default().createElement(gatsby_browser_entry.Link,{key:item.name,href:item.href,className:classNames(item.current?"border-white text-white items-center px-2 pt-2 border-b-2 text-sm font-medium":"text-yellow-300 hover:bg-purple-600 group-hover:text-white","group flex items-center px-2 py-2 text-base font-medium rounded-sm transition-all duration-200 ease-linear")},/*#__PURE__*/index_js_default().createElement(item.icon,{className:classNames(item.current?"text-white":"text-yellow-300 group-hover:text-white","mr-4 flex-shrink-0 h-6 w-6"),"aria-hidden":"true"}),item.name)))),/*#__PURE__*/index_js_default().createElement("div",{className:"italic flex font-medium items-center text-yellow-300 px-2 py-2 mt-10"},/*#__PURE__*/index_js_default().createElement("p",null,"\u201CIt seems to me that we are long overdue for some kind of Biblical-style Jubilee: one that would affect both international debt and consumer debt. It would be salutary not just because it would relieve so much genuine human suffering, but also because it would be our way of reminding ourselves that money is not ineffable, that paying one\u2019s debts is not the essence of morality, that all these things are human arrangements and that if democracy is to mean anything, it is the ability to all agree to arrange things in a different way.\u201D - Graeber, David. Debt (p. 390)"))))),/*#__PURE__*/index_js_default().createElement("div",{className:"flex-shrink-0 w-14","aria-hidden":"true"}))),/*#__PURE__*/index_js_default().createElement("div",{className:"sticky top-0 z-10 flex h-16 md:justify-center bg-purple-900 shadow"},/*#__PURE__*/index_js_default().createElement("button",{type:"button",className:"group px-4 text-yellow-300 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white md:hidden hover:bg-purple-600",onClick:()=>setSidebarOpen(true)},/*#__PURE__*/index_js_default().createElement("span",{className:"sr-only"},"Open sidebar"),/*#__PURE__*/index_js_default().createElement(esm/* MenuAlt2Icon */.fVG,{className:"h-6 w-6 group-hover:text-white ","aria-hidden":"true"})),/*#__PURE__*/index_js_default().createElement(lottielogo,{className:"w-5"}),navigation.map(item=>/*#__PURE__*/index_js_default().createElement(gatsby_browser_entry.Link,{key:item.name,href:item.href,className:classNames(item.current?"border-white text-white inline-flex items-center px-2 pt-2 border-b-2 text-sm font-medium":"text-yellow-300 hover:bg-purple-600 hover:text-white rounded-sm","hidden md:flex group items-center px-2 py-2 text-base font-medium transition-all duration-200 ease-linear")},/*#__PURE__*/index_js_default().createElement(item.icon,{className:classNames(item.current?"text-white":"text-yellow-300 group-hover:text-white","mr-4 flex-shrink-0 h-6 w-6 "),"aria-hidden":"true"}),item.name))));}
+
+/***/ }),
+
+/***/ 6179:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6283);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5697);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_helmet__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(4593);
+/* harmony import */ var gatsby__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(2031);
+/**
+ * SEO component that queries for data with
+ *  Gatsby's useStaticQuery React hook
+ *
+ * See: https://www.gatsbyjs.com/docs/use-static-query/
+ */function Seo({description,lang,meta,title}){var _site$siteMetadata,_site$siteMetadata2;const{site}=(0,gatsby__WEBPACK_IMPORTED_MODULE_3__.useStaticQuery)("63159454");const metaDescription=description||site.siteMetadata.description;const defaultTitle=(_site$siteMetadata=site.siteMetadata)===null||_site$siteMetadata===void 0?void 0:_site$siteMetadata.title;return/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_helmet__WEBPACK_IMPORTED_MODULE_2__.Helmet,{htmlAttributes:{lang},title:title,titleTemplate:defaultTitle?`%s | ${defaultTitle}`:null,meta:[{name:`description`,content:metaDescription},{property:`og:title`,content:title},{property:`og:description`,content:metaDescription},{property:`og:type`,content:`website`},{name:`twitter:card`,content:`summary`},{name:`twitter:creator`,content:((_site$siteMetadata2=site.siteMetadata)===null||_site$siteMetadata2===void 0?void 0:_site$siteMetadata2.author)||``},{name:`twitter:title`,content:title},{name:`twitter:description`,content:metaDescription}].concat(meta)});}Seo.defaultProps={lang:`en`,meta:[],description:``};Seo.propTypes={description:(prop_types__WEBPACK_IMPORTED_MODULE_1___default().string),lang:(prop_types__WEBPACK_IMPORTED_MODULE_1___default().string),meta:prop_types__WEBPACK_IMPORTED_MODULE_1___default().arrayOf((prop_types__WEBPACK_IMPORTED_MODULE_1___default().object)),title:(prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired)};/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Seo);
+
+/***/ }),
+
+/***/ 1219:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "default": () => (/* binding */ pages)
+});
+
+// EXTERNAL MODULE: external "/Users/owner/paul-salele/frontend/node_modules/react/index.js"
+var index_js_ = __webpack_require__(6283);
+var index_js_default = /*#__PURE__*/__webpack_require__.n(index_js_);
+// EXTERNAL MODULE: ./src/components/seo.js
+var seo = __webpack_require__(6179);
+// EXTERNAL MODULE: ./src/components/nav-components/topnavbar.js + 17 modules
+var topnavbar = __webpack_require__(7317);
 // EXTERNAL MODULE: ./node_modules/common-tags/es/index.js + 41 modules
 var es = __webpack_require__(5863);
 // EXTERNAL MODULE: ./node_modules/gatsby-plugin-image/node_modules/camelcase/index.js
@@ -6546,10 +6729,12 @@ var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
 function s(){return(s=Object.assign||function(e){for(var t=1;t<arguments.length;t++){var a=arguments[t];for(var i in a)Object.prototype.hasOwnProperty.call(a,i)&&(e[i]=a[i]);}return e;}).apply(this,arguments);}function l(e,t){if(null==e)return{};var a,i,r={},n=Object.keys(e);for(i=0;i<n.length;i++)t.indexOf(a=n[i])>=0||(r[a]=e[a]);return r;}var d,u=(/* unused pure expression or super */ null && ([.25,.5,1,2])),c=(/* unused pure expression or super */ null && ([750,1080,1366,1920])),h=(/* unused pure expression or super */ null && ([320,654,768,1024,1366,1600,1920,2048,2560,3440,3840,4096])),g=function(e){return console.warn(e);},p=function(e,t){return e-t;},m=function(e){return e.map(function(e){return e.src+" "+e.width+"w";}).join(",\n");};function f(e){var t=e.lastIndexOf(".");if(-1!==t){var a=e.substr(t+1);if("jpeg"===a)return"jpg";if(3===a.length||4===a.length)return a;}}function v(e){var t=e.layout,a=void 0===t?"constrained":t,i=e.width,n=e.height,o=e.sourceMetadata,l=e.breakpoints,d=e.aspectRatio,u=e.formats,c=void 0===u?["auto","webp"]:u;return c=c.map(function(e){return e.toLowerCase();}),a=r(a),i&&n?s({},e,{formats:c,layout:a,aspectRatio:i/n}):(o.width&&o.height&&!d&&(d=o.width/o.height),"fullWidth"===a?(i=i||o.width||l[l.length-1],n=n||Math.round(i/(d||1.3333333333333333))):(i||(i=n&&d?n*d:o.width?o.width:n?Math.round(n/1.3333333333333333):800),d&&!n?n=Math.round(i/d):d||(d=i/n)),s({},e,{width:i,height:n,aspectRatio:d,layout:a,formats:c}));}function w(e,t){var a;return void 0===t&&(t=20),null==(a=(0,(e=v(e)).generateImageSource)(e.filename,t,Math.round(t/e.aspectRatio),e.sourceMetadata.format||"jpg",e.fit,e.options))?void 0:a.src;}function y(e){var t,a=(e=v(e)).pluginName,r=e.sourceMetadata,n=e.generateImageSource,o=e.layout,l=e.fit,h=e.options,p=e.width,w=e.height,y=e.filename,M=e.reporter,S=void 0===M?{warn:g}:M,N=e.backgroundColor,R=e.placeholderURL;if(a||S.warn('[gatsby-plugin-image] "generateImageData" was not passed a plugin name'),"function"!=typeof n)throw new Error("generateImageSource must be a function");r&&(r.width||r.height)?r.format||(r.format=f(y)):r={width:p,height:w,format:(null==(t=r)?void 0:t.format)||f(y)||"auto"};var x=new Set(e.formats);(0===x.size||x.has("auto")||x.has(""))&&(x.delete("auto"),x.delete(""),x.add(r.format)),x.has("jpg")&&x.has("png")&&(S.warn("["+a+"] Specifying both 'jpg' and 'png' formats is not supported. Using 'auto' instead"),x.delete("jpg"===r.format?"png":"jpg"));var I=function(e){var t=e.filename,a=e.layout,r=void 0===a?"constrained":a,n=e.sourceMetadata,o=e.reporter,l=void 0===o?{warn:g}:o,h=e.breakpoints,p=void 0===h?c:h,m=Object.entries({width:e.width,height:e.height}).filter(function(e){var t=e[1];return"number"==typeof t&&t<1;});if(m.length)throw new Error("Specified dimensions for images must be positive numbers (> 0). Problem dimensions you have are "+m.map(function(e){return e.join(": ");}).join(", "));return"fixed"===r?function(e){var t=e.filename,a=e.sourceMetadata,r=e.width,n=e.height,o=e.fit,s=void 0===o?"cover":o,l=e.outputPixelDensities,c=e.reporter,h=void 0===c?{warn:g}:c,p=a.width/a.height,m=b(void 0===l?u:l);if(r&&n){var f=k(a,{width:r,height:n,fit:s});r=f.width,n=f.height,p=f.aspectRatio;}r?n||(n=Math.round(r/p)):r=n?Math.round(n*p):800;var v,w,y=r;if(a.width<r||a.height<n){var E=a.width<r?"width":"height";h.warn(i(d||(v=["\n    The requested ",' "','px" for the image '," was larger than the actual image "," of ","px. If possible, replace the current image with a larger one."],w||(w=v.slice(0)),v.raw=w,d=v),E,"width"===E?r:n,t,E,a[E])),"width"===E?(r=a.width,n=Math.round(r/p)):r=(n=a.height)*p;}return{sizes:m.filter(function(e){return e>=1;}).map(function(e){return Math.round(e*r);}).filter(function(e){return e<=a.width;}),aspectRatio:p,presentationWidth:y,presentationHeight:Math.round(y/p),unscaledWidth:r};}(e):"constrained"===r?E(e):"fullWidth"===r?E(s({breakpoints:p},e)):(l.warn("No valid layout was provided for the image at "+t+". Valid image layouts are fixed, fullWidth, and constrained. Found "+r),{sizes:[n.width],presentationWidth:n.width,presentationHeight:n.height,aspectRatio:n.width/n.height,unscaledWidth:n.width});}(s({},e,{sourceMetadata:r})),W={sources:[]},j=e.sizes;j||(j=function(e,t){switch(t){case"constrained":return"(min-width: "+e+"px) "+e+"px, 100vw";case"fixed":return e+"px";case"fullWidth":return"100vw";default:return;}}(I.presentationWidth,o)),x.forEach(function(e){var t=I.sizes.map(function(t){var i=n(y,t,Math.round(t/I.aspectRatio),e,l,h);if(null!=i&&i.width&&i.height&&i.src&&i.format)return i;S.warn("["+a+"] The resolver for image "+y+" returned an invalid value.");}).filter(Boolean);if("jpg"===e||"png"===e||"auto"===e){var i=t.find(function(e){return e.width===I.unscaledWidth;})||t[0];i&&(W.fallback={src:i.src,srcSet:m(t),sizes:j});}else{var r;null==(r=W.sources)||r.push({srcSet:m(t),sizes:j,type:"image/"+e});}});var _={images:W,layout:o,backgroundColor:N};switch(R&&(_.placeholder={fallback:R}),o){case"fixed":_.width=I.presentationWidth,_.height=I.presentationHeight;break;case"fullWidth":_.width=1,_.height=1/I.aspectRatio;break;case"constrained":_.width=e.width||I.presentationWidth||1,_.height=(_.width||1)/I.aspectRatio;}return _;}var b=function(e){return Array.from(new Set([1].concat(e))).sort(p);};function E(e){var t,a=e.sourceMetadata,i=e.width,r=e.height,n=e.fit,o=void 0===n?"cover":n,s=e.outputPixelDensities,l=e.breakpoints,d=e.layout,c=a.width/a.height,h=b(void 0===s?u:s);if(i&&r){var g=k(a,{width:i,height:r,fit:o});i=g.width,r=g.height,c=g.aspectRatio;}i=i&&Math.min(i,a.width),r=r&&Math.min(r,a.height),i||r||(r=(i=Math.min(800,a.width))/c),i||(i=r*c);var m=i;return(a.width<i||a.height<r)&&(i=a.width,r=a.height),i=Math.round(i),(null==l?void 0:l.length)>0?(t=l.filter(function(e){return e<=a.width;})).length<l.length&&!t.includes(a.width)&&t.push(a.width):t=(t=h.map(function(e){return Math.round(e*i);})).filter(function(e){return e<=a.width;}),"constrained"!==d||t.includes(i)||t.push(i),{sizes:t=t.sort(p),aspectRatio:c,presentationWidth:m,presentationHeight:Math.round(m/c),unscaledWidth:i};}function k(e,t){var a=e.width/e.height,i=t.width,r=t.height;switch(t.fit){case"fill":i=t.width?t.width:e.width,r=t.height?t.height:e.height;break;case"inside":var n=t.width?t.width:Number.MAX_SAFE_INTEGER,o=t.height?t.height:Number.MAX_SAFE_INTEGER;i=Math.min(n,Math.round(o*a)),r=Math.min(o,Math.round(n/a));break;case"outside":var s=t.width?t.width:0,l=t.height?t.height:0;i=Math.max(s,Math.round(l*a)),r=Math.max(l,Math.round(s/a));break;default:t.width&&!t.height&&(i=t.width,r=Math.round(t.width/a)),t.height&&!t.width&&(i=Math.round(t.height*a),r=t.height);}return{width:i,height:r,aspectRatio:i/r};}var M=(/* unused pure expression or super */ null && (["baseUrl","urlBuilder","sourceWidth","sourceHeight","pluginName","formats","breakpoints","options"])),S=(/* unused pure expression or super */ null && (["images","placeholder"]));function N(){return true&&true;}new Set();var R=function(e){var t;return function(e){var t,a;return Boolean(null==e||null==(t=e.images)||null==(a=t.fallback)?void 0:a.src);}(e)?e:function(e){return Boolean(null==e?void 0:e.gatsbyImageData);}(e)?e.gatsbyImageData:null==e||null==(t=e.childImageSharp)?void 0:t.gatsbyImageData;},x=function(e){var t,a,i;return null==(t=R(e))||null==(a=t.images)||null==(i=a.fallback)?void 0:i.src;},I=function(e){var t,a,i;return null==(t=R(e))||null==(a=t.images)||null==(i=a.fallback)?void 0:i.srcSet;};function W(e){var t,a=e.baseUrl,i=e.urlBuilder,r=e.sourceWidth,n=e.sourceHeight,o=e.pluginName,d=void 0===o?"getImageData":o,u=e.formats,c=void 0===u?["auto"]:u,g=e.breakpoints,p=e.options,m=l(e,M);return null!=(t=g)&&t.length||"fullWidth"!==m.layout&&"FULL_WIDTH"!==m.layout||(g=h),y(s({},m,{pluginName:d,generateImageSource:function(e,t,a,r){return{width:t,height:a,format:r,src:i({baseUrl:e,width:t,height:a,options:p,format:r})};},filename:a,formats:c,breakpoints:g,sourceMetadata:{width:r,height:n,format:"auto"}}));}function j(e,t){var a,i,r,n=e.images,o=e.placeholder,d=s({},l(e,S),{images:s({},n,{sources:[]}),placeholder:o&&s({},o,{sources:[]})});return t.forEach(function(t){var a,i=t.media,r=t.image;i?(r.layout!==e.layout&&"development"==="production"&&0,(a=d.images.sources).push.apply(a,r.images.sources.map(function(e){return s({},e,{media:i});}).concat([{media:i,srcSet:r.images.fallback.srcSet}])),d.placeholder&&d.placeholder.sources.push({media:i,srcSet:r.placeholder.fallback})): false&&0;}),(a=d.images.sources).push.apply(a,n.sources),null!=o&&o.sources&&(null==(i=d.placeholder)||(r=i.sources).push.apply(r,o.sources)),d;}var _,T=["src","srcSet","loading","alt","shouldLoad","innerRef"],A=["fallback","sources","shouldLoad"],O=function(t){var a=t.src,i=t.srcSet,r=t.loading,n=t.alt,o=void 0===n?"":n,d=t.shouldLoad,u=t.innerRef,c=l(t,T);return/*#__PURE__*/index_js_default().createElement("img",s({},c,{decoding:"async",loading:r,src:d?a:void 0,"data-src":d?void 0:a,srcSet:d?i:void 0,"data-srcset":d?void 0:i,alt:o,ref:u}));},z=/*#__PURE__*/(0,index_js_.forwardRef)(function(t,a){var i=t.fallback,r=t.sources,n=void 0===r?[]:r,o=t.shouldLoad,d=void 0===o||o,u=l(t,A),c=u.sizes||(null==i?void 0:i.sizes),h=/*#__PURE__*/index_js_default().createElement(O,s({},u,i,{sizes:c,shouldLoad:d,innerRef:a}));return n.length?/*#__PURE__*/index_js_default().createElement("picture",null,n.map(function(t){var a=t.media,i=t.srcSet,r=t.type;return/*#__PURE__*/index_js_default().createElement("source",{key:a+"-"+r+"-"+i,type:r,media:a,srcSet:d?i:void 0,"data-srcset":d?void 0:i,sizes:c});}),h):h;});O.propTypes={src:prop_types.string.isRequired,alt:prop_types.string.isRequired,sizes:prop_types.string,srcSet:prop_types.string,shouldLoad:prop_types.bool},z.displayName="Picture",z.propTypes={alt:prop_types.string.isRequired,shouldLoad:prop_types.bool,fallback:prop_types.exact({src:prop_types.string.isRequired,srcSet:prop_types.string,sizes:prop_types.string}),sources:prop_types.arrayOf(prop_types.oneOfType([prop_types.exact({media:prop_types.string.isRequired,type:prop_types.string,sizes:prop_types.string,srcSet:prop_types.string.isRequired}),prop_types.exact({media:prop_types.string,type:prop_types.string.isRequired,sizes:prop_types.string,srcSet:prop_types.string.isRequired})]))};var L=["fallback"],C=function(t){var a=t.fallback,i=l(t,L);return a?/*#__PURE__*/index_js_default().createElement(z,s({},i,{fallback:{src:a},"aria-hidden":!0,alt:""})):/*#__PURE__*/index_js_default().createElement("div",s({},i));};C.displayName="Placeholder",C.propTypes={fallback:prop_types.string,sources:null==(_=z.propTypes)?void 0:_.sources,alt:function(e,t,a){return e[t]?new Error("Invalid prop `"+t+"` supplied to `"+a+"`. Validation failed."):null;}};var q=/*#__PURE__*/(0,index_js_.forwardRef)(function(t,a){return/*#__PURE__*/index_js_default().createElement((index_js_default()).Fragment,null,/*#__PURE__*/index_js_default().createElement(z,s({ref:a},t)),/*#__PURE__*/index_js_default().createElement("noscript",null,/*#__PURE__*/index_js_default().createElement(z,s({},t,{shouldLoad:!0}))));});q.displayName="MainImage",q.propTypes=z.propTypes;var D=["children"],P=function(){return/*#__PURE__*/index_js_default().createElement("script",{type:"module",dangerouslySetInnerHTML:{__html:'const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t){e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset"));const t=e.parentNode.querySelectorAll("source[data-srcset]");for(let e of t)e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset");e.complete&&(e.style.opacity=1)}}'}});},H=function(t){var a=t.layout,i=t.width,r=t.height;return"fullWidth"===a?/*#__PURE__*/index_js_default().createElement("div",{"aria-hidden":!0,style:{paddingTop:r/i*100+"%"}}):"constrained"===a?/*#__PURE__*/index_js_default().createElement("div",{style:{maxWidth:i,display:"block"}},/*#__PURE__*/index_js_default().createElement("img",{alt:"",role:"presentation","aria-hidden":"true",src:"data:image/svg+xml;charset=utf-8,%3Csvg height='"+r+"' width='"+i+"' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3C/svg%3E",style:{maxWidth:"100%",display:"block",position:"static"}})):null;},F=function(t){var i=t.children,r=l(t,D);return/*#__PURE__*/index_js_default().createElement(index_js_.Fragment,null,/*#__PURE__*/index_js_default().createElement(H,s({},r)),i,/*#__PURE__*/index_js_default().createElement(P,null));},B=["as","children"],G=["as","className","class","style","image","loading","imgClassName","imgStyle","backgroundColor","objectFit","objectPosition"],V=["style","className"],U=function(e){return e.replace(/\n/g,"");},X=function(t){var a=t.as,i=void 0===a?"div":a,r=t.children,n=l(t,B);return/*#__PURE__*/index_js_default().createElement(i,s({},n),r);},Y=function(t){var a=t.as,i=t.className,r=t.class,n=t.style,o=t.image,d=t.loading,u=void 0===d?"lazy":d,c=t.imgClassName,h=t.imgStyle,g=t.backgroundColor,p=t.objectFit,m=t.objectPosition,f=l(t,G);if(!o)return console.warn("[gatsby-plugin-image] Missing image prop"),null;r&&(i=r),h=s({objectFit:p,objectPosition:m,backgroundColor:g},h);var v=o.width,w=o.height,y=o.layout,b=o.images,E=o.placeholder,k=o.backgroundColor,M=function(e,t,a){var i={},r="gatsby-image-wrapper";return N()||(i.position="relative",i.overflow="hidden"),"fixed"===a?(i.width=e,i.height=t):"constrained"===a&&(N()||(i.display="inline-block",i.verticalAlign="top"),r="gatsby-image-wrapper gatsby-image-wrapper-constrained"),{className:r,"data-gatsby-image-wrapper":"",style:i};}(v,w,y),S=M.style,R=M.className,x=l(M,V),I={fallback:void 0,sources:[]};return b.fallback&&(I.fallback=s({},b.fallback,{srcSet:b.fallback.srcSet?U(b.fallback.srcSet):void 0})),b.sources&&(I.sources=b.sources.map(function(e){return s({},e,{srcSet:U(e.srcSet)});})),/*#__PURE__*/index_js_default().createElement(X,s({},x,{as:a,style:s({},S,n,{backgroundColor:g}),className:R+(i?" "+i:"")}),/*#__PURE__*/index_js_default().createElement(F,{layout:y,width:v,height:w},/*#__PURE__*/index_js_default().createElement(C,s({},function(e,t,a,i,r,n,o,l){var d={};n&&(d.backgroundColor=n,"fixed"===a?(d.width=i,d.height=r,d.backgroundColor=n,d.position="relative"):("constrained"===a||"fullWidth"===a)&&(d.position="absolute",d.top=0,d.left=0,d.bottom=0,d.right=0)),o&&(d.objectFit=o),l&&(d.objectPosition=l);var u=s({},e,{"aria-hidden":!0,"data-placeholder-image":"",style:s({opacity:1,transition:"opacity 500ms linear"},d)});return N()||(u.style={height:"100%",left:0,position:"absolute",top:0,width:"100%"}),u;}(E,0,y,v,w,k,p,m))),/*#__PURE__*/index_js_default().createElement(q,s({"data-gatsby-image-ssr":"",className:c},f,function(e,t,a,i,r,n,o,l){return void 0===l&&(l={}),N()||(l=s({height:"100%",left:0,position:"absolute",top:0,transform:"translateZ(0)",transition:"opacity 250ms linear",width:"100%",willChange:"opacity"},l)),s({},a,{loading:i,shouldLoad:e,"data-main-image":"",style:s({},l,{opacity:0}),onLoad:function(e){var t=e.currentTarget,a=new Image();a.src=t.currentSrc,a.decode?a.decode().catch(function(){}).then(function(){r(!0);}):r(!0);},ref:void 0});}("eager"===u,0,I,u,void 0,0,0,h)))));},Z=["src","__imageData","__error","width","height","aspectRatio","tracedSVGOptions","placeholder","formats","quality","transformOptions","jpgOptions","pngOptions","webpOptions","avifOptions","blurredOptions"],J=function(t){return function(a){var i=a.src,r=a.__imageData,n=a.__error,o=l(a,Z);return n&&console.warn(n),r?/*#__PURE__*/index_js_default().createElement(t,s({image:r},o)):(console.warn("Image not loaded",i),n||"development"!=="production"||0,null);};}(Y),K=function(e,t){return"fullWidth"!==e.layout||"width"!==t&&"height"!==t||!e[t]?prop_types_default().number.apply((prop_types_default()),[e,t].concat([].slice.call(arguments,2))):new Error('"'+t+'" '+e[t]+" may not be passed when layout is fullWidth.");},Q=new Set(["fixed","fullWidth","constrained"]),$={src:(prop_types_default()).string.isRequired,alt:function(e,t,a){return e.alt||""===e.alt?prop_types_default().string.apply((prop_types_default()),[e,t,a].concat([].slice.call(arguments,3))):new Error('The "alt" prop is required in '+a+'. If the image is purely presentational then pass an empty string: e.g. alt="". Learn more: https://a11y-style-guide.com/style-guide/section-media.html');},width:K,height:K,sizes:(prop_types_default()).string,layout:function(e){if(void 0!==e.layout&&!Q.has(e.layout))return new Error("Invalid value "+e.layout+'" provided for prop "layout". Defaulting to "constrained". Valid values are "fixed", "fullWidth" or "constrained".');}};J.displayName="StaticImage",J.propTypes=$;
 ;// CONCATENATED MODULE: ./src/components/paul-background.js
 function PaulBackground(){return/*#__PURE__*/index_js_default().createElement("div",{class:"bg-purple-100 min-h-0 flex items-center justify-center px-16"},/*#__PURE__*/index_js_default().createElement("div",{class:"relative w-full max-w-lg"},/*#__PURE__*/index_js_default().createElement("div",{class:"absolute top-0 -left-4 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"}),/*#__PURE__*/index_js_default().createElement("div",{class:"absolute top-0 -right-4 w-72 h-72 bg-red-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"}),/*#__PURE__*/index_js_default().createElement("div",{class:"absolute -bottom-8 left-20 w-72 h-72 bg-yellow-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"}),/*#__PURE__*/index_js_default().createElement(J,{src:"../images/paul-oil.png",placeholder:"blurred",__imageData:__webpack_require__(9066)}),/*#__PURE__*/index_js_default().createElement("div",{class:"grid items-start justify-center"},/*#__PURE__*/index_js_default().createElement("div",{class:"relative group"},/*#__PURE__*/index_js_default().createElement("div",{class:"absolute -inset-0.5 bg-gradient-to-r from-red-900 to-yellow-300 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"}),/*#__PURE__*/index_js_default().createElement("button",{class:"relative py-2 w-80 md:w-96 bg-purple-900 rounded-lg leading-none "},/*#__PURE__*/index_js_default().createElement("span",{class:"font-bold text-yellow-300 text-xs group-hover:text-white transition duration-200"},"Hate Censorhip? Want Your Own Platform? \u2192"))))));}
+// EXTERNAL MODULE: ./node_modules/@heroicons/react/outline/esm/index.js + 230 modules
+var esm = __webpack_require__(6049);
 ;// CONCATENATED MODULE: ./src/components/webshare/webshare.js
-const WebShare=()=>{const handleOnClick=()=>{if(navigator.share){navigator.share({text:`Check out this out!!`,url:document.location.href}).then(()=>{console.log('Successfully shared');}).catch(error=>{console.error('Something went wrong sharing the blog',error);});}else{console.log("Sorry! Your browser does not support Web Share API");}};return/*#__PURE__*/index_js_default().createElement("button",{onClick:handleOnClick},/*#__PURE__*/index_js_default().createElement(esm_ShareIcon,{className:"h-10"}));};/* harmony default export */ const webshare = (WebShare);
+const WebShare=()=>{const handleOnClick=()=>{if(navigator.share){navigator.share({text:`Check out this out!!`,url:document.location.href}).then(()=>{console.log('Successfully shared');}).catch(error=>{console.error('Something went wrong sharing the blog',error);});}else{console.log("Sorry! Your browser does not support Web Share API");}};return/*#__PURE__*/index_js_default().createElement("button",{onClick:handleOnClick},/*#__PURE__*/index_js_default().createElement(esm/* ShareIcon */.aAc,{className:"h-10"}));};/* harmony default export */ const webshare = (WebShare);
 ;// CONCATENATED MODULE: ./src/pages/index.js
-const IndexPage=()=>/*#__PURE__*/index_js_.createElement("div",null,/*#__PURE__*/index_js_.createElement(seo/* default */.Z,{title:"Home"}),/*#__PURE__*/index_js_.createElement(TopNavBar,null),/*#__PURE__*/index_js_.createElement(PaulBackground,null),/*#__PURE__*/index_js_.createElement(webshare,null));/* harmony default export */ const pages = (IndexPage);
+const IndexPage=()=>/*#__PURE__*/index_js_.createElement("div",null,/*#__PURE__*/index_js_.createElement(seo/* default */.Z,{title:"Home"}),/*#__PURE__*/index_js_.createElement(topnavbar/* default */.Z,null),/*#__PURE__*/index_js_.createElement(PaulBackground,null),/*#__PURE__*/index_js_.createElement(webshare,null));/* harmony default export */ const pages = (IndexPage);
 
 /***/ }),
 

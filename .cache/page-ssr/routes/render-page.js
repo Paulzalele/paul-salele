@@ -1899,7 +1899,7 @@ module.exports = Object.assign;
 /***/ 4999:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-exports.components={"component---cache-caches-gatsby-plugin-offline-app-shell-js":()=>__webpack_require__.e(/* import() | component---cache-caches-gatsby-plugin-offline-app-shell-js */ 306).then(__webpack_require__.bind(__webpack_require__, 1930)),"component---src-pages-404-js":()=>__webpack_require__.e(/* import() | component---src-pages-404-js */ 883).then(__webpack_require__.bind(__webpack_require__, 9616)),"component---src-pages-index-js":()=>__webpack_require__.e(/* import() | component---src-pages-index-js */ 678).then(__webpack_require__.bind(__webpack_require__, 3484)),"component---src-pages-page-2-js":()=>__webpack_require__.e(/* import() | component---src-pages-page-2-js */ 617).then(__webpack_require__.bind(__webpack_require__, 9863))};
+exports.components={"component---cache-caches-gatsby-plugin-offline-app-shell-js":()=>__webpack_require__.e(/* import() | component---cache-caches-gatsby-plugin-offline-app-shell-js */ 306).then(__webpack_require__.bind(__webpack_require__, 1930)),"component---src-pages-404-js":()=>__webpack_require__.e(/* import() | component---src-pages-404-js */ 883).then(__webpack_require__.bind(__webpack_require__, 9288)),"component---src-pages-contact-js":()=>__webpack_require__.e(/* import() | component---src-pages-contact-js */ 501).then(__webpack_require__.bind(__webpack_require__, 8140)),"component---src-pages-index-js":()=>__webpack_require__.e(/* import() | component---src-pages-index-js */ 678).then(__webpack_require__.bind(__webpack_require__, 1219))};
 
 /***/ }),
 
@@ -5168,7 +5168,7 @@ module.exports = JSON.parse('{"name":"gatsby","description":"Blazing fast modern
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"polyfill":["/polyfill-65a907e51915b8b71475.js"],"app":["/app-1440536db2d2af4ddedc.js"],"component---cache-caches-gatsby-plugin-offline-app-shell-js":["/component---cache-caches-gatsby-plugin-offline-app-shell-js-ca7625a901b217b3cc85.js"],"component---src-pages-404-js":["/component---src-pages-404-js-ee54fd47a0cc12f085d1.js"],"component---src-pages-index-js":["/component---src-pages-index-js-168b77637a6b2caa5065.js"],"component---src-pages-page-2-js":["/component---src-pages-page-2-js-1c95f864a40033873942.js"]}');
+module.exports = JSON.parse('{"polyfill":["/polyfill-65a907e51915b8b71475.js"],"app":["/app-f8294e134458898c377f.js"],"component---cache-caches-gatsby-plugin-offline-app-shell-js":["/component---cache-caches-gatsby-plugin-offline-app-shell-js-ca7625a901b217b3cc85.js"],"component---src-pages-404-js":["/component---src-pages-404-js-24ca195f555b6a67ad36.js"],"component---src-pages-contact-js":["/component---src-pages-contact-js-cb9e4d268fdfd90462b2.js"],"component---src-pages-index-js":["/component---src-pages-index-js-d59d8a5a94f6bc34f8ba.js"]}');
 
 /***/ })
 
@@ -5244,7 +5244,7 @@ module.exports = JSON.parse('{"polyfill":["/polyfill-65a907e51915b8b71475.js"],"
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames based on template
-/******/ 			return "" + {"306":"component---cache-caches-gatsby-plugin-offline-app-shell-js","617":"component---src-pages-page-2-js","678":"component---src-pages-index-js","883":"component---src-pages-404-js"}[chunkId] + ".js";
+/******/ 			return "" + {"306":"component---cache-caches-gatsby-plugin-offline-app-shell-js","501":"component---src-pages-contact-js","678":"component---src-pages-index-js","883":"component---src-pages-404-js"}[chunkId] + ".js";
 /******/ 		};
 /******/ 	})();
 /******/ 	
