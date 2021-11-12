@@ -14,19 +14,91 @@
   }
   ```
 */
-import React, { useState } from 'react'
-import { Switch } from '@headlessui/react'
+import React, { Component } from 'react'
+import axios from 'axios';
+
 import "../styles/global.css"
+
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function ContactComponent() {
-  const [agreed, setAgreed] = useState(false)
+class ContactComponent extends Component {
+
+  state = {
+    FirstName: '',
+    LastName: '',
+    Phone: '',
+    Email: '',
+    Subject: '',
+    Message: ''
+  }
+
+  handleSubmit = async(event) => {
+    event.preventDefault();
+    
+    const {FirstName} = this.state
+    const {LastName} = this.state
+    const {Phone} = this.state
+    const {Email} = this.state
+    const {Subject} = this.state
+    const {Message} = this.state
+    
+  
+    const create_contact_response = await axios({
+        method: "post",
+        url: "https://newbackend-tj78o.ondigitalocean.app/contacts",
+        data: {
+          FirstName, LastName, Phone, Email, Subject, Message
+        },
+        headers: { "Content-Type": "application/json" },
+      });
+  
+
+  if(create_contact_response.status === 200){
+    alert("Successfully added contact")
+    window.location = window.location
+  }
+}
+
+  // const handleChange = (event) => {
+  //   setformValue({
+  //     ...formValue,
+  //     [event.target.name]: event.target.value
+  //   });
+  // }
+
+
+  // const [firstname, setFirstname] = useState('')
+  // const [lastname, setLastname] = useState('')
+  // const [phone, setPhone] = useState('')
+  // const [email, setEmail] = useState('')
+  // const [subject, setSubject] = useState('')
+  // const [message, setMessage] = useState('')
+
+
+  // function handleSubmit() {
+  //   e.preventDefault();
+  //   const contacts = { firstname, lastname, phone, email, subject, message};
+
+  //   fetch('https://newbackend-tj78o.ondigitalocean.app/contacts', {
+  //     method: 'POST',
+  //     body: contacts
+  // });
+  // }
+
+  render() { 
+  
+  const {FirstName} = this.state
+  const {LastName} = this.state
+  const {Phone} = this.state
+  const {Email} = this.state
+  const {Subject} = this.state
+  const {Message} = this.state
 
   return (
-    <div className="bg-white py-16 px-4 overflow-hidden sm:px-6 lg:px-8 lg:py-24">
+    <div className="bg-purple-100 py-16 px-4 overflow-hidden sm:px-6 lg:px-8 lg:py-24">
       <div className="relative max-w-xl mx-auto">
         <svg
           className="absolute left-full transform translate-x-1/2"
@@ -45,7 +117,7 @@ export default function ContactComponent() {
               height={20}
               patternUnits="userSpaceOnUse"
             >
-              <rect x={0} y={0} width={4} height={4} className="text-gray-200" fill="currentColor" />
+              <rect x={0} y={0} width={4} height={4} className="text-gray-300" fill="currentColor" />
             </pattern>
           </defs>
           <rect width={404} height={404} fill="url(#85737c0e-0916-41d7-917f-596dc7edfa27)" />
@@ -73,14 +145,13 @@ export default function ContactComponent() {
           <rect width={404} height={404} fill="url(#85737c0e-0916-41d7-917f-596dc7edfa27)" />
         </svg>
         <div className="text-center">
-          <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">Contact sales</h2>
+          <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">Contact</h2>
           <p className="mt-4 text-lg leading-6 text-gray-500">
-            Nullam risus blandit ac aliquam justo ipsum. Quam mauris volutpat massa dictumst amet. Sapien tortor lacus
-            arcu.
+            Please feel free to contact or message me on any topic using this form and I will get back to you as soon as possible!!
           </p>
         </div>
         <div className="mt-12">
-          <form action="#" method="POST" className="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+          <form onSubmit={this.handleSubmit} className="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
             <div>
               <label htmlFor="first-name" className="block text-sm font-medium text-gray-700">
                 First name
@@ -89,9 +160,10 @@ export default function ContactComponent() {
                 <input
                   type="text"
                   name="first-name"
-                  id="first-name"
+                  id="FirstName"
                   autoComplete="given-name"
                   className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                  onChange={(event) => this.setState({FirstName: event.target.value})}
                 />
               </div>
             </div>
@@ -103,23 +175,28 @@ export default function ContactComponent() {
                 <input
                   type="text"
                   name="last-name"
-                  id="last-name"
+                  id="LastName"
                   autoComplete="family-name"
                   className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                  onChange={(event) => this.setState({LastName: event.target.value})}
                 />
               </div>
             </div>
+            
             <div className="sm:col-span-2">
-              <label htmlFor="company" className="block text-sm font-medium text-gray-700">
-                Company
+              <label htmlFor="phone-number" className="block text-sm font-medium text-gray-700">
+                Phone Number
               </label>
-              <div className="mt-1">
+              <div className="mt-1 relative rounded-md shadow-sm">
+                
                 <input
                   type="text"
-                  name="company"
-                  id="company"
-                  autoComplete="organization"
-                  className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                  name="phone-number"
+                  id="Phone"
+                  autoComplete="tel"
+                  className="py-3 px-4 block w-full focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                  placeholder="+1 (469) 884-6010"
+                  onChange={(event) => this.setState({Phone: event.target.value})}
                 />
               </div>
             </div>
@@ -129,40 +206,27 @@ export default function ContactComponent() {
               </label>
               <div className="mt-1">
                 <input
-                  id="email"
+                  id="Email"
                   name="email"
                   type="email"
                   autoComplete="email"
                   className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                  placeholder="paul@paulsalele.com"
+                  onChange={(event) => this.setState({Email: event.target.value})}
                 />
               </div>
             </div>
             <div className="sm:col-span-2">
-              <label htmlFor="phone-number" className="block text-sm font-medium text-gray-700">
-                Phone Number
+              <label htmlFor="company" className="block text-sm font-medium text-gray-700">
+                Subject
               </label>
-              <div className="mt-1 relative rounded-md shadow-sm">
-                <div className="absolute inset-y-0 left-0 flex items-center">
-                  <label htmlFor="country" className="sr-only">
-                    Country
-                  </label>
-                  <select
-                    id="country"
-                    name="country"
-                    className="h-full py-0 pl-4 pr-8 border-transparent bg-transparent text-gray-500 focus:ring-indigo-500 focus:border-indigo-500 rounded-md"
-                  >
-                    <option>US</option>
-                    <option>CA</option>
-                    <option>EU</option>
-                  </select>
-                </div>
+              <div className="mt-1">
                 <input
                   type="text"
-                  name="phone-number"
-                  id="phone-number"
-                  autoComplete="tel"
-                  className="py-3 px-4 block w-full pl-20 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
-                  placeholder="+1 (555) 987-6543"
+                  name="subject"
+                  id="Subject"
+                  className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                  onChange={(event) => this.setState({Subject: event.target.value})}
                 />
               </div>
             </div>
@@ -172,54 +236,20 @@ export default function ContactComponent() {
               </label>
               <div className="mt-1">
                 <textarea
-                  id="message"
+                  id="Message"
                   name="message"
                   rows={4}
                   className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border border-gray-300 rounded-md"
                   defaultValue={''}
+                  onChange={(event) => this.setState({Message: event.target.value})}
                 />
               </div>
             </div>
-            <div className="sm:col-span-2">
-              <div className="flex items-start">
-                <div className="flex-shrink-0">
-                  <Switch
-                    checked={agreed}
-                    onChange={setAgreed}
-                    className={classNames(
-                      agreed ? 'bg-indigo-600' : 'bg-gray-200',
-                      'relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
-                    )}
-                  >
-                    <span className="sr-only">Agree to policies</span>
-                    <span
-                      aria-hidden="true"
-                      className={classNames(
-                        agreed ? 'translate-x-5' : 'translate-x-0',
-                        'inline-block h-5 w-5 rounded-full bg-white shadow transform ring-0 transition ease-in-out duration-200'
-                      )}
-                    />
-                  </Switch>
-                </div>
-                <div className="ml-3">
-                  <p className="text-base text-gray-500">
-                    By selecting this, you agree to the{' '}
-                    <a href="#" className="font-medium text-gray-700 underline">
-                      Privacy Policy
-                    </a>{' '}
-                    and{' '}
-                    <a href="#" className="font-medium text-gray-700 underline">
-                      Cookie Policy
-                    </a>
-                    .
-                  </p>
-                </div>
-              </div>
-            </div>
+            
             <div className="sm:col-span-2">
               <button
                 type="submit"
-                className="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                className="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-yellow-300 bg-purple-900 hover:bg-purple-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
               >
                 Let's talk
               </button>
@@ -230,3 +260,6 @@ export default function ContactComponent() {
     </div>
   )
 }
+}
+
+export default ContactComponent;

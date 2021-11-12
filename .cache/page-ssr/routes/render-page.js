@@ -1899,7 +1899,7 @@ module.exports = Object.assign;
 /***/ 4999:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-exports.components={"component---cache-caches-gatsby-plugin-offline-app-shell-js":()=>__webpack_require__.e(/* import() | component---cache-caches-gatsby-plugin-offline-app-shell-js */ 306).then(__webpack_require__.bind(__webpack_require__, 1930)),"component---src-pages-404-js":()=>__webpack_require__.e(/* import() | component---src-pages-404-js */ 883).then(__webpack_require__.bind(__webpack_require__, 9288)),"component---src-pages-contact-js":()=>__webpack_require__.e(/* import() | component---src-pages-contact-js */ 501).then(__webpack_require__.bind(__webpack_require__, 8140)),"component---src-pages-index-js":()=>__webpack_require__.e(/* import() | component---src-pages-index-js */ 678).then(__webpack_require__.bind(__webpack_require__, 1219))};
+exports.components={"component---cache-caches-gatsby-plugin-offline-app-shell-js":()=>__webpack_require__.e(/* import() | component---cache-caches-gatsby-plugin-offline-app-shell-js */ 306).then(__webpack_require__.bind(__webpack_require__, 1930)),"component---src-pages-404-js":()=>__webpack_require__.e(/* import() | component---src-pages-404-js */ 883).then(__webpack_require__.bind(__webpack_require__, 9288)),"component---src-pages-contact-js":()=>__webpack_require__.e(/* import() | component---src-pages-contact-js */ 501).then(__webpack_require__.bind(__webpack_require__, 7319)),"component---src-pages-index-js":()=>__webpack_require__.e(/* import() | component---src-pages-index-js */ 678).then(__webpack_require__.bind(__webpack_require__, 1219)),"component---src-pages-testing-js":()=>__webpack_require__.e(/* import() | component---src-pages-testing-js */ 796).then(__webpack_require__.bind(__webpack_require__, 6120))};
 
 /***/ }),
 
@@ -2427,22 +2427,17 @@ const RouteAnnouncerProps={id:`gatsby-announcer`,style:{position:`absolute`,top:
 
 /***/ }),
 
-/***/ 8709:
+/***/ 1945:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  "WritableAsPromise": () => (/* binding */ WritableAsPromise)
-});
-
-;// CONCATENATED MODULE: external "stream"
-const external_stream_namespaceObject = require("stream");
-;// CONCATENATED MODULE: ./.cache/server-utils/writable-as-promise.js
-class WritableAsPromise extends external_stream_namespaceObject.Writable{constructor(){super();this._output=``;this._deferred={promise:null,resolve:null,reject:null};this._deferred.promise=new Promise((resolve,reject)=>{this._deferred.resolve=resolve;this._deferred.reject=reject;});}_write(chunk,enc,cb){this._output+=chunk.toString();cb();}end(){this._deferred.resolve(this._output);this.destroy();}// disguise us as a promise
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "WritableAsPromise": () => (/* binding */ WritableAsPromise)
+/* harmony export */ });
+/* harmony import */ var stream__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8311);
+/* harmony import */ var stream__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(stream__WEBPACK_IMPORTED_MODULE_0__);
+class WritableAsPromise extends stream__WEBPACK_IMPORTED_MODULE_0__.Writable{constructor(){super();this._output=``;this._deferred={promise:null,resolve:null,reject:null};this._deferred.promise=new Promise((resolve,reject)=>{this._deferred.resolve=resolve;this._deferred.reject=reject;});}_write(chunk,enc,cb){this._output+=chunk.toString();cb();}end(){this._deferred.resolve(this._output);this.destroy();}// disguise us as a promise
 then(resolve,reject){return this._deferred.promise.then(resolve,reject);}}
 
 /***/ }),
@@ -5132,6 +5127,22 @@ module.exports = require("/Users/owner/paul-salele/frontend/.cache/ssr-builtin-t
 
 /***/ }),
 
+/***/ 4532:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("/Users/owner/paul-salele/frontend/.cache/ssr-builtin-trackers/http");
+
+/***/ }),
+
+/***/ 6480:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("/Users/owner/paul-salele/frontend/.cache/ssr-builtin-trackers/https");
+
+/***/ }),
+
 /***/ 3381:
 /***/ ((module) => {
 
@@ -5148,11 +5159,67 @@ module.exports = require("/Users/owner/paul-salele/frontend/node_modules/react/i
 
 /***/ }),
 
+/***/ 9084:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("assert");
+
+/***/ }),
+
+/***/ 9719:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("os");
+
+/***/ }),
+
 /***/ 1423:
 /***/ ((module) => {
 
 "use strict";
 module.exports = require("path");
+
+/***/ }),
+
+/***/ 8311:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("stream");
+
+/***/ }),
+
+/***/ 4786:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("tty");
+
+/***/ }),
+
+/***/ 4269:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("url");
+
+/***/ }),
+
+/***/ 6464:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("util");
+
+/***/ }),
+
+/***/ 8884:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("zlib");
 
 /***/ }),
 
@@ -5168,7 +5235,7 @@ module.exports = JSON.parse('{"name":"gatsby","description":"Blazing fast modern
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"polyfill":["/polyfill-65a907e51915b8b71475.js"],"app":["/app-f8294e134458898c377f.js"],"component---cache-caches-gatsby-plugin-offline-app-shell-js":["/component---cache-caches-gatsby-plugin-offline-app-shell-js-ca7625a901b217b3cc85.js"],"component---src-pages-404-js":["/component---src-pages-404-js-24ca195f555b6a67ad36.js"],"component---src-pages-contact-js":["/component---src-pages-contact-js-cb9e4d268fdfd90462b2.js"],"component---src-pages-index-js":["/component---src-pages-index-js-d59d8a5a94f6bc34f8ba.js"]}');
+module.exports = JSON.parse('{"polyfill":["/polyfill-65a907e51915b8b71475.js"],"app":["/app-1d1628ba62db366f8faf.js"],"component---cache-caches-gatsby-plugin-offline-app-shell-js":["/component---cache-caches-gatsby-plugin-offline-app-shell-js-ca7625a901b217b3cc85.js"],"component---src-pages-404-js":["/component---src-pages-404-js-24ca195f555b6a67ad36.js"],"component---src-pages-contact-js":["/component---src-pages-contact-js-47c37bccf221f1f68d4e.js"],"component---src-pages-index-js":["/component---src-pages-index-js-ccce45cb8aa4ece013e0.js"],"component---src-pages-testing-js":["/component---src-pages-testing-js-64abe3634995fd8b70c7.js"]}');
 
 /***/ })
 
@@ -5244,7 +5311,7 @@ module.exports = JSON.parse('{"polyfill":["/polyfill-65a907e51915b8b71475.js"],"
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames based on template
-/******/ 			return "" + {"306":"component---cache-caches-gatsby-plugin-offline-app-shell-js","501":"component---src-pages-contact-js","678":"component---src-pages-index-js","883":"component---src-pages-404-js"}[chunkId] + ".js";
+/******/ 			return "" + {"306":"component---cache-caches-gatsby-plugin-offline-app-shell-js","501":"component---src-pages-contact-js","678":"component---src-pages-index-js","796":"component---src-pages-testing-js","883":"component---src-pages-404-js"}[chunkId] + ".js";
 /******/ 		};
 /******/ 	})();
 /******/ 	
@@ -5317,7 +5384,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ staticPage),
 /* harmony export */   "getPageChunk": () => (/* binding */ getPageChunk)
 /* harmony export */ });
-const React=__webpack_require__(6283);const path=__webpack_require__(1423);const{renderToString,renderToStaticMarkup,pipeToNodeWritable}=__webpack_require__(3381);const{ServerLocation,Router,isRedirect}=__webpack_require__(3631);const merge=__webpack_require__(9996);const{StaticQueryContext}=__webpack_require__(2031);const fs=__webpack_require__(9702);const{WritableAsPromise}=__webpack_require__(8709);const{RouteAnnouncerProps}=__webpack_require__(5394);const{apiRunner,apiRunnerAsync}=__webpack_require__(9874);const asyncRequires=__webpack_require__(4999);const{version:gatsbyVersion}=__webpack_require__(1741);const{grabMatchParams}=__webpack_require__(8451);const chunkMapping=__webpack_require__(9804);// we want to force posix-style joins, so Windows doesn't produce backslashes for urls
+const React=__webpack_require__(6283);const path=__webpack_require__(1423);const{renderToString,renderToStaticMarkup,pipeToNodeWritable}=__webpack_require__(3381);const{ServerLocation,Router,isRedirect}=__webpack_require__(3631);const merge=__webpack_require__(9996);const{StaticQueryContext}=__webpack_require__(2031);const fs=__webpack_require__(9702);const{WritableAsPromise}=__webpack_require__(1945);const{RouteAnnouncerProps}=__webpack_require__(5394);const{apiRunner,apiRunnerAsync}=__webpack_require__(9874);const asyncRequires=__webpack_require__(4999);const{version:gatsbyVersion}=__webpack_require__(1741);const{grabMatchParams}=__webpack_require__(8451);const chunkMapping=__webpack_require__(9804);// we want to force posix-style joins, so Windows doesn't produce backslashes for urls
 const{join}=path.posix;// const testRequireError = require("./test-require-error")
 // For some extremely mysterious reason, webpack adds the above module *after*
 // this module so that when this code runs, testRequireError is undefined.

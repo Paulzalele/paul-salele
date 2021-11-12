@@ -11,6 +11,7 @@
     "@tailwindcss/aspect-ratio": "^0.3.0",
     "@tailwindcss/forms": "^0.3.4",
     "autoprefixer": "^10.3.7",
+    "axios": "^0.24.0",
     "gatsby": "^4.0.2",
     "gatsby-plugin-image": "^2.0.0-zz-next.1",
     "gatsby-plugin-manifest": "^4.0.0-zz-next.1",
