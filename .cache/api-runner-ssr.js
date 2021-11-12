@@ -7,10 +7,6 @@ var plugins = [{
       plugin: require('/Users/owner/paul-salele/frontend/node_modules/gatsby-plugin-image/gatsby-ssr'),
       options: {"plugins":[]},
     },{
-      name: 'gatsby-plugin-matomo',
-      plugin: require('/Users/owner/paul-salele/frontend/node_modules/gatsby-plugin-matomo/gatsby-ssr'),
-      options: {"plugins":[],"siteId":"1","matomoUrl":"https://paulsalele.matomo.cloud/","siteUrl":"https://paulsalele.com"},
-    },{
       name: 'gatsby-plugin-manifest',
       plugin: require('/Users/owner/paul-salele/frontend/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
       options: {"plugins":[],"name":"Paul Salele","short_name":"Paul Salele","start_url":"/","background_color":"#4C1D95","theme_color":"#4C1D95","display":"standalone","icon":"src/images/newpaul.png","crossOrigin":"use-credentials","legacy":true,"theme_color_in_head":true,"cache_busting_mode":"query","include_favicon":true,"cacheDigest":"b400019f4d12b9af77b5c0e5fc3a97c2"},

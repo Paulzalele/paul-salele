@@ -6,7 +6,7 @@ import ContactComponent from "../components/contact-components/contact-component
 
 const Contact = () => (
   <>
-  <TopNavBar>
+  <TopNavBar >
     <Seo title="Contact" />
     
   </TopNavBar>

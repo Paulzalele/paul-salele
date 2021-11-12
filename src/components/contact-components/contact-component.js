@@ -57,7 +57,7 @@ class ContactComponent extends Component {
   
 
   if(create_contact_response.status === 200){
-    alert("Successfully added contact")
+    alert("Your Message was Successfully Sent!!")
     window.location = window.location
   }
 }

@@ -20,14 +20,6 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
-      resolve: 'gatsby-plugin-matomo',
-      options: {
-        siteId: '1',
-        matomoUrl: 'https://paulsalele.matomo.cloud/',
-        siteUrl: 'https://paulsalele.com',
-      },
-    },
-    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Paul Salele`,

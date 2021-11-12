@@ -10,7 +10,7 @@ const IndexPage = () => (
   <Seo title="Home" />
   <TopNavBar />
   <PaulBackground />
-   <WebShare />
+  <WebShare />
     
   
   </div>
