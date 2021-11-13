@@ -7,7 +7,7 @@
   "dependencies": {
     "@headlessui/react": "^1.4.1",
     "@heroicons/react": "^1.0.4",
-    "@pdftron/pdfjs-express-viewer": "^8.1.0",
+    "@pdftron/pdfjs-express-viewer": "^8.1.1",
     "@tailwindcss/aspect-ratio": "^0.3.0",
     "@tailwindcss/forms": "^0.3.4",
     "autoprefixer": "^10.3.7",

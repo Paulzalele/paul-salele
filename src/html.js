@@ -22,12 +22,12 @@ export default function HTML(props) {
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
         {props.postBodyComponents}
-        <script
+        {/* <script
           type="text/javascript"
           src="https://app.termly.io/embed.min.js"
           data-auto-block="on"
           data-website-uuid="4ea2ab2c-11da-4b6c-8898-e477cfa4b60d"
-        ></script>
+        ></script> */}
       </body>
     </html>
   );

@@ -16,9 +16,9 @@ import {
 } from "@heroicons/react/outline"
 
 const navigation = [
-  { name: "Home", href: "/", icon: HomeIcon, current: true },
+  { name: "Home", href: "/", icon: HomeIcon, current: false },
   { name: "Blogs", href: "/", icon: AnnotationIcon, current: false },
-  { name: "White Papers", href: "/", icon: BookOpenIcon, current: false },
+  { name: "White Papers", href: "/white-papers", icon: BookOpenIcon, current: false },
   { name: "Services", href: "/", icon: CogIcon, current: false },
   { name: "Support", href: "/", icon: GiftIcon, current: false },
   { name: "Contact", href: "/contact", icon: MailOpenIcon, current: false },
@@ -30,6 +30,8 @@ function classNames(...classes) {
 
 export default function TopNavBar() {
   const [sidebarOpen, setSidebarOpen] = useState(false)
+
+
 
   return (
     <div>

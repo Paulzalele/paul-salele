@@ -62,33 +62,7 @@ class ContactComponent extends Component {
   }
 }
 
-  // const handleChange = (event) => {
-  //   setformValue({
-  //     ...formValue,
-  //     [event.target.name]: event.target.value
-  //   });
-  // }
-
-
-  // const [firstname, setFirstname] = useState('')
-  // const [lastname, setLastname] = useState('')
-  // const [phone, setPhone] = useState('')
-  // const [email, setEmail] = useState('')
-  // const [subject, setSubject] = useState('')
-  // const [message, setMessage] = useState('')
-
-
-  // function handleSubmit() {
-  //   e.preventDefault();
-  //   const contacts = { firstname, lastname, phone, email, subject, message};
-
-  //   fetch('https://newbackend-tj78o.ondigitalocean.app/contacts', {
-  //     method: 'POST',
-  //     body: contacts
-  // });
-  // }
-
-  render() { 
+ render() { 
   
   const {FirstName} = this.state
   const {LastName} = this.state
@@ -240,7 +214,6 @@ class ContactComponent extends Component {
                   name="message"
                   rows={4}
                   className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border border-gray-300 rounded-md"
-                  defaultValue={''}
                   onChange={(event) => this.setState({Message: event.target.value})}
                 />
               </div>
