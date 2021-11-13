@@ -6,7 +6,9 @@ import "../styles/global.css"
 
 const Solution1 = () => {
   const viewer = useRef(null);
-
+  
+  
+  
   // if using a class, equivalent of componentDidMount 
   useEffect(() => {
     WebViewer(
@@ -31,6 +33,8 @@ const Solution1 = () => {
         });
       });
     }, []);
+
+    
 
   return (
     
