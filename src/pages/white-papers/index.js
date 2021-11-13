@@ -9,7 +9,7 @@ const WhitePapersIndexPage = () => (
   <div >
 <Seo title="White Papers"/>
  <TopNavBar />
- <Solution1 />
+ {/* <Solution1 /> */}
     
   
   </div>

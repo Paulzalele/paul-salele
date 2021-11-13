@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgatsby_starter_default=self.webpackChunkgatsby_starter_default||[]).push([[252],{8013:function(e,t,a){a.r(t);var l=a(7294),r=a(3162),n=a(3751);t.default=function(){return l.createElement("div",null,l.createElement(n.Z,{title:"White Papers"}),l.createElement(r.Z,null))}}}]);
+//# sourceMappingURL=component---src-pages-white-papers-index-js-89902a070287773a612a.js.map
