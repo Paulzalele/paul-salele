@@ -6,7 +6,7 @@ import "../../components/styles/global.css"
 
 
 const WhitePapersIndexPage = () => (
-  <div className="flex flex-col h-screen">
+  <div >
 <Seo title="White Papers"/>
  <TopNavBar />
  <Solution1 />
