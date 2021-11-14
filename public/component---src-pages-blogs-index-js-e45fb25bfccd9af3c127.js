@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgatsby_starter_default=self.webpackChunkgatsby_starter_default||[]).push([[295],{72:function(e,t,l){l.r(t);var a=l(7294),n=l(3162),r=l(3751);t.default=function(){return a.createElement("div",null,a.createElement(r.Z,{title:"Blogs"}),a.createElement(n.Z,null))}}}]);
+//# sourceMappingURL=component---src-pages-blogs-index-js-e45fb25bfccd9af3c127.js.map
