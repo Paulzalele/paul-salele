@@ -1899,7 +1899,7 @@ module.exports = Object.assign;
 /***/ 4999:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-exports.components={"component---cache-caches-gatsby-plugin-offline-app-shell-js":()=>__webpack_require__.e(/* import() | component---cache-caches-gatsby-plugin-offline-app-shell-js */ 306).then(__webpack_require__.bind(__webpack_require__, 1930)),"component---src-pages-404-js":()=>__webpack_require__.e(/* import() | component---src-pages-404-js */ 883).then(__webpack_require__.bind(__webpack_require__, 9288)),"component---src-pages-about-js":()=>__webpack_require__.e(/* import() | component---src-pages-about-js */ 682).then(__webpack_require__.t.bind(__webpack_require__, 5518, 23)),"component---src-pages-blogs-index-js":()=>__webpack_require__.e(/* import() | component---src-pages-blogs-index-js */ 295).then(__webpack_require__.bind(__webpack_require__, 72)),"component---src-pages-contact-js":()=>__webpack_require__.e(/* import() | component---src-pages-contact-js */ 501).then(__webpack_require__.bind(__webpack_require__, 7319)),"component---src-pages-index-js":()=>__webpack_require__.e(/* import() | component---src-pages-index-js */ 678).then(__webpack_require__.bind(__webpack_require__, 1219)),"component---src-pages-services-js":()=>__webpack_require__.e(/* import() | component---src-pages-services-js */ 88).then(__webpack_require__.t.bind(__webpack_require__, 2953, 23)),"component---src-pages-support-js":()=>__webpack_require__.e(/* import() | component---src-pages-support-js */ 276).then(__webpack_require__.t.bind(__webpack_require__, 6323, 23)),"component---src-pages-testing-js":()=>__webpack_require__.e(/* import() | component---src-pages-testing-js */ 796).then(__webpack_require__.bind(__webpack_require__, 6120)),"component---src-pages-white-papers-index-js":()=>__webpack_require__.e(/* import() | component---src-pages-white-papers-index-js */ 252).then(__webpack_require__.bind(__webpack_require__, 8013))};
+exports.components={"component---cache-caches-gatsby-plugin-offline-app-shell-js":()=>__webpack_require__.e(/* import() | component---cache-caches-gatsby-plugin-offline-app-shell-js */ 306).then(__webpack_require__.bind(__webpack_require__, 1930)),"component---src-pages-404-js":()=>__webpack_require__.e(/* import() | component---src-pages-404-js */ 883).then(__webpack_require__.bind(__webpack_require__, 9288)),"component---src-pages-about-js":()=>__webpack_require__.e(/* import() | component---src-pages-about-js */ 682).then(__webpack_require__.bind(__webpack_require__, 5518)),"component---src-pages-blogs-index-js":()=>__webpack_require__.e(/* import() | component---src-pages-blogs-index-js */ 295).then(__webpack_require__.bind(__webpack_require__, 72)),"component---src-pages-contact-js":()=>__webpack_require__.e(/* import() | component---src-pages-contact-js */ 501).then(__webpack_require__.bind(__webpack_require__, 7319)),"component---src-pages-index-js":()=>__webpack_require__.e(/* import() | component---src-pages-index-js */ 678).then(__webpack_require__.bind(__webpack_require__, 1219)),"component---src-pages-services-js":()=>__webpack_require__.e(/* import() | component---src-pages-services-js */ 88).then(__webpack_require__.bind(__webpack_require__, 2953)),"component---src-pages-support-js":()=>__webpack_require__.e(/* import() | component---src-pages-support-js */ 276).then(__webpack_require__.bind(__webpack_require__, 6323)),"component---src-pages-testing-js":()=>__webpack_require__.e(/* import() | component---src-pages-testing-js */ 796).then(__webpack_require__.bind(__webpack_require__, 6120)),"component---src-pages-white-papers-index-js":()=>__webpack_require__.e(/* import() | component---src-pages-white-papers-index-js */ 252).then(__webpack_require__.bind(__webpack_require__, 8013))};
 
 /***/ }),
 
@@ -5226,7 +5226,7 @@ module.exports = JSON.parse('{"name":"gatsby","description":"Blazing fast modern
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"polyfill":["/polyfill-65a907e51915b8b71475.js"],"app":["/app-9aff4770ec79ee9ba1dc.js"],"component---cache-caches-gatsby-plugin-offline-app-shell-js":["/component---cache-caches-gatsby-plugin-offline-app-shell-js-ca7625a901b217b3cc85.js"],"component---src-pages-404-js":["/component---src-pages-404-js-24ca195f555b6a67ad36.js"],"component---src-pages-about-js":["/component---src-pages-about-js-3c8a7fdc9f57b5639299.js"],"component---src-pages-blogs-index-js":["/component---src-pages-blogs-index-js-e45fb25bfccd9af3c127.js"],"component---src-pages-contact-js":["/component---src-pages-contact-js-efd99e03de86d7751496.js"],"component---src-pages-index-js":["/component---src-pages-index-js-ccce45cb8aa4ece013e0.js"],"component---src-pages-services-js":["/component---src-pages-services-js-62482cccae8cb7ca8c64.js"],"component---src-pages-support-js":["/component---src-pages-support-js-821a09e13a5f792f2647.js"],"component---src-pages-testing-js":["/component---src-pages-testing-js-64abe3634995fd8b70c7.js"],"component---src-pages-white-papers-index-js":["/component---src-pages-white-papers-index-js-89902a070287773a612a.js"]}');
+module.exports = JSON.parse('{"polyfill":["/polyfill-65a907e51915b8b71475.js"],"app":["/app-4fc4aeef8aa73d3a54c6.js"],"component---cache-caches-gatsby-plugin-offline-app-shell-js":["/component---cache-caches-gatsby-plugin-offline-app-shell-js-ca7625a901b217b3cc85.js"],"component---src-pages-404-js":["/component---src-pages-404-js-24ca195f555b6a67ad36.js"],"component---src-pages-about-js":["/component---src-pages-about-js-d27d06d633ded5d7da24.js"],"component---src-pages-blogs-index-js":["/component---src-pages-blogs-index-js-e45fb25bfccd9af3c127.js"],"component---src-pages-contact-js":["/component---src-pages-contact-js-efd99e03de86d7751496.js"],"component---src-pages-index-js":["/component---src-pages-index-js-ccce45cb8aa4ece013e0.js"],"component---src-pages-services-js":["/component---src-pages-services-js-f858c5bbcae21ba3a277.js"],"component---src-pages-support-js":["/component---src-pages-support-js-eecd9dfacfaffb6b3894.js"],"component---src-pages-testing-js":["/component---src-pages-testing-js-64abe3634995fd8b70c7.js"],"component---src-pages-white-papers-index-js":["/component---src-pages-white-papers-index-js-89902a070287773a612a.js"]}');
 
 /***/ })
 
@@ -5269,36 +5269,6 @@ module.exports = JSON.parse('{"polyfill":["/polyfill-65a907e51915b8b71475.js"],"
 /******/ 				() => (module);
 /******/ 			__webpack_require__.d(getter, { a: getter });
 /******/ 			return getter;
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/create fake namespace object */
-/******/ 	(() => {
-/******/ 		var getProto = Object.getPrototypeOf ? (obj) => (Object.getPrototypeOf(obj)) : (obj) => (obj.__proto__);
-/******/ 		var leafPrototypes;
-/******/ 		// create a fake namespace object
-/******/ 		// mode & 1: value is a module id, require it
-/******/ 		// mode & 2: merge all properties of value into the ns
-/******/ 		// mode & 4: return value when already ns object
-/******/ 		// mode & 16: return value when it's Promise-like
-/******/ 		// mode & 8|1: behave like require
-/******/ 		__webpack_require__.t = function(value, mode) {
-/******/ 			if(mode & 1) value = this(value);
-/******/ 			if(mode & 8) return value;
-/******/ 			if(typeof value === 'object' && value) {
-/******/ 				if((mode & 4) && value.__esModule) return value;
-/******/ 				if((mode & 16) && typeof value.then === 'function') return value;
-/******/ 			}
-/******/ 			var ns = Object.create(null);
-/******/ 			__webpack_require__.r(ns);
-/******/ 			var def = {};
-/******/ 			leafPrototypes = leafPrototypes || [null, getProto({}), getProto([]), getProto(getProto)];
-/******/ 			for(var current = mode & 2 && value; typeof current == 'object' && !~leafPrototypes.indexOf(current); current = getProto(current)) {
-/******/ 				Object.getOwnPropertyNames(current).forEach((key) => (def[key] = () => (value[key])));
-/******/ 			}
-/******/ 			def['default'] = () => (value);
-/******/ 			__webpack_require__.d(ns, def);
-/******/ 			return ns;
 /******/ 		};
 /******/ 	})();
 /******/ 	
